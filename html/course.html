@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pluralsight</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../css/courses.css" />
+    <link rel="stylesheet" href="../css/courses.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+  </head>
+  <style>
+    .bgImg {
+      background-image: url("https://pluralsight.imgix.net/course-images/audience/software-development.jpg?w=1078");
+      width: 100%;
+      height: 607px;
+      background-repeat: no-repeat;
+      background-blend-mode: luminosity;
+      background-size: cover;
+    }
+    .checked {
+      color: white;
+    }
+    .textPart h1 {
+      color: white;
+    }
+    .text-content {
+      font-weight: 200;
+      color: white;
+      font-size: 18px;
+      max-width: 75%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
+    .textPart {
+      margin-left: 20px;
+      padding: 100px;
+    }
+    .textPart > h1 {
+      font-size: 50px;
+      font-family: "Source Sans Pro", sans-serif;
+      line-height: 0.5;
+    }
+    .text-content {
+      color: #eeeeee;
+      font-size: 18px;
+      font-family: "Source Sans Pro", sans-serif;
+    }
+    .fButton > button {
+      height: 50px;
+      color: #eeeeee;
+      width: 300px;
+      float: left;
+      background-image: linear-gradient(to right, #f05a28, #ec008c, #f05a28);
+      margin-left: 120px;
+      border: none;
+      border-radius: 3px;
+      transition: all 0.6s ease-in-out;
+    }
+    .sButton > button {
+      font-weight: 200;
+      color: #eeeeee;
+      background-color: transparent;
+      border: white solid 2px;
+      height: 50px;
+      width: 300px;
+      float: left;
+      margin-left: 500px;
+      border-radius: 3px;
+      margin-top: -50px;
+    }
+    .second {
+      width: 100%;
+      height: 360px;
+      background-color: rgb(24, 24, 24);
+      border-top: solid black 4px;
+    }
+    .review {
+      width: 30%;
+      height: 100%;
+
+      margin-left: 40px;
+      margin-top: 40px;
+      float: left;
+    }
+    .desc {
+      width: 60%;
+      height: 100%;
+      float: left;
+      margin-left: 5%;
+      margin-top: 40px;
+    }
+    .left {
+      color: white;
+    }
+    .star {
+      float: right;
+      color: gold;
+      margin-top: -30px;
+    }
+    .right {
+      float: right;
+      color: white;
+      margin-top: -30px;
+      padding-right: 10px;
+    }
+    .desc > span {
+      color: white;
+      margin-right: 30px;
+    }
+    .last {
+      background-color: rgb(24, 24, 24);
+      text-align: center;
+      margin-top: 0px;
+      border-top: solid black 4px;
+    }
+
+    .abutton {
+      font-family: sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1.1;
+      padding: 15px 30px;
+      white-space: normal;
+      border-radius: 2px;
+      color: #fff;
+      background: #ec008c;
+
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      transition: box-shadow 0.3s ease-in-out;
+      margin: 0 0 20px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .content {
+      position: relative;
+    }
+  </style>
+  <body>
+    <div id="nav_bar">
+      <div id="left_nav_bar">
+        <img
+          src="https://media-exp3.licdn.com/dms/image/C4D0BAQGMBr54nDC6rw/company-logo_200_200/0/1596819394680?e=2159024400&v=beta&t=a7RGpov0dB-gGlqsXdDr33YL35XfMXKtIGx1rsO4jFU"
+          alt=""
+        />
+        <div>PLURAlSIGHT</div>
+      </div>
+      <div id="mid_nav_bar">
+        <div onclick="up('platform')">
+          Platform
+          <i id="platform" class="material-icons">expand_more</i>
+        </div>
+
+        <div onclick="up_product()">
+          Product
+          <i id="product" class="material-icons">expand_more</i>
+        </div>
+
+        <div onclick="up('resources')">
+          Resources
+          <i id="resources" class="material-icons">expand_more</i>
+        </div>
+
+        <div>For Individuals</div>
+      </div>
+
+      <div id="right_nav_bar">
+        <i id="platform" class="material-icons">search</i>
+        <div>
+          Sigin in
+          <i id="sigin_in" class="material-icons">expand_more</i>
+        </div>
+        <button class="tryFree">TRY FOR FREE</button>
+      </div>
+    </div>
+    <!-- this is nav_down part -->
+
+    <div id="nav_down">
+      <div id="nav_down_left">
+        <ul>
+          <li id="l_W">WAYS TO UPSKILL</li>
+          <li>
+            <img
+              src="https://www.pluralsight.com/content/dam/pluralsight2/experiment-fragment/navigation/dashboard.png"
+              alt=""
+            />
+            <span>Courses</span>
+          </li>
+          <li>
+            <img
+              src="https://www.pluralsight.com/content/dam/pluralsight2/experiment-fragment/navigation/iq.png"
+              alt=""
+            />
+            <span>Skill assessments</span>
+          </li>
+          <li>
+            <img
+              src="https://www.pluralsight.com/content/dam/pluralsight2/experiment-fragment/navigation/cloud.png"
+              alt=""
+            />
+            <span> Labs</span>
+          </li>
+          <li>
+            <img
+              src="https://www.pluralsight.com/content/dam/pluralsight2/experiment-fragment/navigation/hand.png"
+              alt=""
+            />
+            <span>Hands-on learning</span>
+          </li>
+          <li>
+            <img
+              src="https://www.pluralsight.com/content/dam/pluralsight2/experiment-fragment/navigation/certifications.png"
+              alt=""
+            />
+            <span>Certification prep</span>
+          </li>
+          <li>
+            <img
+              src="https://www.pluralsight.com/content/dam/pluralsight2/experiment-fragment/navigation/analytics.png"
+              alt=""
+            />
+            <span>Team efficiency</span>
+          </li>
+        </ul>
+      </div>
+      <div
+        style="
+          width: 1px;
+          height: 85%;
+          background-color: rgb(139, 139, 139);
+          float: left;
+          margin-top: 2%;
+        "
+      ></div>
+      <i
+        onclick="cut('platform')"
+        class="material-icons"
+        style="color: white; margin-top: 15px"
+        >close</i
+      >
+      <div id="nav_down_right">
+        <div id="nav_down_right_1">
+          <ul>
+            <li><span id="l_W">SKILLS FOR</span></li>
+            <li>Software development</li>
+            <li>IT ops</li>
+            <li>Info & cyber security</li>
+            <li>Cloud computing</li>
+            <li>Machine learning / AI</li>
+            <li>Data professional</li>
+          </ul>
+        </div>
+        <div id="nav_down_right_2">
+          <div style="margin-bottom: 0px; margin-left: 15px" id="l_W">
+            TOP TRENDING PATHS
+          </div>
+          <div id="nav_down_right_2_box">
+            <img
+              src="https://pluralsight2.imgix.net/paths/images/group-policy-administration-ee0dacafe8.png?w=75"
+              alt=""
+            />
+            <p>Microsoft Azure Deployment</p>
+            <div id="nav_down_box_c">
+              <span>4</span>
+              <p>Courses</p>
+              <span>4</span>
+              <p>Hours</p>
+              <img
+                src="https://www.pluralsight.com/content/dam/pluralsight2/experiment-fragment/navigation/iq.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div id="nav_down_right_2_box">
+            <img
+              src="https://pluralsight2.imgix.net/paths/images/python-7be70baaac.png?w=75"
+              alt=""
+            />
+            <p>Microsoft Azure Deployment</p>
+            <div id="nav_down_box_c">
+              <span>4</span>
+              <p>Courses</p>
+              <span>4</span>
+              <p>Hours</p>
+              <img
+                src="https://www.pluralsight.com/content/dam/pluralsight2/experiment-fragment/navigation/iq.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div id="nav_down_right_2_box">
+            <img
+              src="https://pluralsight2.imgix.net/paths/images/r-programming-eb2e267a97.png?w=75"
+              alt=""
+            />
+            <p>Microsoft Azure Deployment</p>
+            <div id="nav_down_box_c">
+              <span>5</span>
+              <p>Courses</p>
+              <span>8</span>
+              <p>Hours</p>
+              <img
+                src="https://www.pluralsight.com/content/dam/pluralsight2/experiment-fragment/navigation/iq.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div id="nav_down_right_2_box">
+            <img
+              src="https://pluralsight2.imgix.net/paths/images/ruby-7e88ddd5f0.png?w=75"
+              alt=""
+            />
+            <p>Microsoft Azure Deployment</p>
+            <div id="nav_down_box_c">
+              <span>7</span>
+              <p>Courses</p>
+              <span>13</span>
+              <p>Hours</p>
+              <img
+                src="https://www.pluralsight.com/content/dam/pluralsight2/experiment-fragment/navigation/iq.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div id="nav_down_right_2_box">
+            <img
+              src="https://pluralsight2.imgix.net/paths/images/aws-certified-devops-engineer-25d912e3da.png?w=75"
+              alt=""
+            />
+            <p>Microsoft Azure Deployment</p>
+            <div id="nav_down_box_c">
+              <span>6</span>
+              <p>Courses</p>
+              <span>9</span>
+              <p>Hours</p>
+              <img
+                src="https://www.pluralsight.com/content/dam/pluralsight2/experiment-fragment/navigation/iq.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          style="
+            width: 98%;
+            height: 2px;
+            background-color: rgb(161, 161, 161);
+            clear: both;
+            margin: auto;
+          "
+        ></div>
+        <div id="bottom_nav_bar">
+          <span>See our entire course library</span
+          ><span> Check out the Technology Index</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="nav_down_1">
+      <div id="nav_down_1_left">
+        <ul>
+          <li>
+            <img
+              src="https://www.pluralsight.com/content/dam/pluralsight2/experiment-fragment/navigation/Skill_logo_white.png"
+              alt=""
+            />
+          </li>
+          <li>Build tech skills to drive results</li>
+        </ul>
+        <div
+          style="
+            width: 80%;
+            clear: both;
+            margin: auto;
+            height: 2px;
+            background-color: rgb(126, 126, 126);
+          "
+        ></div>
+        <div id="nav_down_1_left_down">
+          <ul>
+            <li>What is skill?</li>
+            <li>View plans</li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        style="
+          width: 2px;
+          float: left;
+          height: 90%;
+          margin-top: 2%;
+          background-color: rgb(126, 126, 126);
+        "
+      ></div>
+      <div id="nav_down_1_left">
+        <i
+          onclick="cut1('product')"
+          class="material-icons"
+          style="color: white; margin-top: 15px; float: right"
+          >close</i
+        >
+        <ul>
+          <li>
+            <img
+              src="https://www.pluralsight.com/content/dam/pluralsight2/experiment-fragment/navigation/Flow_Logo_white.png"
+              alt=""
+            />
+          </li>
+          <li>Get insights into your workflow</li>
+        </ul>
+        <div
+          style="
+            width: 80%;
+            clear: both;
+            margin: auto;
+            height: 2px;
+            background-color: rgb(126, 126, 126);
+          "
+        ></div>
+        <div id="nav_down_1_left_down">
+          <ul>
+            <li>What is Flow?</li>
+            <li>View plans</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="container">
+      <div class="bgImg">
+        <div class="textPart">
+          <h1>Postman Fundamentals</h1>
+          <div>
+            <h5>
+              <span style="margin-right: 10px">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span style="color: white" class="fa fa-star-half-o"></span>
+              </span>
+              <span style="color: white"> By </span>
+
+              <a style="color: white" href=""> Nate Taylor </a>
+            </h5>
+          </div>
+          <div class="text-content">
+            Postman is used by over 3 million developers across the world. This
+            course will show you the fundamentals of Postman, how you can issue
+            requests, create automated API tests, and even document your API
+            with Postman.
+          </div>
+        </div>
+        <div class="button">
+          <div class="fButton">
+            <button
+              onclick="window.location.href='free_trial.html'"
+              style="cursor: pointer; float: left"
+            >
+              START A FREE 10-DAY TRIAL
+            </button>
+          </div>
+          <div class="sButton">
+            <button style="cursor: pointer">PLAY COURSE OVERVIEW</button>
+          </div>
+        </div>
+      </div>
+      <div class="second">
+        <div class="review">
+          <div class="courseInfo">
+            <span> <h4 style="color: white">Course info</h4></span>
+            <div class="left">
+              <p>Rating</p>
+            </div>
+            <div class="star">
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star checked"></span>
+            </div>
+            <hr style="height: 2px; background-color: black; border: none" />
+            <div>
+              <div class="left">
+                <p>Level</p>
+              </div>
+              <div class="right">
+                Beginner
+                <img
+                  width="10px"
+                  height="9px"
+                  src="https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/course/level.png"
+                  alt=""
+                />
+              </div>
+              <hr style="height: 2px; background-color: black; border: none" />
+            </div>
+            <div>
+              <div class="left">
+                <p>Updated</p>
+              </div>
+              <div class="right">
+                Jul 22, 2021
+                <img
+                  width="10px"
+                  height="9px"
+                  src="https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/course/calendar.png"
+                  alt=""
+                />
+              </div>
+              <hr style="height: 2px; background-color: black; border: none" />
+            </div>
+            <div>
+              <div class="left">
+                <p>Duration</p>
+              </div>
+              <div class="right">
+                59m
+                <img
+                  width="10px"
+                  height="9px"
+                  src="	https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/course/clock.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="desc">
+          <h4 style="color: white">Description</h4>
+          <p
+            style="
+              color: white;
+              font-size: 15px;
+              font-family: sans-serif;
+              line-height: 1.5;
+            "
+          >
+            Understanding the new California Consumer Privacy Act (CCPA) that
+            has begun being enforced in July 2020 is essential to avoid heavy
+            penalties and fines when it comes to the data privacy of California
+            Citizens. In this course, Data Privacy Under the California Consumer
+            Privacy Act, you will learn what the CCPA entails for both
+            businesses and consumers. First, you’ll learn what data is covered
+            and who is affected by this new law. Next, you’ll discover the
+            required notices and steps if there is a data breach. Finally,
+            you’ll learn what rights California citizens have over their
+            personal data. When you’re finished with this course, you’ll have
+            the skills and knowledge of the California Consumer Privacy Act
+            needed to know your rights and be compliant with this groundbreaking
+            law.
+          </p>
+        </div>
+      </div>
+      <div class="second">
+        <div style="text-align: center" class="review">
+          <img
+            style="border-radius: 50%"
+            src="https://pluralsight.imgix.net/author/lg/2428625b-5ff5-432d-a0c6-f8cba3a76008.JPG?w=100"
+            alt=""
+          />
+          <h3 style="color: white">Shaila Rana</h3>
+        </div>
+        <div class="desc">
+          <h4 style="color: white; margin-top: -30px">About the author</h4>
+          <p style="color: white">Founder & Security Educator at CyberSecure</p>
+          <br />
+          <h2
+            style="
+              color: white;
+              font-size: 15px;
+              font-family: sans-serif;
+              line-height: 1.5;
+            "
+          >
+            Founder & Security Educator at CyberSecure
+          </h2>
+          <hr style="height: 1px; background-color: black; border: none" />
+          <h4 style="color: white">
+            Performing Threat Modeling with the OVTAVE Methodoogy
+          </h4>
+          <span> Intermediate </span> <span> 1h 15m </span>
+          <span> Aug 26, 2020 </span>
+        </div>
+      </div>
+      <div class="second">
+        <div style="text-align: center" class="review"></div>
+        <div class="desc">
+          <h4 style="color: white; margin-top: -80px">
+            Section Introduction Transcripts
+          </h4>
+          <span style="color: white">Course Overview</span>
+          <p style="color: white; margin-top: 5px">
+            [Autogenerated] Hi everyone. My name is Sheila Rana and I'm the
+            founder of Cyber Secure a security training and awareness consulting
+            firm. Welcome to my course Security governance C. C. P. A. Are you a
+            California citizen or do you work for a business that has to be
+            compliant with the CCP A. If you do then this is definitely the
+            course for you. Some of the major topics that we will cover include
+            data rights, how to exercise those rights and penalties of
+            noncompliance. In this course you will learn who is affected what
+            data is affected by this privacy law and the rights of a California
+            consumer. Next you'll learn about the differences between the CCP A.
+            And G. D. P. R. We'll also talk about Prop 24 which just passed in
+            November 2020. Then you'll learn about required notices businesses
+            have to provide. And then finally you'll learn how California
+            consumers can exercise their data rights and the penalties of
+            noncompliance for businesses that are subject to comply with the CCP
+            A. By the end of this course, you'll understand data rights,
+            required notices and penalties of noncompliance. As of January 1,
+            2020, the California Consumer Privacy Act went into effect.
+            Organizations that utilize and harvest consumer information now have
+            to conduct business in a different way to remain compliant. Citizens
+            of California also must understand their rights and protect their
+            data. I hope you'll join me in this journey to learn about data
+            privacy under the California Consumer Privacy Act.
+          </p>
+        </div>
+      </div>
+
+      <div class="last">
+        <div class="content">
+          <h1 style="color: white; margin-top: -200px">
+            Push the limits of what's possible. Today.
+          </h1>
+          <div class="lButton">
+            <a
+              style="margin-bottom: 80px"
+              ;
+              class="abutton"
+              href="free_trial.html"
+              >START A FREE 10-DAY TRIAL</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-container">
+        <div>
+          <div class="footer-head">SOLUTIONS</div>
+          <div>
+            <a href="">Pluralsight Skills</a><br />
+            <a href="">Pluralsight Flow</a><br />
+            <a href="">Government</a><br />
+            <a href="">Gift of Pluralsight</a><br />
+            <a href="">View Pricing</a><br />
+            <a href="">Contact Sales</a><br />
+            <a href="">Skill up for </a><br />
+          </div>
+        </div>
+        <div>
+          <div class="footer-head">PLATFORM</div>
+          <div>
+            <a href="">Browse Library</a><br />
+            <a href="">Role IQ</a><br />
+            <a href="">Skill IQ</a><br />
+            <a href="">Iris</a><br />
+            <a href="">Authors</a><br />
+            <a href="">Professionals Services</a><br />
+            <a href="">Technology Index </a><br />
+          </div>
+        </div>
+        <div>
+          <div class="footer-head">COMPANY</div>
+          <div>
+            <a href="">About Us</a><br />
+            <a href="">Customer Stories</a><br />
+            <a href="">Careers</a><br />
+            <a href="">Blog</a><br />
+            <a href="">Newsroom</a><br />
+            <a href="">Resource Center</a><br />
+            <a href="">Guides</a><br />
+          </div>
+        </div>
+        <div>
+          <div class="footer-head">RESOURCES</div>
+
+          <div>
+            <a href="">Download Pluralsight</a><br />
+            <a href="">Events</a><br />
+            <a href="">Teach</a><br />
+            <a href="">Partners</a><br />
+            <a href="">Affiliate Program</a><br />
+            <a href="">PluralsightOne.org</a><br />
+            <a href="">Subscribe </a><br />
+          </div>
+        </div>
+        <div>
+          <div class="footer-head">SUPPORT</div>
+
+          <div>
+            <a href="">Contact</a><br />
+            <a href="">Help Center</a><br />
+            <a href="">IP whitelist</a><br />
+            <a href="">Sitemap</a><br />
+            <a href=""></a><br />
+            <a href=""></a><br />
+            <a href=""></a><br />
+          </div>
+        </div>
+      </div>
+      <!-- <hr> -->
+
+      <div class="footer-last-div">
+        <div class="copyright-content">
+          <span
+            ><a href=""
+              ><img
+                src="https://www.pluralsight.com/content/dam/pluralsight2/general/icons/light/ps-icon.png"
+                alt="" /></a
+          ></span>
+          <div>
+            <span
+              >Copyright © 2004 - 2021 Pluralsight LLC. All rights
+              reserved</span
+            >
+          </div>
+        </div>
+        <div class="connect">
+          <span id="terms-of-use"><a href="">Terms of Use</a></span>
+          <span id="privacy-policy"><a href="">Privacy Policy</a></span>
+          <span>
+            <a href=""
+              ><img
+                src="https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/icons/desktop/Facebook_Icon.svg"
+                alt=""
+            /></a>
+            <a href=""
+              ><img
+                src="https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/icons/desktop/Instagram_Icon.svg"
+                alt=""
+            /></a>
+            <a href=""
+              ><img
+                src="https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/icons/desktop/Twitter_Icon.svg"
+                alt=""
+            /></a>
+            <a href=""
+              ><img
+                src="https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/icons/desktop/LinkedIn_Icon.svg"
+                alt=""
+            /></a>
+            <a href=""
+              ><img
+                src="https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/icons/desktop/YouTube_Icon.svg"
+                alt=""
+            /></a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

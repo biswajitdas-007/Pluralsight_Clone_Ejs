@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pluralsight</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div id="main-container">
+      <div id="left-side">
+        <div class="signin">
+          <div>
+            <img
+              src="https://app.pluralsight.com/id/img/login-logo.png"
+              alt=""
+            />
+          </div>
+          <form action="" class="signin-form">
+            <div>
+              <label for="" style="margin-bottom: 4px">Email & Username</label>
+              <input id="email" type="text" />
+            </div>
+            <div>
+              <label for="" style="margin-bottom: 4px">Password</label>
+              <input id="password" type="password" />
+            </div>
+            <button onclick="showData(event)" class="btn1-signin">
+              Sign In
+            </button>
+          </form>
+          <div class="signin-links">
+            <a href="forgotPassword.html">Forgot Password?</a>
+            <a href="signInWithCompany.html">Signin with comapany or school</a>
+          </div>
+          <div>
+            <hr class="bar" />
+          </div>
+          <button
+            onclick="window.location.href='free_trial.html'"
+            class="btn2-signin"
+          >
+            Create an account
+          </button>
+        </div>
+
+        <footer>
+          Copyright © 2004 - 2021 Pluralsight LLC. All rights reserved.
+          <div><a href="">Terms of use</a>|<a href="">Privacy Policy</a></div>
+        </footer>
+      </div>
+      <div id="right-side">
+        <div id="left-side-up-img">
+          <img
+            src="https://www.pluralsight.com/content/dam/pluralsight2/login/login-h1.png"
+            alt=""
+          />
+          <a href="" id="try-for-free">Try For Free</a>
+        </div>
+        <div></div>
+        <div id="right-side-down-img">
+          <img
+            src="https://www.pluralsight.com/content/dam/pluralsight2/logos/logo-build-better.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  function showData(e) {
+    e.preventDefault();
+    // var firstname = document.getElementById("firstname").value;
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+    var count = 0;
+    var arr2 = [];
+    let data = JSON.parse(localStorage.getItem("signData1"));
+    console.log(email);
+    for (let i = 0; i < data.length; i++) {
+      if (data[i].email == email && data[i].password == password) {
+        window.location.href = "login_courses.html";
+        arr2.push(data[i].firstname);
+        console.log(data);
+        localStorage.setItem("Data1", JSON.stringify(arr2));
+        count++;
+        break;
+      }
+    }
+    if (count == 0) {
+      alert("‘Invalid username or password!’");
+    }
+  }
+</script>

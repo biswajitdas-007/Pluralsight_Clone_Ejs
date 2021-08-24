@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pluralsight</title>
+    <link rel="stylesheet" href="../css/courses.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+  </head>
+  <body id="body">
+    <div id="nav_bar">
+      <div id="left_nav_bar">
+        <img
+          src="https://media-exp3.licdn.com/dms/image/C4D0BAQGMBr54nDC6rw/company-logo_200_200/0/1596819394680?e=2159024400&v=beta&t=a7RGpov0dB-gGlqsXdDr33YL35XfMXKtIGx1rsO4jFU"
+          alt=""
+        />
+        <div>PLURAlSIGHT</div>
+      </div>
+      <div id="mid_nav_bar">
+        <div onclick="up('platform')">
+          Platform
+          <i id="platform" class="material-icons">expand_more</i>
+        </div>
+
+        <div onclick="up_product()">
+          Product
+          <i id="product" class="material-icons">expand_more</i>
+        </div>
+
+        <div onclick="up('resources')">
+          Resources
+          <i id="resources" class="material-icons">expand_more</i>
+        </div>
+
+        <div>For Individuals</div>
+      </div>
+
+      <div id="right_nav_bar">
+        <i id="platform" class="material-icons">search</i>
+        <div>
+          Sigin in
+          <i id="sigin_in" class="material-icons">expand_more</i>
+        </div>
+        <button class="tryFree">TRY FOR FREE</button>
+      </div>
+    </div>
+    <!-- this is nav_down part -->
+
+    <div id="nav_down">
+      <div id="nav_down_left">
+        <ul>
+          <li id="l_W">WAYS TO UPSKILL</li>
+          <li>
+            <img
+              src="https://www.pluralsight.com/content/dam/pluralsight2/experiment-fragment/navigation/dashboard.png"
+              alt=""
+            />
+            <span>Courses</span>
+          </li>
+          <li>
+            <img
+              src="https://www.pluralsight.com/content/dam/pluralsight2/experiment-fragment/navigation/iq.png"
+              alt=""
+            />
+            <span>Skill assessments</span>
+          </li>
+          <li>
+            <img
+              src="https://www.pluralsight.com/content/dam/pluralsight2/experiment-fragment/navigation/cloud.png"
+              alt=""
+            />
+            <span> Labs</span>
+          </li>
+          <li>
+            <img
+              src="https://www.pluralsight.com/content/dam/pluralsight2/experiment-fragment/navigation/hand.png"
+              alt=""
+            />
+            <span>Hands-on learning</span>
+          </li>
+          <li>
+            <img
+              src="https://www.pluralsight.com/content/dam/pluralsight2/experiment-fragment/navigation/certifications.png"
+              alt=""
+            />
+            <span>Certification prep</span>
+          </li>
+          <li>
+            <img
+              src="https://www.pluralsight.com/content/dam/pluralsight2/experiment-fragment/navigation/analytics.png"
+              alt=""
+            />
+            <span>Team efficiency</span>
+          </li>
+        </ul>
+      </div>
+      <div
+        style="
+          width: 1px;
+          height: 85%;
+          background-color: rgb(139, 139, 139);
+          float: left;
+          margin-top: 2%;
+        "
+      ></div>
+      <i
+        onclick="cut('platform')"
+        class="material-icons"
+        style="color: white; margin-top: 15px"
+        >close</i
+      >
+      <div id="nav_down_right">
+        <div id="nav_down_right_1">
+          <ul>
+            <li><span id="l_W">SKILLS FOR</span></li>
+            <li>Software development</li>
+            <li>IT ops</li>
+            <li>Info & cyber security</li>
+            <li>Cloud computing</li>
+            <li>Machine learning / AI</li>
+            <li>Data professional</li>
+          </ul>
+        </div>
+        <div id="nav_down_right_2">
+          <div style="margin-bottom: 0px; margin-left: 15px" id="l_W">
+            TOP TRENDING PATHS
+          </div>
+          <div id="nav_down_right_2_box">
+            <img
+              src="https://pluralsight2.imgix.net/paths/images/group-policy-administration-ee0dacafe8.png?w=75"
+              alt=""
+            />
+            <p>Microsoft Azure Deployment</p>
+            <div id="nav_down_box_c">
+              <span>4</span>
+              <p>Courses</p>
+              <span>4</span>
+              <p>Hours</p>
+              <img
+                src="https://www.pluralsight.com/content/dam/pluralsight2/experiment-fragment/navigation/iq.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div id="nav_down_right_2_box">
+            <img
+              src="https://pluralsight2.imgix.net/paths/images/python-7be70baaac.png?w=75"
+              alt=""
+            />
+            <p>Microsoft Azure Deployment</p>
+            <div id="nav_down_box_c">
+              <span>4</span>
+              <p>Courses</p>
+              <span>4</span>
+              <p>Hours</p>
+              <img
+                src="https://www.pluralsight.com/content/dam/pluralsight2/experiment-fragment/navigation/iq.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div id="nav_down_right_2_box">
+            <img
+              src="https://pluralsight2.imgix.net/paths/images/r-programming-eb2e267a97.png?w=75"
+              alt=""
+            />
+            <p>Microsoft Azure Deployment</p>
+            <div id="nav_down_box_c">
+              <span>5</span>
+              <p>Courses</p>
+              <span>8</span>
+              <p>Hours</p>
+              <img
+                src="https://www.pluralsight.com/content/dam/pluralsight2/experiment-fragment/navigation/iq.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div id="nav_down_right_2_box">
+            <img
+              src="https://pluralsight2.imgix.net/paths/images/ruby-7e88ddd5f0.png?w=75"
+              alt=""
+            />
+            <p>Microsoft Azure Deployment</p>
+            <div id="nav_down_box_c">
+              <span>7</span>
+              <p>Courses</p>
+              <span>13</span>
+              <p>Hours</p>
+              <img
+                src="https://www.pluralsight.com/content/dam/pluralsight2/experiment-fragment/navigation/iq.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div id="nav_down_right_2_box">
+            <img
+              src="https://pluralsight2.imgix.net/paths/images/aws-certified-devops-engineer-25d912e3da.png?w=75"
+              alt=""
+            />
+            <p>Microsoft Azure Deployment</p>
+            <div id="nav_down_box_c">
+              <span>6</span>
+              <p>Courses</p>
+              <span>9</span>
+              <p>Hours</p>
+              <img
+                src="https://www.pluralsight.com/content/dam/pluralsight2/experiment-fragment/navigation/iq.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          style="
+            width: 98%;
+            height: 2px;
+            background-color: rgb(161, 161, 161);
+            clear: both;
+            margin: auto;
+          "
+        ></div>
+        <div id="bottom_nav_bar">
+          <span>See our entire course library</span
+          ><span> Check out the Technology Index</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="nav_down_1">
+      <div id="nav_down_1_left">
+        <ul>
+          <li>
+            <img
+              src="https://www.pluralsight.com/content/dam/pluralsight2/experiment-fragment/navigation/Skill_logo_white.png"
+              alt=""
+            />
+          </li>
+          <li>Build tech skills to drive results</li>
+        </ul>
+        <div
+          style="
+            width: 80%;
+            clear: both;
+            margin: auto;
+            height: 2px;
+            background-color: rgb(126, 126, 126);
+          "
+        ></div>
+        <div id="nav_down_1_left_down">
+          <ul>
+            <li>What is skill?</li>
+            <li>View plans</li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        style="
+          width: 2px;
+          float: left;
+          height: 90%;
+          margin-top: 2%;
+          background-color: rgb(126, 126, 126);
+        "
+      ></div>
+      <div id="nav_down_1_left">
+        <i
+          onclick="cut1('product')"
+          class="material-icons"
+          style="color: white; margin-top: 15px; float: right"
+          >close</i
+        >
+        <ul>
+          <li>
+            <img
+              src="https://www.pluralsight.com/content/dam/pluralsight2/experiment-fragment/navigation/Flow_Logo_white.png"
+              alt=""
+            />
+          </li>
+          <li>Get insights into your workflow</li>
+        </ul>
+        <div
+          style="
+            width: 80%;
+            clear: both;
+            margin: auto;
+            height: 2px;
+            background-color: rgb(126, 126, 126);
+          "
+        ></div>
+        <div id="nav_down_1_left_down">
+          <ul>
+            <li>What is Flow?</li>
+            <li>View plans</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="c_mid_box">
+      <div>
+        <img
+          src="https://www.pluralsight.com/content/dam/pluralsight2/product/v2/logos/logo-skills.png"
+          alt=""
+        />
+      </div>
+      <div>
+        <p>Thousands of courses authored by our network of industry experts</p>
+      </div>
+    </div>
+    <!-- this is  slide part -->
+    <div
+      style="
+        width: 100%;
+        height: 1px;
+        background-color: rgb(170, 170, 170);
+        margin: auto;
+      "
+    ></div>
+    <div class="slider_box">
+      <div class="slider" id="slider">
+        <div class="slide" id="slide">
+          <div class="item" id="product1" onclick="window.location.href='course.html'">
+              <img src="https://pluralsight.imgix.net/course-images/industrial-iot-google-cloud-1-v1.png?h=180&w=320" alt="" />
+            <div>Postman Fundamental</div>
+            <p>by Nate Tayion</p>
+            <span>2h 29m</span
+            ><span
+              >Beginner
+              <img
+                src="https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/course/level.png"
+                alt=""
+            /></span>
+          </div>
+          <div class="item" onclick="window.location.href='course.html'">
+            <img
+              src="https://pluralsight.imgix.net/course-images/ng-conf-2021-session-32-part-2-v1.jpg?h=180&w=320"
+              alt=""
+            />
+            <div>Postman Fundamental</div>
+            <p>by Nate Tayion</p>
+            <span>2h 29m</span
+            ><span
+              >Beginner
+              <img
+                src="https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/course/level.png"
+                alt=""
+            /></span>
+          </div>
+          <div class="item" onclick="window.location.href='course.html'">
+            <img
+              src="https://pluralsight.imgix.net/course-images/ng-conf-2021-session-36-part-1-v1.jpg?h=180&w=320"
+              alt=""
+            />
+            <div>Postman Fundamental</div>
+            <p>by Nate Tayion</p>
+            <span>2h 29m</span
+            ><span
+              >Beginner
+              <img
+                src="https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/course/level.png"
+                alt=""
+            /></span>
+          </div>
+          <div class="item" onclick="window.location.href='course.html'">
+            <img
+              src="https://pluralsight.imgix.net/course-images/docker-developing-go-apps-v1.jpg?h=180&w=320"
+              alt=""
+            />
+            <div>Postman Fundamental</div>
+            <p>by Nate Tayion</p>
+            <span>2h 29m</span
+            ><span
+              >Beginner
+              <img
+                src="https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/course/level.png"
+                alt=""
+            /></span>
+          </div>
+          <div class="item" onclick="window.location.href='course.html'">
+            <img
+              src="https://pluralsight.imgix.net/course-images/audience/software-development.jpg?h=180&w=320"
+              alt=""
+            />
+            <div>Postman Fundamental</div>
+            <p>by Nate Tayion</p>
+            <span>2h 29m</span
+            ><span
+              >Beginner
+              <img
+                src="https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/course/level.png"
+                alt=""
+            /></span>
+          </div>
+
+          <div class="item" onclick="window.location.href='course.html'">
+            <img
+              src="https://pluralsight.imgix.net/course-images/ng-conf-2021-session-32-part-2-v1.jpg?h=180&w=320"
+              alt=""
+            />
+            <div>Postman Fundamental</div>
+            <p>by Nate Tayion</p>
+            <span>2h 29m</span
+            ><span
+              >Beginner
+              <img
+                src="https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/course/level.png"
+                alt=""
+            /></span>
+          </div>
+          <div class="item" onclick="window.location.href='course.html'">
+            <img
+              src="https://pluralsight.imgix.net/course-images/audience/software-development.jpg?h=180&w=320"
+              alt=""
+            />
+            <div>Postman Fundamental</div>
+            <p>by Nate Tayion</p>
+            <span>2h 29m</span
+            ><span
+              >Beginner
+              <img
+                src="https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/course/level.png"
+                alt=""
+            /></span>
+          </div>
+          <div class="item" onclick="window.location.href='course.html'">
+            <img
+              src="https://pluralsight.imgix.net/course-images/docker-developing-go-apps-v1.jpg?h=180&w=320"
+              alt=""
+            />
+            <div onclick="course.html">Postman Fundamental</div>
+            <p onclick="course.html">by Nate Tayion</p>
+            <span>2h 29m</span
+            ><span
+              >Beginner
+              <img
+                src="https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/course/level.png"
+                alt="" onclick="course.html"
+            /></span>
+          </div>
+          <div class="item" onclick="window.location.href='course.html'">
+            <img
+              src="https://pluralsight.imgix.net/course-images/audience/software-development.jpg?h=180&w=320"
+              alt=""
+            />
+            <div>Postman Fundamental</div>
+            <p>by Nate Tayion</p>
+            <span>2h 29m</span
+            ><span
+              >Beginner
+              <img
+                src="https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/course/level.png"
+                alt=""
+            /></span>
+          </div>
+          <div class="item" onclick="window.location.href='course.html'">
+            <img
+              src="http://via.placeholder.com/200x200?text=Product1"
+              alt=""
+            />
+          </div>
+          <div class="item" onclick="window.location.href='course.html'">
+            <img
+              src="http://via.placeholder.com/200x200?text=Product1"
+              alt=""
+            />
+          </div>
+
+          <div class="item">
+            <img
+              src="http://via.placeholder.com/200x200?text=Product1"
+              alt=""
+            />
+          </div>
+          <div class="item">
+            <img
+              src="http://via.placeholder.com/200x200?text=Product1"
+              alt=""
+            />
+          </div>
+          <div class="item">
+            <img
+              src="http://via.placeholder.com/200x200?text=Product1"
+              alt=""
+            />
+          </div>
+        </div>
+        <button class="ctrl-btn pro-prev">
+          <i
+            onclick="sarch_sarch()"
+            class="material-icons"
+            style="
+              color: white;
+              margin-left: 15px;
+              border-left: 1px solid rgb(194, 194, 194);
+              margin-top: 15px;
+              border-radius: 5%;
+            "
+            >arrow_back_ios</i
+          >
+        </button>
+        <button class="ctrl-btn pro-next">
+          <i
+            onclick="sarch_sarch()"
+            class="material-icons"
+            style="
+              color: white;
+              margin-left: 15px;
+              border-left: 1px solid rgb(194, 194, 194);
+              margin-top: 15px;
+            "
+            >arrow_forward_ios</i
+          >
+        </button>
+      </div>
+    </div>
+
+    <!-- courses -->
+    <h2 id="browse">Browse</h2>
+    <input
+      type="text"
+      name=""
+      placeholder="What do you want to learn?"
+      id="sarch_box"
+    />
+    <div id="sarch_box_1">
+      <i
+        onclick="cut_sarch()"
+        class="material-icons"
+        style="
+          color: white;
+          margin-top: 15px;
+          background-color: rgb(65, 65, 65);
+        "
+        >close</i
+      >
+      <i
+        onclick="sarch_sarch()"
+        class="material-icons"
+        style="
+          color: white;
+          margin-left: 15px;
+          border-left: 1px solid rgb(194, 194, 194);
+          padding-left: 19px;
+          margin-top: 15px;
+          background-color: rgb(65, 65, 65);
+        "
+        >search</i
+      >
+    </div>
+    <div id="sort_box" onclick="sort_drop_down()">Sort by</div>
+    <div id="sort_drop_down_id">
+      <i
+        onclick="sort_drop_down_cut()"
+        class="material-icons"
+        ;
+        style="
+          color: white;
+          margin-top: 15px;
+          float: right;
+          background-color: rgb(46, 46, 46);
+          margin-top: 0px;
+        "
+        >close</i
+      >
+      <ul>
+        <li style="margin-top: 30px" onclick="sortupper()">Highest rated</li>
+
+        <li onclick="sortupper_wirth()">Course wirth</li>
+        <li></li>
+      </ul>
+    </div>
+    <div id="courses_box" style="width: 100%; display: flex">
+      <h1 id="not_available">sdfss</h1>
+      <div
+        style="
+          width: 35%;
+          height: 100%;
+          background-color: rgb(0, 0, 0);
+          float: left;
+        "
+      >
+        <div id="right_sort_bar">
+          <p>Skill level</p>
+          <label class="container"
+            >Beginner
+            <input
+              onclick="sort_mid('Beginner')"
+              type="radio"
+              name="radio"
+              value="Beginner"
+            />
+            <span class="checkmark"></span>
+          </label>
+          <label class="container"
+            >Intermediate
+            <input
+              onclick="sort_mid('Intermediate')"
+              type="radio"
+              name="radio"
+            />
+            <span class="checkmark"></span>
+          </label>
+          <label class="container"
+            >Advanced
+            <input onclick="sort_mid('Advanced')" type="radio" name="radio" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div id="right_sort_bar" style="height: 400px">
+          <p>Subject</p>
+          <label class="container"
+            >Business professional
+            <input
+              onclick="sort_mid_name('Business professional')"
+              type="radio"
+              name="radio"
+              value="Beginner"
+            />
+            <span class="checkmark"></span>
+          </label>
+          <label class="container"
+            >Data professional
+            <input
+              onclick="sort_mid_name('Data professional')"
+              type="radio"
+              name="radio"
+            />
+            <span class="checkmark"></span>
+          </label>
+          <label class="container"
+            >It ops
+            <input
+              onclick="sort_mid_name('It ops')"
+              type="radio"
+              name="radio"
+            />
+            <span class="checkmark"></span>
+          </label>
+          <label class="container"
+            >Information & cyber security
+            <input
+              onclick="sort_mid_name('Information & cyber security')"
+              type="radio"
+              name="radio"
+              value="Beginner"
+            />
+            <span class="checkmark"></span>
+          </label>
+
+          <label class="container"
+            >Manufacturing & design
+            <input
+              onclick="sort_mid_name('Manufacturing & design')"
+              type="radio"
+              name="radio"
+              value="Beginner"
+            />
+            <span class="checkmark"></span>
+          </label>
+
+          <label class="container"
+            >Software development
+            <input
+              onclick="sort_mid_name('Software development')"
+              type="radio"
+              name="radio"
+              value="Beginner"
+            />
+            <span class="checkmark"></span>
+          </label>
+
+          <label class="container"
+            >Web development
+            <input
+              onclick="sort_mid_name('Web development')"
+              type="radio"
+              name="radio"
+              value="Beginner"
+            />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </div>
+
+      <div
+        id="coures_view"
+        style="
+          width: 65%;
+          float: left;
+          height: 100%;
+          background-color: rgb(0, 0, 0);
+        "
+      ></div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-container">
+        <div>
+          <div class="footer-head">SOLUTIONS</div>
+          <div>
+            <a href="">Pluralsight Skills</a><br />
+            <a href="">Pluralsight Flow</a><br />
+            <a href="">Government</a><br />
+            <a href="">Gift of Pluralsight</a><br />
+            <a href="">View Pricing</a><br />
+            <a href="">Contact Sales</a><br />
+            <a href="">Skill up for </a><br />
+          </div>
+        </div>
+        <div>
+          <div class="footer-head">PLATFORM</div>
+          <div>
+            <a href="">Browse Library</a><br />
+            <a href="">Role IQ</a><br />
+            <a href="">Skill IQ</a><br />
+            <a href="">Iris</a><br />
+            <a href="">Authors</a><br />
+            <a href="">Professionals Services</a><br />
+            <a href="">Technology Index </a><br />
+          </div>
+        </div>
+        <div>
+          <div class="footer-head">COMPANY</div>
+          <div>
+            <a href="">About Us</a><br />
+            <a href="">Customer Stories</a><br />
+            <a href="">Careers</a><br />
+            <a href="">Blog</a><br />
+            <a href="">Newsroom</a><br />
+            <a href="">Resource Center</a><br />
+            <a href="">Guides</a><br />
+          </div>
+        </div>
+        <div>
+          <div class="footer-head">RESOURCES</div>
+
+          <div>
+            <a href="">Download Pluralsight</a><br />
+            <a href="">Events</a><br />
+            <a href="">Teach</a><br />
+            <a href="">Partners</a><br />
+            <a href="">Affiliate Program</a><br />
+            <a href="">PluralsightOne.org</a><br />
+            <a href="">Subscribe </a><br />
+          </div>
+        </div>
+        <div>
+          <div class="footer-head">SUPPORT</div>
+
+          <div>
+            <a href="">Contact</a><br />
+            <a href="">Help Center</a><br />
+            <a href="">IP whitelist</a><br />
+            <a href="">Sitemap</a><br />
+            <a href=""></a><br />
+            <a href=""></a><br />
+            <a href=""></a><br />
+          </div>
+        </div>
+      </div>
+      <!-- <hr> -->
+
+      <div class="footer-last-div">
+        <div class="copyright-content">
+          <span
+            ><a href=""
+              ><img
+                src="https://www.pluralsight.com/content/dam/pluralsight2/general/icons/light/ps-icon.png"
+                alt="" /></a
+          ></span>
+          <div>
+            <span
+              >Copyright © 2004 - 2021 Pluralsight LLC. All rights
+              reserved</span
+            >
+          </div>
+        </div>
+        <div class="connect">
+          <span id="terms-of-use"><a href="">Terms of Use</a></span>
+          <span id="privacy-policy"><a href="">Privacy Policy</a></span>
+          <span>
+            <a href=""
+              ><img
+                src="https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/icons/desktop/Facebook_Icon.svg"
+                alt=""
+            /></a>
+            <a href=""
+              ><img
+                src="https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/icons/desktop/Instagram_Icon.svg"
+                alt=""
+            /></a>
+            <a href=""
+              ><img
+                src="https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/icons/desktop/Twitter_Icon.svg"
+                alt=""
+            /></a>
+            <a href=""
+              ><img
+                src="https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/icons/desktop/LinkedIn_Icon.svg"
+                alt=""
+            /></a>
+            <a href=""
+              ><img
+                src="https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/icons/desktop/YouTube_Icon.svg"
+                alt=""
+            /></a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="../js/courses.js"></script>
