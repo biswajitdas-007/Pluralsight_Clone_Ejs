@@ -6,7 +6,7 @@
 
 - **[Biswajit Das](https://github.com/biswajitdas-007)**
 - **[Prajal Singh Bankoti](https://github.com/prajal-Bankoti)**
-- **[Premkumar Chanda](https://github.com/chandaprem999)**
+- **[Soumyaranjan Purohit](https://github.com/cybervirus997)**
 
 ---
 
