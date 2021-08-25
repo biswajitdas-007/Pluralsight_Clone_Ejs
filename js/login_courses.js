@@ -1,5 +1,5 @@
 "use strict";
-
+//////hello
 function productScroll() {
   let slider = document.getElementById("slider");
   let next = document.getElementsByClassName("pro-next");
