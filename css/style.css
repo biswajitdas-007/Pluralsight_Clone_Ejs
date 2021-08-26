@@ -1,4 +1,6 @@
 * {
+  left: 0;
+  right: 0;
   color: white;
   font-family: sans-serif;
 }
@@ -629,7 +631,7 @@ body {
   background-color: transparent;
   margin-bottom: 50px;
   width: 35%;
- 
+
   margin-left: 1%;
   font-family: "Secular One", sans-serif;
 }
@@ -1057,6 +1059,7 @@ footer > div a {
   flex-direction: row;
   /* margin-top: 40px; */
   margin-bottom: 50px;
+  margin-left: 3%;
 }
 .trial-includes-container > div {
   width: 100%;
@@ -1142,11 +1145,82 @@ footer > div a {
   letter-spacing: 0.5px;
   padding: 18px 34px;
 }
-.plan-div > div > h6 {
+.plan-div > div > div > div > h6 {
   font-size: 14px;
   line-height: 1.4;
-  margin-top: 40px;
+  /* margin-top: 40px; */
 }
+
+/* switch button*/
+.switch-table {
+  width: 100%;
+  padding: 0 15px;
+  text-align: center;
+  margin-bottom: 35px;
+}
+.switch-table div,
+.switch-table .custom-switch {
+  display: inline-block;
+}
+.switch-table .text-monthly,
+.switch-table .text-yearly {
+  color: #ffffff;
+  text-transform: capitalize;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+.switch-table .custom-switch {
+  height: 30px;
+  width: 70px;
+  background-color: #363636;
+  border-radius: 30px;
+  vertical-align: middle;
+  margin: 0 10px;
+  position: relative;
+  cursor: pointer;
+}
+.switch-table .toggle-switch {
+  position: absolute;
+  left: -9999px;
+}
+.switch-table .custom-switch span {
+  display: inline-block;
+  height: 27px;
+  width: 27px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  left: 2px;
+  top: 1px;
+  transition: left 0.5s ease;
+}
+#plan-details.active .switch-table .custom-switch span {
+  left: calc(100% - 25px);
+}
+/*price*/
+.price-div {
+  padding: 40px 0;
+  display: flex;
+  font-size: 25px;
+  color: #555555;
+  font-weight: 700;
+  line-height: 1;
+  overflow: hidden;
+}
+.yearly,
+.monthly {
+  display: flex;
+  /* padding: 0 30px; */
+  justify-content: center;
+  width: 100%;
+  flex-shrink: 0;
+  transition: all 0.5s ease;
+}
+#plan-details.active .yearly,
+#plan-details.active .monthly {
+  transform: translateX(-100%);
+}
+
 .opportunity {
   margin-right: 13% !important;
   height: 40px !important;
@@ -1189,22 +1263,61 @@ footer > div a {
   margin-left: 5px;
   color: #ec008c;
 }
+.border-line::before {
+  width: 30px;
+  left: -10px;
+  content: "";
+  height: 15px;
+  display: inline-block;
+  position: relative;
+  top: 10px;
+  border-top: 1px solid #363636;
+  border-left: 1px solid #363636;
+}
+.border-line::after {
+  width: 30px;
+  left: 10px;
+  content: "";
+  height: 15px;
+  display: inline-block;
+  position: relative;
+  top: 10px;
+  border-top: 1px solid #363636;
+  border-right: 1px solid #363636;
+}
+.border-line {
+  font-size: 15px !important;
+  letter-spacing: 1px !important;
+  color: #f7a614;
+  display: inline-block;
+  text-transform: uppercase;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-size: 17px;
+  line-height: 40px;
+  text-align: center;
+  white-space: nowrap;
+}
+.border-line td[colspan="3"] {
+  color: #ec008c;
+}
 .price-table {
   clear: both;
-  margin-top: 30px;
+  margin-top: 2%;
 }
 .price-table > table > tbody > tr > td:first-child,
 .price-table > table > thead > tr > td:first-child {
-  width: 39%;
-  padding: 10px;
-  padding-left: 20px;
-
-  font-size: 15px;
+  width: 37%;
+  color: white;
+  font-size: 16px;
+  padding: 5px 10px;
+  line-height: 40px;
+  font-weight: 100;
   text-align: left;
 }
-.price-table > table > tbody > tr > td:first-child > h4 {
-  font-weight: 100 !important;
-  font-size: 15px;
+.features > td {
+  font-weight: bold;
 }
 .price-table > table > tbody > tr > td {
   text-align: center;
@@ -1242,8 +1355,22 @@ footer > div a {
 .price-table > table > tbody > tr > td:last-child {
   width: 250px !important;
 }
+.price-table > table > tbody > tr:nth-child(2n + 1) {
+  background-color: #212121;
+}
 .price-table > table > tbody > tr:nth-child(2n) {
-  background-color: #1c1c1a;
+  background-color: #18181a;
+}
+.price-table > table {
+  margin-bottom: 0px !important;
+  padding-bottom: 0 !important;
+}
+.price-table > table + div {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 tr > td > img {
   height: 20px;
@@ -1665,7 +1792,6 @@ tr > td > img {
   }
   .mid_box {
     height: 910px;
-   
   }
   .left_mid_box {
     width: 100%;
@@ -1689,8 +1815,6 @@ tr > td > img {
   }
   .largeMid {
     display: block;
-  
-   
   }
   .left_mid_box_1 {
     width: 93%;
@@ -1699,7 +1823,7 @@ tr > td > img {
   .mdiv1 {
     width: 90%;
     margin-bottom: 30px;
-  border-radius: 10px;
+    border-radius: 10px;
   }
   .mdiv2 {
     float: none;
@@ -1718,9 +1842,9 @@ tr > td > img {
   }
   #h_box_1_1 {
     width: 70%;
-    
+
     font-size: 230%;
-    margin-left:45%;
+    margin-left: 45%;
     text-align: center;
     float: left;
   }
@@ -1736,26 +1860,24 @@ tr > td > img {
     width: 100%;
     height: 500px;
     margin-top: 85px;
-    background-position: right ;
-    
+    background-position: right;
   }
   #h_box_1 span {
     width: 80%;
     margin-top: -30px;
     margin-left: 50%;
-   
   }
-  #h_box_1_2{
+  #h_box_1_2 {
     margin-left: 50%;
   }
   .carousel-cell {
     width: 85%;
     height: 230px;
   }
- .copyright-content{
-   display: none;
- }
- .footer-container{
-   display: none;
- }
+  .copyright-content {
+    display: none;
+  }
+  .footer-container {
+    display: none;
+  }
 }
