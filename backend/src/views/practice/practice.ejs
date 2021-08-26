@@ -1,64 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <title>Document</title>
-      <style>
-        *
+    <style>
+        .container-fluid
         {
-            padding: 0;
-            margin: 0;
+            background-color: #181C20;
         }
-        #overview
+        .box,.row1,.row2
         {
-            width: 60vw;
-            height: 70vh;
-            margin: 3vh auto;
+            display: flex;
+            flex-flow: row;
+            border: 1px solid red;
+            padding: 3px;
         }
-        input
+        .spaceCreation
         {
-            width:66%;
-            height:50px;
-            margin-top: 4%;
-            margin-left: 16%;
-            padding-left: 1%;
-            font-size:20px;
+            width:1.67%;
         }
-        #result
+        .row1
         {
-            width: 66.9%;
-            height:70%;
-            margin-top: 1%;
-            margin-left: 16%;
-            border: 1px solid black;
-            overflow:scroll;
+            height: 65px;
+        }
+        .row1>div
+        {
+            width: 33.33%;
+            border: 1px solid red;
+        }
+        .row1>input
+        {
+            height: 80%;
+            width: 95%;
+            margin: 1% auto;
+            padding:2%;  
+        }
+        .row2>div
+        {
+            width: 25%;
+            border: 1px solid red;
+        }
+        .row2>:nth-child(3)
+        {
+           width: 50%;
+           padding: 1%;
+        }
+        .row2>:nth-child(3)>button
+        {
+            padding: 2%;
+            width: 96%;
+            height: 100%;
+        }
+        .dropdown > button
+        {
+            width: 100%;
         }
 
+        /* overlay css */
+        .rowstream
+        {
+            width: 33.33%;
+        }
+        /* overlay css */
     </style>
 </head>
 <body>
-    <h1>hello world</h1>
-    <% streams.forEach(  function(stream) {  %>
-        <li><%= stream.courseDomain_name %></li>
-    <%  })  %>
 
-    <h1></h1>
-<!--  -->
-    <div id="overview">
+    <div class="container-fluid box">
+        <div class="spaceCreation">
 
-        <!-- input box -->
-        <input type="text" oninput="throttleFunctions()" id="query">
-        
-        <!-- result box -->
-        <div id="result">
+        </div>
+        <div class="row1 col-2">
+            <div class="rowdown">
+                <p>image</p>
+            </div>
+            <div class="rowdown homebase">
+                <button onclick="off()">home</button>
+            </div>
+            <div class="rowdown">
+                <!-- dropdown -->
+                   <button onclick="on()">brwose</button>
+                <!-- dropdown -->
+            </div>
+        </div>
+
+        <div class="row1 col-5">
+
+            <input type="text">
 
         </div>
 
-    </div>
-<!--  -->
+         <div class="row2 col-2">
+            <div class="twenty">
+                path
+            </div>
+            <div class="twenty">
+                path
+            </div>
+            <div class="twenty">
+                <button>upgrade now</button>
+            </div>
+        </div>
 
+         <div class="row1 col-2">
+            <div class="userdetail">
+                notificatiobn
+            </div>
+            <div class="userdetail">
+                appps
+            </div>
+            <div class="userdetail">
+                face
+            </div>
+        </div>
+    </div>
+    <!-- overlay started -->
+    <div class="container box col-8" id="skipit">
+        <div class="rowstream">
+            <h1>EXPLORE</h1>
+            <p id="b1">Business Professional</p>
+            <p id="b2">Cloud</p>
+            <p id="b3">Data & Machine Learning</p>
+            <p id="b4">IT Ops</p>
+            <p id="b5">Security</p>
+            <p id="b6">Software Development</p>
+
+        </div>
+        <div class="rowstream">
+            <h4 id="c1"></h4>
+            <p id="c2"></p>
+            <p id="c3"></p>
+            <p id="c4"></p>
+            <p id="c5"></p>
+            <p id="c6"></p>
+            <p id="c7"></p>
+            <p id="c8"></p>
+            <p id="c9"></p>
+        </div>
+        <div class="rowstream">
+            <h4 id="d1"></h4>
+            <p id="d2"></p>
+            <p id="d3"></p>
+            <p id="d4"></p>
+            <p id="d5"></p>
+            <p id="d6"></p>
+            <p id="d7"></p>
+            <p id="d8"></p>
+            <p id="d9"></p>
+            <p id="d10"></p>
+        </div>
+    </div>
+    <!-- overlay ended -->
 </body>
 </html>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+
 
 <script>
-    
+    let a=0;
+    if(a==0)
+    {
+        off();
+    }
+    function on()
+    {   
+        a++;
+        document.getElementById("skipit").style.display="flex";
+    }
+    function off()
+    {
+        document.getElementById("skipit").style.display="none";
+    }
+///////////////// bussiness proff.///////////////////////
+    let Business=document.getElementById("b1");
+    Business.onmouseover = function() {
+
+    document.getElementById("c1").innerHTML="Business Professional";
+    ///////////////////////////////////////////////////////////////////////////    
+    document.getElementById("c2").innerHTML="office Applications";
+    let abc1=document.getElementById("c2");
+        abc1.onmouseover = function() {
+            document.getElementById("d1").innerHTML="office Applications";
+
+            document.getElementById("d2").innerHTML="Microft Acess";
+            document.getElementById("d3").innerHTML="Microsoft Excel";
+            document.getElementById("d4").innerHTML="Microsoft Office";
+            document.getElementById("d5").innerHTML="Microsoft OneDrive";
+            document.getElementById("d6").innerHTML="Microsoft OneNote";
+            document.getElementById("d7").innerHTML="Microsoft Outlook";
+            document.getElementById("d8").innerHTML="Microsoft SharePoint";
+            document.getElementById("d9").innerHTML="Microsoft Word";
+            document.getElementById("d10").innerHTML="Microsoft Yammer";
+        }
+    /////////////////////////////////////////////////////////////////////////
+    document.getElementById("c3").innerHTML="Security Awareness";
+    let abc2=document.getElementById("c3");
+        abc2.onmouseover = function() {
+            document.getElementById("d1").innerHTML="Security Awareness";
+
+            document.getElementById("d2").innerHTML="Data Security";
+            document.getElementById("d3").innerHTML="Digital Communications";
+            document.getElementById("d4").innerHTML="Mobile Device Security";
+            document.getElementById("d5").innerHTML="Personally Identificable Information";
+            document.getElementById("d6").innerHTML="Social Networking And Engg.";
+            document.getElementById("d7").innerHTML="";
+            document.getElementById("d8").innerHTML="";
+            document.getElementById("d9").innerHTML="";
+            document.getElementById("d10").innerHTML="";
+        }
+    ///////////////////////////////////////////////////////////////////////
+    document.getElementById("c4").innerHTML="";
+    document.getElementById("c5").innerHTML="";
+    document.getElementById("c6").innerHTML="";
+    document.getElementById("c7").innerHTML="";
+    document.getElementById("c8").innerHTML="";
+
+    }
+///////////////// bussiness proff.//////////////////////////////
+
+///////////////////  Cloud //////////////////////////////
+    let sec=document.getElementById("b2");
+    sec.onmouseover = function() {
+    document.getElementById("c1").innerHTML="Cloud";
+    /////////////////////////////////////////////////////////////////////////
+    document.getElementById("c2").innerHTML="Cloud Architecture & Design";
+     let abc1=document.getElementById("c2");
+        abc1.onmouseover = function() {
+            document.getElementById("d1").innerHTML="Cloud Architecture & Design";
+
+            let abc1=document.getElementById("c2");
+        abc1.onmouseover = function() {
+            document.getElementById("d1").innerHTML="Cloud Architecture & Design";
+
+            document.getElementById("d2").innerHTML="AWS Certified solutions Architecture Associate SAA-C02";
+            document.getElementById("d3").innerHTML="AWS Certified solutions Architecture Professional SAP-CO1";
+            document.getElementById("d4").innerHTML="Google Proffesional Cloud Architect";
+            document.getElementById("d5").innerHTML="Microsoft Azure Architect Design AZ-301";
+            document.getElementById("d6").innerHTML="Microsoft Azure Architect Design AZ-304";
+            document.getElementById("d7").innerHTML="Microsoft Azure Architect technologies AZ_300";
+            document.getElementById("d8").innerHTML="Microsoft Azure Architect technologies AZ_303";
+            document.getElementById("d9").innerHTML="Microsoft Azure Architect fundamentals";
+            document.getElementById("d10").innerHTML="";
+        }
+
+        }
+    ////////////////////////////////////////////////////////////////////////
+    document.getElementById("c3").innerHTML="Cloud Platforms";
+    let abc2=document.getElementById("c3");
+        abc2.onmouseover = function() {
+            document.getElementById("d1").innerHTML="Cloud Platforms";
+        }
+    ////////////////////////////////////////////////////////////////////////
+    document.getElementById("c4").innerHTML="Salesforce CRM";
+    let abc3=document.getElementById("c4");
+        abc3.onmouseover = function() {
+            document.getElementById("d1").innerHTML="Salesforce CRM";
+        }
+    ////////////////////////////////////////////////////////////////////
+    document.getElementById("c5").innerHTML="";
+    document.getElementById("c6").innerHTML="";
+    document.getElementById("c7").innerHTML="";
+    document.getElementById("c8").innerHTML="";
+    }
+////////////////////  Cloud ////////////////////////////////////////////
+    let third=document.getElementById("b3");
+    third.onmouseover = function() {
+       document.getElementById("c1").innerHTML="Data & Machine Learning";
+        document.getElementById("c2").innerHTML="Big Data";
+        document.getElementById("c3").innerHTML="Business Intelligence";
+        document.getElementById("c4").innerHTML="Data Visualization";
+        document.getElementById("c5").innerHTML="Databases";
+        document.getElementById("c6").innerHTML="Language and Libraries";
+        document.getElementById("c7").innerHTML="Machine Learning";
+        document.getElementById("c8").innerHTML="";
+    }
+///////////////////////////////////////////////////////////////////////////////
+    let fourt=document.getElementById("b4");
+    fourt.onmouseover = function() {
+        document.getElementById("c1").innerHTML="IT Ops";
+            document.getElementById("c2").innerHTML="Client OPerating Systems";
+            document.getElementById("c3").innerHTML="Collaboration Platforms";
+            document.getElementById("c4").innerHTML="Confriguration Management";
+            document.getElementById("c5").innerHTML="Containers";
+            document.getElementById("c6").innerHTML="IT Automations";
+            document.getElementById("c7").innerHTML="Network Architecture";
+            document.getElementById("c8").innerHTML="Virtualisation";
+    }
+/////////////////////////////////////////////////////////////////////////////////
+    let five=document.getElementById("b5");
+    five.onmouseover = function() {
+       document.getElementById("c1").innerHTML="Security";
+        document.getElementById("c2").innerHTML="Certifications";
+        document.getElementById("c3").innerHTML="Governance, Risks & Compliance";
+        document.getElementById("c4").innerHTML="Security Architecture & Engineering";
+        document.getElementById("c5").innerHTML="Security Operations";
+        document.getElementById("c6").innerHTML="Security Testing";
+        document.getElementById("c7").innerHTML="";
+        document.getElementById("c8").innerHTML="";
+    }
+/////////////////////////////////////////////////////////////////////////////////
+    let six=document.getElementById("b6");
+    six.onmouseover = function() {
+        document.getElementById("c1").innerHTML="Software Development";
+        document.getElementById("c2").innerHTML="Databases";
+        document.getElementById("c3").innerHTML="Game Development";
+        document.getElementById("c4").innerHTML="Mobile Development";
+        document.getElementById("c5").innerHTML="Programming Languages";
+        document.getElementById("c6").innerHTML="Web Development";
+        document.getElementById("c7").innerHTML="";
+        document.getElementById("c8").innerHTML="";
+    }
+////////////////////////////////////////////////////////////////////////////////
+
 </script>
