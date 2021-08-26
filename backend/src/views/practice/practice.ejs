@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+      <style>
+        *
+        {
+            padding: 0;
+            margin: 0;
+        }
+        #overview
+        {
+            width: 60vw;
+            height: 70vh;
+            margin: 3vh auto;
+        }
+        input
+        {
+            width:66%;
+            height:50px;
+            margin-top: 4%;
+            margin-left: 16%;
+            padding-left: 1%;
+            font-size:20px;
+        }
+        #result
+        {
+            width: 66.9%;
+            height:70%;
+            margin-top: 1%;
+            margin-left: 16%;
+            border: 1px solid black;
+            overflow:scroll;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>hello world</h1>
+    <% streams.forEach(  function(stream) {  %>
+        <li><%= stream.courseDomain_name %></li>
+    <%  })  %>
+
+    <h1></h1>
+<!--  -->
+    <div id="overview">
+
+        <!-- input box -->
+        <input type="text" oninput="throttleFunctions()" id="query">
+        
+        <!-- result box -->
+        <div id="result">
+
+        </div>
+
+    </div>
+<!--  -->
+
+</body>
+</html>
+
+<script>
+    
+</script>
