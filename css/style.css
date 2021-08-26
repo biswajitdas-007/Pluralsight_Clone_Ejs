@@ -904,7 +904,8 @@ footer > div a {
 }
 #right-side-down-img {
   position: absolute;
-  right: 40px;
+  /* right: 40px; */
+  left: 5%;
   bottom: 40px;
   text-align: center;
 }
@@ -1879,5 +1880,92 @@ tr > td > img {
   }
   .footer-container {
     display: none;
+  }
+}
+
+@media screen and (max-width: 764px) {
+  #right-side {
+    display: none;
+  }
+  #left-side {
+    width: 100%;
+  }
+  footer {
+    margin-bottom: 25%;
+  }
+  #forgot-password {
+    color: hsla(0, 0%, 100%, 0.95);
+    margin-top: 0px;
+    width: 100%;
+    margin-left: 20%;
+    letter-spacing: 0.025em;
+  }
+  #forgot-password:first-child {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  #forgot-password > div > h1 {
+    font-weight: 200;
+    font-size: 2.75rem;
+    line-height: 1.4;
+    width: 60%;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 40px;
+    letter-spacing: 0.025em;
+    font-family: Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  }
+  #forgot-password > div > p {
+    line-height: 1.4;
+    letter-spacing: 0.025em;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    text-align: left;
+    width: 50%;
+  }
+  #forgot-passwd-image {
+    height: 80px;
+    margin-top: 10%;
+    font-size: 14px;
+    margin-bottom: 60px;
+  }
+  #forgot-passwd-div > input {
+    width: 100%;
+    border-radius: 3px;
+  }
+  #forgot-container {
+    display: inline-block;
+    height: 100%;
+    text-align: left;
+    padding-bottom: 80px;
+  }
+  #forgot-passwd-div > label {
+    display: flex;
+    color: hsla(0, 0%, 100%, 0.95);
+    padding-bottom: 0px;
+    font-size: 16px;
+    margin: 0px;
+    text-align: left !important;
+  }
+  #forgot-passwd-div > button {
+    width: 100%;
+  }
+  #forgot-passwd-form {
+    margin-top: 0px !important;
+  }
+  #forgot-passwd-div > p {
+    width: 250px;
+    line-height: 1.6;
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: 0.025em;
+  }
+  #forgot-passwd-div > p > a {
+    letter-spacing: 0.025em;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #2ea0d6;
+    text-decoration: none;
   }
 }
