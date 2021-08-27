@@ -12,15 +12,20 @@
     {
       overflow-x: hidden;
     }
+    
     .container-fluid,body
         {
             background-color: rgb(13,15,18)
         }
+        .box
+    {
+      background-color:rgb(0, 0, 0);
+    }
         .box,.row1,.row2
         {
             display: flex;
             flex-flow: row;
-            border: 1px solid red;
+            
             padding: 3px;
         }
         .spaceCreation
@@ -34,7 +39,7 @@
         .row1>div
         {
             width: 33.33%;
-            border: 1px solid red;
+            /* border: 1px solid red; */
         }
         .row1>input
         {
@@ -46,7 +51,7 @@
         .row2>div
         {
             width: 25%;
-            border: 1px solid red;
+            /* border: 1px solid red; */
         }
         .row2>:nth-child(3)
         {
@@ -66,6 +71,20 @@
         .rowstream
         {
             width: 33.33%;
+        }
+        .rowdown>img
+        {
+          width:60px;
+        }
+        .rowdown>button>img
+        {
+          width:55px;
+        }
+        .rowdown>button
+        {
+          border: transparent;
+          background-color: black;
+          color: white;
         }
     /* navbar ends */
         
@@ -226,14 +245,14 @@
         </div>
         <div class="row1 col-2">
             <div class="rowdown">
-                <p>image</p>
+                <img src="https://i.pinimg.com/280x280_RS/a7/cc/a9/a7cca931e3d796de2962d6ce0659a51b.jpg" alt="">
             </div>
             <div class="rowdown homebase">
-                <button onclick="off()">home</button>
+                <button onclick="off()"><img src="https://icon-library.com/images/home-logo-icon/home-logo-icon-0.jpg" alt=""></button>
             </div>
             <div class="rowdown">
                 <!-- dropdown -->
-                   <button onclick="on()">brwose</button>
+                   <button onclick="on()"><img src="https://www.svgimages.com/svg-image/s8/download-folder-icon-grey.svg" alt=""></button>
                 <!-- dropdown -->
             </div>
         </div>
@@ -252,7 +271,7 @@
                 path
             </div>
             <div class="twenty">
-                <button>upgrade now</button>
+                <button class="btn btn-primary">upgrade now</button>
             </div>
         </div>
 
