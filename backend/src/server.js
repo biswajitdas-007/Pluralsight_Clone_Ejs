@@ -6,6 +6,7 @@ const connect = require("./configs/db");
 const streamController = require("./controllers/stream.controller");
 const subStreamController = require("./controllers/substream.controller");
 const courseDomainController = require("./controllers/coursedomain.controller");
+const videoHeadController = require("./controllers/videoHead.controller");
 
 const app = express();
 app.use(express.json());
@@ -27,7 +28,7 @@ app.set("view engine", "ejs");         // this is telling us which engine we wan
 app.use("/stream",streamController)
 app.use("/substream", subStreamController)
 app.use("/coursedomain", courseDomainController)
-
+app.use("/videoHead", videoHeadController)
 
 
 

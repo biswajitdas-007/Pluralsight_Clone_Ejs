@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <title>Filter</title>
+  <style>
+    /* navabar starts */
+    body
+    {
+      overflow-x: hidden;
+    }
+    .container-fluid,body
+        {
+            background-color: rgb(13,15,18)
+        }
+        .box,.row1,.row2
+        {
+            display: flex;
+            flex-flow: row;
+            border: 1px solid red;
+            padding: 3px;
+        }
+        .spaceCreation
+        {
+            width:1.67%;
+        }
+        .row1
+        {
+            height: 65px;
+        }
+        .row1>div
+        {
+            width: 33.33%;
+            border: 1px solid red;
+        }
+        .row1>input
+        {
+            height: 80%;
+            width: 95%;
+            margin: 1% auto;
+            padding:2%;  
+        }
+        .row2>div
+        {
+            width: 25%;
+            border: 1px solid red;
+        }
+        .row2>:nth-child(3)
+        {
+           width: 50%;
+           padding: 1%;
+        }
+        .row2>:nth-child(3)>button
+        {
+            padding: 2%;
+            width: 96%;
+            height: 100%;
+        }
+        .dropdown > button
+        {
+            width: 100%;
+        }
+        .rowstream
+        {
+            width: 33.33%;
+        }
+    /* navbar ends */
+        
+        /* checkbox ends */
+    .lines
+    {
+      border: 1px solid red;
+      color:beige;
+    }
+    .flexbox
+    {
+      display: flex;
+      flex-flow: row;
+    }
+    #headTag
+    {
+          font-size: 18px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 48px;
+    overflow-wrap: break-word;
+    -webkit-box-direction: normal;
+    --hoverColor: #f2f2f2;
+    }
+    #headTagDyanamic
+    {
+          font-size: 36px;
+    line-height: 48px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.95);
+    overflow-wrap: break-word;
+    -webkit-box-direction: normal;
+    --hoverColor: #f2f2f2;
+    }
+    #topBox
+    {
+      margin-top:30px;
+    }
+    .filterbox
+    {
+      margin-top: 0.4em;
+      color: white;
+    background-color: rgb(24, 28, 32);
+    margin-bottom: 16px;
+    width: 24%;
+    }
+    .filterHeadText
+    {
+      padding-left: 1em;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    }
+    .filterHeadTextup
+    {
+      padding-top: 0.8em;
+      padding-left: 1em;
+          color: rgb(255, 255, 255);
+    line-height: 21px;
+    font-size: 18px;
+    }
+    .content-type-one
+    {
+      display: flex;
+      flex-flow: column;
+    }
+    .btnToradio
+    {
+      width:60% ;
+      margin:1px;
+      margin-left: 1em;
+      border: transparent;
+    }
+    #juggaddata
+    {
+      width: 4%;
+    }
+    .adjustment
+    {
+      width: 95%;
+    }
+    .flexboxjug
+    {
+      display: flex;
+      flex-flow: row;
+    }
+    .smallestdiv
+    {
+      display: flex;
+      flex-flow: row;
+    }
+    .bademiyan
+    {
+
+    }
+    .notesicon>img,.notifier>img
+    {
+      width: 60px;
+    }
+    #mainData>div
+    {
+      border: 1px solid red;
+      display: flex;
+      flex-flow:row ;
+    }
+     #mainData>div>div:nth-child(1)>img
+     {
+       width: 80px;
+       padding: 8px;
+     }
+     #mainData>div>div:nth-child(2)>div:nth-child(1)
+     {
+        padding: 5px;
+     }
+     #mainData>div>div:nth-child(2)>div:nth-child(1)>p:nth-child(1)
+     {
+           color: rgba(255, 255, 255, 0.7);
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.06em;
+        line-height: 14px;
+        margin-bottom: 8px;
+        text-transform: uppercase;
+        order: -1;
+     }
+     #mainData>div>div:nth-child(2)>div:nth-child(1)>p:nth-child(2)
+     {
+            font-weight: 500;
+          font-size: 18px;
+          line-height: 24px;
+          margin-bottom: 6px;
+              color: -webkit-link;
+          cursor: pointer;
+          text-decoration: underline;
+          color: #f2f2f2;
+     }
+     #mainData>div>div:nth-child(2)>div:nth-child(1)>p:nth-child(3)
+     {
+                color: rgba(255, 255, 255, 0.7);
+    font-family: "PS TT Commons Roman", "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+     }
+      
+  </style>
+</head>
+<body>
+  
+  <div class="container-fluid">
+    <!-- navbar started -->
+     <div class="container-fluid box">
+        <div class="spaceCreation">
+
+        </div>
+        <div class="row1 col-2">
+            <div class="rowdown">
+                <p>image</p>
+            </div>
+            <div class="rowdown homebase">
+                <button onclick="off()">home</button>
+            </div>
+            <div class="rowdown">
+                <!-- dropdown -->
+                   <button onclick="on()">brwose</button>
+                <!-- dropdown -->
+            </div>
+        </div>
+
+        <div class="row1 col-5">
+
+            <input type="text">
+
+        </div>
+
+         <div class="row2 col-2">
+            <div class="twenty">
+                path
+            </div>
+            <div class="twenty">
+                path
+            </div>
+            <div class="twenty">
+                <button>upgrade now</button>
+            </div>
+        </div>
+
+         <div class="row1 col-2">
+            <div class="userdetail">
+                notificatiobn
+            </div>
+            <div class="userdetail">
+                appps
+            </div>
+            <div class="userdetail">
+                face
+            </div>
+        </div>
+    </div>
+    <!-- overlay started -->
+    <div class="container box col-8" id="skipit" style="position: absolute; left: 13vw;">
+        <div class="rowstream">
+            <h1>EXPLORE</h1>
+            <p id="b1">Business Professional</p>
+            <p id="b2">Cloud</p>
+            <p id="b3">Data & Machine Learning</p>
+            <p id="b4">IT Ops</p>
+            <p id="b5">Security</p>
+            <p id="b6">Software Development</p>
+
+        </div>
+        <div class="rowstream">
+            <h4 id="c1"></h4>
+            <p id="c2"></p>
+            <p id="c3"></p>
+            <p id="c4"></p>
+            <p id="c5"></p>
+            <p id="c6"></p>
+            <p id="c7"></p>
+            <p id="c8"></p>
+            <p id="c9"></p>
+        </div>
+        <div class="rowstream">
+            <h4 id="d1"></h4>
+            <p id="d2"></p>
+            <p id="d3"></p>
+            <p id="d4"></p>
+            <p id="d5"></p>
+            <p id="d6"></p>
+            <p id="d7"></p>
+            <p id="d8"></p>
+            <p id="d9"></p>
+            <p id="d10"></p>
+        </div>
+    </div>
+    <!-- navbar ended -->
+
+    <div class="container-fluid">
+
+      <div class="col-11 " id="topBox">
+        <p id="headTag">Showing search results for:</p>
+        <p id="headTagDyanamic">‘Microsoft Access’</p>
+      </div>
+
+      <div class="col-11 flexbox">
+
+        <div class="col-3 filterbox">
+          
+          <p class="filterHeadTextup">Filters</p>
+
+          <hr>
+
+          <div>
+            <p class="filterHeadText" onclick="dropkar()">Content Type</p>
+            
+            <div class="content-type-one">
+              <button class="btnToradio">Conferences</button>
+              <button class="btnToradio" onclick="videosSC()">Video Courses</button>
+              <button class="btnToradio">Demos</button>
+              <button class="btnToradio" onclick="guides()">Guides</button>
+              <button class="btnToradio">Interactive Courses</button>
+              <button class="btnToradio">Projects</button>
+              <button class="btnToradio" onclick="Webinars()">Webinars</button>
+              
+              
+            </div>
+
+            <hr>
+            <p class="filterHeadText">Level</p>
+            <div class="content-type-one">
+
+              <button class="btnToradio" onclick="begin()">Beginners</button>
+              <button class="btnToradio" onclick="inter()">Intermediate</button>
+              <button class="btnToradio" onclick="advnc()" style="margin-bottom: 0.9em;">Advances</button>
+              
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="col-1" id="juggaddata">
+          
+        </div>
+
+        <div class="col-9 adjustment">
+
+          <div class="flexboxjug">
+            <div class="lines">  <!--  separate box -->
+              <!-- start -->
+              <div class="smallestdiv">
+                  <div class="notesicon">
+                    <img src="https://pluralsight2.imgix.net/paths/images/comptia-project-7fea631277.png" alt="">
+                  </div>
+                  <div class="addition">
+                    hello
+                  </div>
+                   <div class="notifier">
+                    <img src="https://pluralsight2.imgix.net/paths/images/comptia-project-7fea631277.png" alt="">
+                  </div>
+              </div>
+              <div class="bademiyan">
+                <p>path</p>
+                <p>Using Microsoft Office 2016</p>
+                <p>Includes: Skill Assessment</p>
+              </div>
+              <!-- ends -->
+            </div>
+            <div class="lines">   <!--  separate box -->
+              <!-- strat -->
+              <div class="smallestdiv">
+                  <div class="notesicon">
+                    <img src="https://pluralsight2.imgix.net/paths/images/comptia-project-7fea631277.png" alt="">
+                  </div>
+                  <div class="addition">
+                    hello
+                  </div>
+                   <div class="notifier">
+                    <img src="https://pluralsight2.imgix.net/paths/images/comptia-project-7fea631277.png" alt="">
+                  </div>
+              </div>
+              <div class="bademiyan">
+                <p>path</p>
+                <p>Using Microsoft Office 2016</p>
+                <p>Includes: Skill Assessment</p>
+              </div>
+              <!-- exit -->
+            </div>
+          </div>
+
+          <div class="resultBox lines">
+            <p>217 results</p>
+          </div>
+          <div class="col-9 lines" id="mainData">
+          <!-- data to be fetced -->
+          </div>
+
+        </div>
+       
+
+      </div>
+
+    </div>
+
+  </div>
+  
+
+
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+
+<script>
+   let a=0;
+    if(a==0)
+    {
+        off();
+    }
+    function on()
+    {   
+        a++;
+        document.getElementById("skipit").style.display="flex";
+    }
+    function off()
+    {
+        document.getElementById("skipit").style.display="none";
+    }
+///////////////// bussiness proff.///////////////////////
+    let Business=document.getElementById("b1");
+    Business.onmouseover = function() {
+
+    document.getElementById("c1").innerHTML="Business Professional";
+    ///////////////////////////////////////////////////////////////////////////    
+    document.getElementById("c2").innerHTML="office Applications";
+    let abc1=document.getElementById("c2");
+        abc1.onmouseover = function() {
+            document.getElementById("d1").innerHTML="office Applications";
+
+            document.getElementById("d2").innerHTML="Microft Acess";
+            document.getElementById("d3").innerHTML="Microsoft Excel";
+            document.getElementById("d4").innerHTML="Microsoft Office";
+            document.getElementById("d5").innerHTML="Microsoft OneDrive";
+            document.getElementById("d6").innerHTML="Microsoft OneNote";
+            document.getElementById("d7").innerHTML="Microsoft Outlook";
+            document.getElementById("d8").innerHTML="Microsoft SharePoint";
+            document.getElementById("d9").innerHTML="Microsoft Word";
+            document.getElementById("d10").innerHTML="Microsoft Yammer";
+        }
+    /////////////////////////////////////////////////////////////////////////
+    document.getElementById("c3").innerHTML="Security Awareness";
+    let abc2=document.getElementById("c3");
+        abc2.onmouseover = function() {
+            document.getElementById("d1").innerHTML="Security Awareness";
+
+            document.getElementById("d2").innerHTML="Data Security";
+            document.getElementById("d3").innerHTML="Digital Communications";
+            document.getElementById("d4").innerHTML="Mobile Device Security";
+            document.getElementById("d5").innerHTML="Personally Identificable Information";
+            document.getElementById("d6").innerHTML="Social Networking And Engg.";
+            document.getElementById("d7").innerHTML="";
+            document.getElementById("d8").innerHTML="";
+            document.getElementById("d9").innerHTML="";
+            document.getElementById("d10").innerHTML="";
+        }
+    ///////////////////////////////////////////////////////////////////////
+    document.getElementById("c4").innerHTML="";
+    document.getElementById("c5").innerHTML="";
+    document.getElementById("c6").innerHTML="";
+    document.getElementById("c7").innerHTML="";
+    document.getElementById("c8").innerHTML="";
+
+    }
+///////////////// bussiness proff.//////////////////////////////
+
+///////////////////  Cloud //////////////////////////////
+    let sec=document.getElementById("b2");
+    sec.onmouseover = function() {
+    document.getElementById("c1").innerHTML="Cloud";
+    /////////////////////////////////////////////////////////////////////////
+    document.getElementById("c2").innerHTML="Cloud Architecture & Design";
+     let abc1=document.getElementById("c2");
+        abc1.onmouseover = function() {
+            document.getElementById("d1").innerHTML="Cloud Architecture & Design";
+
+            let abc1=document.getElementById("c2");
+        abc1.onmouseover = function() {
+            document.getElementById("d1").innerHTML="Cloud Architecture & Design";
+
+            document.getElementById("d2").innerHTML="AWS Certified solutions Architecture Associate SAA-C02";
+            document.getElementById("d3").innerHTML="AWS Certified solutions Architecture Professional SAP-CO1";
+            document.getElementById("d4").innerHTML="Google Proffesional Cloud Architect";
+            document.getElementById("d5").innerHTML="Microsoft Azure Architect Design AZ-301";
+            document.getElementById("d6").innerHTML="Microsoft Azure Architect Design AZ-304";
+            document.getElementById("d7").innerHTML="Microsoft Azure Architect technologies AZ_300";
+            document.getElementById("d8").innerHTML="Microsoft Azure Architect technologies AZ_303";
+            document.getElementById("d9").innerHTML="Microsoft Azure Architect fundamentals";
+            document.getElementById("d10").innerHTML="";
+        }
+
+        }
+    ////////////////////////////////////////////////////////////////////////
+    document.getElementById("c3").innerHTML="Cloud Platforms";
+    let abc2=document.getElementById("c3");
+        abc2.onmouseover = function() {
+            document.getElementById("d1").innerHTML="Cloud Platforms";
+        }
+    ////////////////////////////////////////////////////////////////////////
+    document.getElementById("c4").innerHTML="Salesforce CRM";
+    let abc3=document.getElementById("c4");
+        abc3.onmouseover = function() {
+            document.getElementById("d1").innerHTML="Salesforce CRM";
+        }
+    ////////////////////////////////////////////////////////////////////
+    document.getElementById("c5").innerHTML="";
+    document.getElementById("c6").innerHTML="";
+    document.getElementById("c7").innerHTML="";
+    document.getElementById("c8").innerHTML="";
+    }
+////////////////////  Cloud ////////////////////////////////////////////
+    let third=document.getElementById("b3");
+    third.onmouseover = function() {
+       document.getElementById("c1").innerHTML="Data & Machine Learning";
+        document.getElementById("c2").innerHTML="Big Data";
+        document.getElementById("c3").innerHTML="Business Intelligence";
+        document.getElementById("c4").innerHTML="Data Visualization";
+        document.getElementById("c5").innerHTML="Databases";
+        document.getElementById("c6").innerHTML="Language and Libraries";
+        document.getElementById("c7").innerHTML="Machine Learning";
+        document.getElementById("c8").innerHTML="";
+    }
+///////////////////////////////////////////////////////////////////////////////
+    let fourt=document.getElementById("b4");
+    fourt.onmouseover = function() {
+        document.getElementById("c1").innerHTML="IT Ops";
+            document.getElementById("c2").innerHTML="Client OPerating Systems";
+            document.getElementById("c3").innerHTML="Collaboration Platforms";
+            document.getElementById("c4").innerHTML="Confriguration Management";
+            document.getElementById("c5").innerHTML="Containers";
+            document.getElementById("c6").innerHTML="IT Automations";
+            document.getElementById("c7").innerHTML="Network Architecture";
+            document.getElementById("c8").innerHTML="Virtualisation";
+    }
+/////////////////////////////////////////////////////////////////////////////////
+    let five=document.getElementById("b5");
+    five.onmouseover = function() {
+       document.getElementById("c1").innerHTML="Security";
+        document.getElementById("c2").innerHTML="Certifications";
+        document.getElementById("c3").innerHTML="Governance, Risks & Compliance";
+        document.getElementById("c4").innerHTML="Security Architecture & Engineering";
+        document.getElementById("c5").innerHTML="Security Operations";
+        document.getElementById("c6").innerHTML="Security Testing";
+        document.getElementById("c7").innerHTML="";
+        document.getElementById("c8").innerHTML="";
+    }
+/////////////////////////////////////////////////////////////////////////////////
+    let six=document.getElementById("b6");
+    six.onmouseover = function() {
+        document.getElementById("c1").innerHTML="Software Development";
+        document.getElementById("c2").innerHTML="Databases";
+        document.getElementById("c3").innerHTML="Game Development";
+        document.getElementById("c4").innerHTML="Mobile Development";
+        document.getElementById("c5").innerHTML="Programming Languages";
+        document.getElementById("c6").innerHTML="Web Development";
+        document.getElementById("c7").innerHTML="";
+        document.getElementById("c8").innerHTML="";
+    }
+////////////////////////////////////////////////////////////////////////////////
+
+////////////dom part //////////////////////
+
+    let x= '<%- JSON.stringify(videos) %>';
+    let z=JSON.parse(x);
+    console.log(z)
+    let y=document.getElementById("mainData");
+
+    function Webinars(){
+      y.innerHTML=null;
+        z.forEach((el)=>{
+          if(el.contentType=="Webinars"){
+            let maindiv=document.createElement("div");
+
+            let imageDiv=document.createElement("div");
+            let namePart=document.createElement("div");
+
+            let kaamMehanat=document.createElement("div");
+            let jydaMehanat=document.createElement("div");
+
+            let imageDivpic=document.createElement("img");
+            imageDivpic.src="https://image.shutterstock.com/image-vector/line-play-button-icon-illustration-260nw-1044448477.jpg"
+
+            imageDiv.appendChild(imageDivpic);
+            
+          let contentType1=document.createElement("p");
+          contentType1.innerHTML=el.contentType;
+          let courseName1=document.createElement("p");
+          courseName1.innerHTML=el.courseName;
+          let author1=document.createElement("p");
+          author1.innerHTML="by"+el.author;
+
+
+          let dateOfCourse1=document.createElement("p");
+          dateOfCourse1.innerHTML=el.dateOfCourse +" ..... "+el.difficulty+"...... "+el.rating+" ...... "+el.duration;
+          // let difficulty1=document.createElement("p");
+          // difficulty1.innerHTML=el.difficulty;
+          // let rating1=document.createElement("p");
+          // rating1.innerHTML=el.rating;
+          // let duration1=document.createElement("p");
+          // duration1.innerHTML=el.duration;
+          
+          kaamMehanat.append(contentType1,courseName1,author1);
+          jydaMehanat.append(dateOfCourse1);     // ,difficulty1,rating1,duration1
+          namePart.append(kaamMehanat,jydaMehanat);
+          maindiv.append(imageDiv,namePart);
+          y.append(maindiv);
+          }
+        })
+    }
+
+    function videosSC(){
+      y.innerHTML=null;
+        z.forEach((el)=>{
+          if(el.contentType=="VIDEO COURSE"){
+          ////////////////////////////////////
+            let maindiv=document.createElement("div");
+
+            let imageDiv=document.createElement("div");
+            let namePart=document.createElement("div");
+
+            let kaamMehanat=document.createElement("div");
+            let jydaMehanat=document.createElement("div");
+
+            let imageDivpic=document.createElement("img");
+            imageDivpic.src="https://image.shutterstock.com/image-vector/line-play-button-icon-illustration-260nw-1044448477.jpg"
+
+            imageDiv.appendChild(imageDivpic);
+            
+          let contentType1=document.createElement("p");
+          contentType1.innerHTML=el.contentType;
+          let courseName1=document.createElement("p");
+          courseName1.innerHTML=el.courseName;
+          let author1=document.createElement("p");
+          author1.innerHTML="by"+el.author;
+
+
+          let dateOfCourse1=document.createElement("p");
+          dateOfCourse1.innerHTML=el.dateOfCourse +" ..... "+el.difficulty+"...... "+el.rating+" ...... "+el.duration;
+          // let difficulty1=document.createElement("p");
+          // difficulty1.innerHTML=el.difficulty;
+          // let rating1=document.createElement("p");
+          // rating1.innerHTML=el.rating;
+          // let duration1=document.createElement("p");
+          // duration1.innerHTML=el.duration;
+          
+          kaamMehanat.append(contentType1,courseName1,author1);
+          jydaMehanat.append(dateOfCourse1);     // ,difficulty1,rating1,duration1
+          namePart.append(kaamMehanat,jydaMehanat);
+          maindiv.append(imageDiv,namePart);
+          y.append(maindiv);
+
+
+          ///////////////////////////////////
+          }
+        })
+    }
+
+    function guides(){
+      y.innerHTML=null;
+        z.forEach((el)=>{
+          if(el.contentType=="Guides"){
+                    ////////////////////////////////////
+            let maindiv=document.createElement("div");
+
+            let imageDiv=document.createElement("div");
+            let namePart=document.createElement("div");
+
+            let kaamMehanat=document.createElement("div");
+            let jydaMehanat=document.createElement("div");
+
+            let imageDivpic=document.createElement("img");
+            imageDivpic.src="https://image.shutterstock.com/image-vector/line-play-button-icon-illustration-260nw-1044448477.jpg"
+
+            imageDiv.appendChild(imageDivpic);
+            
+          let contentType1=document.createElement("p");
+          contentType1.innerHTML=el.contentType;
+          let courseName1=document.createElement("p");
+          courseName1.innerHTML=el.courseName;
+          let author1=document.createElement("p");
+          author1.innerHTML="by"+el.author;
+
+
+          let dateOfCourse1=document.createElement("p");
+          dateOfCourse1.innerHTML=el.dateOfCourse +" ..... "+el.difficulty+"...... "+el.rating+" ...... "+el.duration;
+          // let difficulty1=document.createElement("p");
+          // difficulty1.innerHTML=el.difficulty;
+          // let rating1=document.createElement("p");
+          // rating1.innerHTML=el.rating;
+          // let duration1=document.createElement("p");
+          // duration1.innerHTML=el.duration;
+          
+          kaamMehanat.append(contentType1,courseName1,author1);
+          jydaMehanat.append(dateOfCourse1);     // ,difficulty1,rating1,duration1
+          namePart.append(kaamMehanat,jydaMehanat);
+          maindiv.append(imageDiv,namePart);
+          y.append(maindiv);
+
+
+          ///////////////////////////////////
+          }
+        })
+    }
+
+
+    function begin(){
+      y.innerHTML=null;
+        z.forEach((el)=>{
+          if(el.difficulty=="Beginner"){
+                    ////////////////////////////////////
+            let maindiv=document.createElement("div");
+
+            let imageDiv=document.createElement("div");
+            let namePart=document.createElement("div");
+
+            let kaamMehanat=document.createElement("div");
+            let jydaMehanat=document.createElement("div");
+
+            let imageDivpic=document.createElement("img");
+            imageDivpic.src="https://image.shutterstock.com/image-vector/line-play-button-icon-illustration-260nw-1044448477.jpg"
+
+            imageDiv.appendChild(imageDivpic);
+            
+          let contentType1=document.createElement("p");
+          contentType1.innerHTML=el.contentType;
+          let courseName1=document.createElement("p");
+          courseName1.innerHTML=el.courseName;
+          let author1=document.createElement("p");
+          author1.innerHTML="by"+el.author;
+
+
+          let dateOfCourse1=document.createElement("p");
+          dateOfCourse1.innerHTML=el.dateOfCourse +" ..... "+el.difficulty+"...... "+el.rating+" ...... "+el.duration;
+          // let difficulty1=document.createElement("p");
+          // difficulty1.innerHTML=el.difficulty;
+          // let rating1=document.createElement("p");
+          // rating1.innerHTML=el.rating;
+          // let duration1=document.createElement("p");
+          // duration1.innerHTML=el.duration;
+          
+          kaamMehanat.append(contentType1,courseName1,author1);
+          jydaMehanat.append(dateOfCourse1);     // ,difficulty1,rating1,duration1
+          namePart.append(kaamMehanat,jydaMehanat);
+          maindiv.append(imageDiv,namePart);
+          y.append(maindiv);
+
+
+          ///////////////////////////////////
+          }
+        })
+    }
+    function inter(){
+      y.innerHTML=null;
+       z.forEach((el)=>{
+          if(el.difficulty=="Intermediate"){
+                   ////////////////////////////////////
+            let maindiv=document.createElement("div");
+
+            let imageDiv=document.createElement("div");
+            let namePart=document.createElement("div");
+
+            let kaamMehanat=document.createElement("div");
+            let jydaMehanat=document.createElement("div");
+
+            let imageDivpic=document.createElement("img");
+            imageDivpic.src="https://image.shutterstock.com/image-vector/line-play-button-icon-illustration-260nw-1044448477.jpg"
+
+            imageDiv.appendChild(imageDivpic);
+            
+          let contentType1=document.createElement("p");
+          contentType1.innerHTML=el.contentType;
+          let courseName1=document.createElement("p");
+          courseName1.innerHTML=el.courseName;
+          let author1=document.createElement("p");
+          author1.innerHTML="by"+el.author;
+
+
+          let dateOfCourse1=document.createElement("p");
+          dateOfCourse1.innerHTML=el.dateOfCourse +" ..... "+el.difficulty+"...... "+el.rating+" ...... "+el.duration;
+          // let difficulty1=document.createElement("p");
+          // difficulty1.innerHTML=el.difficulty;
+          // let rating1=document.createElement("p");
+          // rating1.innerHTML=el.rating;
+          // let duration1=document.createElement("p");
+          // duration1.innerHTML=el.duration;
+          
+          kaamMehanat.append(contentType1,courseName1,author1);
+          jydaMehanat.append(dateOfCourse1);     // ,difficulty1,rating1,duration1
+          namePart.append(kaamMehanat,jydaMehanat);
+          maindiv.append(imageDiv,namePart);
+          y.append(maindiv);
+
+
+          ///////////////////////////////////
+          }
+        })
+    }
+    function advnc(){
+      y.innerHTML=null;
+       z.forEach((el)=>{
+          if(el.difficulty=="Advance"){
+                    ////////////////////////////////////
+            let maindiv=document.createElement("div");
+
+            let imageDiv=document.createElement("div");
+            let namePart=document.createElement("div");
+
+            let kaamMehanat=document.createElement("div");
+            let jydaMehanat=document.createElement("div");
+
+            let imageDivpic=document.createElement("img");
+            imageDivpic.src="https://image.shutterstock.com/image-vector/line-play-button-icon-illustration-260nw-1044448477.jpg"
+
+            imageDiv.appendChild(imageDivpic);
+            
+          let contentType1=document.createElement("p");
+          contentType1.innerHTML=el.contentType;
+          let courseName1=document.createElement("p");
+          courseName1.innerHTML=el.courseName;
+          let author1=document.createElement("p");
+          author1.innerHTML="by"+el.author;
+
+
+          let dateOfCourse1=document.createElement("p");
+          dateOfCourse1.innerHTML=el.dateOfCourse +" ..... "+el.difficulty+"...... "+el.rating+" ...... "+el.duration;
+          // let difficulty1=document.createElement("p");
+          // difficulty1.innerHTML=el.difficulty;
+          // let rating1=document.createElement("p");
+          // rating1.innerHTML=el.rating;
+          // let duration1=document.createElement("p");
+          // duration1.innerHTML=el.duration;
+          
+          kaamMehanat.append(contentType1,courseName1,author1);
+          jydaMehanat.append(dateOfCourse1);     // ,difficulty1,rating1,duration1
+          namePart.append(kaamMehanat,jydaMehanat);
+          maindiv.append(imageDiv,namePart);
+          y.append(maindiv);
+
+
+          ///////////////////////////////////
+          }
+        })
+    }
+  
+
+//////////// filter drop down ??????
+
+
+
+</script>

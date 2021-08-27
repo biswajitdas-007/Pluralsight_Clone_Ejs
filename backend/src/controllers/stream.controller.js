@@ -11,6 +11,7 @@ router.get("/", async function (req, res) {
     } catch (error) {
         return res.status(400).send(error.message);
     }
+    
 });
 /////////////////////////////////////////////////////////////////
 router.get("/checking", async function (req, res) {
@@ -23,6 +24,7 @@ router.get("/checking", async function (req, res) {
         return res.status(400).send(error.message);
     }
 });
+
 //////////////////////////////////////////////////////////////
 router.post("/", async function (req, res) {
      try {
