@@ -60,11 +60,39 @@ router.get("/home", async function (req, res) {
   });
 });
 
+/////////////////////////////////////////////////////
 router.get("/payment_successful", async function (req, res) {
   const pageTitle = "Welcome to Users page";
   return res.render("users/payment_successful", {
      pageTitle,
   });
 });
+////////////////////////////////////////////
+router.get("/forgotPassword", async function (req, res) {
+  const pageTitle = "Welcome to Users page";
+  return res.render("users/forgotPassword", {
+     pageTitle,
+  });
+});
+
+///////////////////////////////////////////////
+
+router.get("/signInWithCompany", async function (req, res) {
+  const pageTitle = "Welcome to Users page";
+  return res.render("users/signInWithCompany", {
+     pageTitle,
+  });
+});
+
+//////////////////////////////////////////////
+
+router.get("/courses", async function (req, res) {
+  const pageTitle = "Welcome to Users page";
+  return res.render("users/courses", {
+     pageTitle,
+  });
+});
+
+
 
 module.exports = router;
