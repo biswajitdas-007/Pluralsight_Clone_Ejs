@@ -1236,7 +1236,7 @@
         <hr />
 
         <div>
-          <button onclick="check()">Continue</button>
+          <button  onclick="window.location.href='/users/payment_successful'" >Continue</button>
         </div>
       </div>
     </div>
@@ -1244,11 +1244,11 @@
 </html>
 <script>
   console.log(window.location.href)
-  if(window.location.href=="http://localhost:3251/users/create?first_name=Dheeraj&last_name=Bisht&email=dheeraj@bisht.com"){
-    document.getElementById("text").style.display="none"
+  if(document.getElementById("text").innerText=="Email is already in databse"){
+    document.getElementById("text").style.display="block"
     console.log("kkk")
   }
-
+  
   function check(e) {
     e.preventDefault();
     var terms_policy = document.getElementById("terms-policy");
@@ -1338,7 +1338,6 @@
             data[data.length - 1].country;
           document.getElementById("password1").value =
             data[data.length - 1].password;
-          //window.open("payment.html");
         } else {
           alert("You missed terms and conditions!");
         }
@@ -1376,7 +1375,7 @@
       document.getElementById("number5").style.color = "white";
       document.getElementById("number4").style.backgroundColor =
         "rgb(136, 136, 136)";
-      //  window.open("payment_successful.html");
+      
     }
   }
 

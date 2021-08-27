@@ -32,20 +32,37 @@ router.post("", async function (req, res) {
   } 
 });
 
+//////////////////////////////////////////
 router.get("", async function (req, res) {
   const users = await User.find().lean().exec();
-
   const pageTitle = "Welcome to Users page";
   return res.render("users/allUsers", {
     users: users,
     pageTitle,
   });
 });
+
+//////////////////////////////////////////
 router.get("/create", async function (req, res) {
   const users = await User.find().lean().exec();
 console.log(users[users.length-1]);
   const pageTitle = "Welcome to Users page";
   return res.render("users/addUser", {
+     pageTitle,
+  });
+});
+
+///////////////////////////////////////////////
+router.get("/home", async function (req, res) {
+  const pageTitle = "Welcome to Users page";
+  return res.render("users/home", {
+     pageTitle,
+  });
+});
+
+router.get("/payment_successful", async function (req, res) {
+  const pageTitle = "Welcome to Users page";
+  return res.render("users/payment_successful", {
      pageTitle,
   });
 });
