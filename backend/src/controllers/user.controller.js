@@ -93,6 +93,25 @@ router.get("/courses", async function (req, res) {
   });
 });
 
+//////////////////////////////
+
+
+router.get("/course", async function (req, res) {
+  const pageTitle = "Welcome to Users page";
+  return res.render("users/course", {
+     pageTitle,
+  });
+});
+
+////////////////////////////////////////
+
+router.get("/free_trial", async function (req, res) {
+  const pageTitle = "Welcome to Users page";
+  return res.render("users/free_trial", {
+     pageTitle,
+  });
+});
+
 
 
 module.exports = router;

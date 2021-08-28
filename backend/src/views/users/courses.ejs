@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pluralsight</title>
-    <link rel="stylesheet" href="/static/users/courses.css"/>
+    <link rel="stylesheet" href="/static/users/courses.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
   </head>
   <body id="body">
-    <div id="nav_bar">
+    <div id="nav_bar" style="height: 60px;">
       <div id="left_nav_bar">
         <img
           src="https://media-exp3.licdn.com/dms/image/C4D0BAQGMBr54nDC6rw/company-logo_200_200/0/1596819394680?e=2159024400&v=beta&t=a7RGpov0dB-gGlqsXdDr33YL35XfMXKtIGx1rsO4jFU"
@@ -325,9 +325,16 @@
     <div class="slider_box">
       <div class="slider" id="slider">
         <div class="slide" id="slide">
-          <div class="item" id="product1" onclick="window.location.href='course.html'">
-              <img src="https://pluralsight.imgix.net/course-images/industrial-iot-google-cloud-1-v1.png?h=180&w=320" alt="" />
-            <div>Postman Fundamental</div>
+          <div
+            class="item"
+            id="product1"
+            onclick="window.location.href='course?img=https://pluralsight.imgix.net/course-images/aws-developer-serverless-architecture-monitoring-v2.png?h=180&w=320&duration=2h29m&level=Intermediate&p=byRyan Lewis&rating=27&n=AWS-Developer:-Serverless-Architecture-and-Monitoring'"
+          >
+            <img
+              src="https://pluralsight.imgix.net/course-images/aws-developer-serverless-architecture-monitoring-v2.png?h=180&w=320"
+              alt=""
+            />
+            <div>AWS Developer: Serverless Architecture and Monitoring</div>
             <p>by Nate Tayion</p>
             <span>2h 29m</span
             ><span
@@ -337,29 +344,35 @@
                 alt=""
             /></span>
           </div>
-          <div class="item" onclick="window.location.href='course.html'">
+          <div
+            class="item"
+            onclick="window.location.href='course?img=https://pluralsight.imgix.net/course-images/ng-conf-2021-session-32-part-2-v1.jpg?h=180&w=320&duration=4h16m&level=Intermediate&p=byKevin Jones&rating=35&n=Postman Fundamental'"
+          >
             <img
               src="https://pluralsight.imgix.net/course-images/ng-conf-2021-session-32-part-2-v1.jpg?h=180&w=320"
               alt=""
             />
             <div>Postman Fundamental</div>
-            <p>by Nate Tayion</p>
-            <span>2h 29m</span
+            <p>by Kevin Jones</p>
+            <span>4h 16m </span
             ><span
-              >Beginner
+              >Intermediate
               <img
                 src="https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/course/level.png"
                 alt=""
             /></span>
           </div>
-          <div class="item" onclick="window.location.href='course.html'">
+          <div
+            class="item"
+            onclick="window.location.href='course?img=https://pluralsight.imgix.net/course-images/linux-managing-software-debian-software-management-v1.png?h=180&w=320&duration=3h16m&level=Intermediate&p=byKevin Jones&rating=30&n=Administering-a-Delivery-Pipeline-Ecosystem-in-Salesforce'"
+          >
             <img
-              src="https://pluralsight.imgix.net/course-images/ng-conf-2021-session-36-part-1-v1.jpg?h=180&w=320"
+              src="https://pluralsight.imgix.net/course-images/linux-managing-software-debian-software-management-v1.png?h=180&w=320"
               alt=""
             />
-            <div>Postman Fundamental</div>
-            <p>by Nate Tayion</p>
-            <span>2h 29m</span
+            <div>Administering a Delivery Pipeline Ecosystem in Salesforce</div>
+            <p>by Scott Lee</p>
+            <span>3h 29m</span
             ><span
               >Beginner
               <img
@@ -367,7 +380,7 @@
                 alt=""
             /></span>
           </div>
-          <div class="item" onclick="window.location.href='course.html'">
+          <div class="item" onclick="window.location.href='users/course'">
             <img
               src="https://pluralsight.imgix.net/course-images/docker-developing-go-apps-v1.jpg?h=180&w=320"
               alt=""
@@ -382,7 +395,7 @@
                 alt=""
             /></span>
           </div>
-          <div class="item" onclick="window.location.href='course.html'">
+          <div class="item" onclick="window.location.href='users/course'">
             <img
               src="https://pluralsight.imgix.net/course-images/audience/software-development.jpg?h=180&w=320"
               alt=""
@@ -398,7 +411,7 @@
             /></span>
           </div>
 
-          <div class="item" onclick="window.location.href='course.html'">
+          <div class="item" onclick="window.location.href='users/course'">
             <img
               src="https://pluralsight.imgix.net/course-images/ng-conf-2021-session-32-part-2-v1.jpg?h=180&w=320"
               alt=""
@@ -413,7 +426,7 @@
                 alt=""
             /></span>
           </div>
-          <div class="item" onclick="window.location.href='course.html'">
+          <div class="item" onclick="window.location.href='users/course'">
             <img
               src="https://pluralsight.imgix.net/course-images/audience/software-development.jpg?h=180&w=320"
               alt=""
@@ -428,7 +441,7 @@
                 alt=""
             /></span>
           </div>
-          <div class="item" onclick="window.location.href='course.html'">
+          <div class="item" onclick="window.location.href='users/course'">
             <img
               src="https://pluralsight.imgix.net/course-images/docker-developing-go-apps-v1.jpg?h=180&w=320"
               alt=""
@@ -440,10 +453,11 @@
               >Beginner
               <img
                 src="https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/course/level.png"
-                alt="" onclick="course.html"
+                alt=""
+                onclick="course.html"
             /></span>
           </div>
-          <div class="item" onclick="window.location.href='course.html'">
+          <div class="item" onclick="window.location.href='users/course'">
             <img
               src="https://pluralsight.imgix.net/course-images/audience/software-development.jpg?h=180&w=320"
               alt=""
@@ -458,13 +472,13 @@
                 alt=""
             /></span>
           </div>
-          <div class="item" onclick="window.location.href='course.html'">
+          <div class="item" onclick="window.location.href='users/course'">
             <img
               src="http://via.placeholder.com/200x200?text=Product1"
               alt=""
             />
           </div>
-          <div class="item" onclick="window.location.href='course.html'">
+          <div class="item" onclick="window.location.href='users/course'">
             <img
               src="http://via.placeholder.com/200x200?text=Product1"
               alt=""
@@ -817,4 +831,3 @@
   </body>
 </html>
 <script src="/static/users/courses.js"></script>
-
