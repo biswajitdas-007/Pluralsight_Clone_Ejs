@@ -100,8 +100,16 @@
                 </div>
             </div>
         </div>
+        
         <div id="plan-details">
-           
+            <div class="switch-table">
+                <div class="text-monthly">monthly</div>
+                <label class="custom-switch">
+                    <span></span>
+                    <input type="checkbox" class="toggle-switch">
+                </label>
+                <div class="text-yearly">yearly</div>
+            </div>
             <div class="opportunity">
                 <div>
                     <h4>BEST OPPORTUNITY</h4>
@@ -116,9 +124,19 @@
                     <div>
                         <a href="account_details.html">START A FREE 10-DAY TRIAL</a>
                     </div>
-                    <div>
-                        <h6>10-day free trial <br>
-                            then ₹ 1024.88/month, billed annually (₹ 12,299.00)</h6>
+                    <div class="price-div">
+                        <div class="monthly">
+                            <div><h6>10-day free trial <br>
+                            then ₹ 1,499.00/month, billed monthly</h6></div>
+                            <!-- <h6>10-day free trial <br>
+                                then ₹ 1499.00/month, billed monthly</h6> -->
+                        </div>
+                        <div class="yearly">
+                            <div><h6>10-day free trial <br>
+                            then ₹ 682.10/month, billed annually (₹ 8185.48)</h6></div>
+                            <!-- <h6>10-day free trial <br>
+                                then ₹ 628.10/month, billed yearly</h6> -->
+                        </div>
                     </div>
                 </div>
             
@@ -129,9 +147,15 @@
                     <div>
                         <a href="account_details.html">START A FREE 10-DAY TRIAL</a>
                     </div>
-                    <div>
-                        <h6>10-day free trial <br>
-                            then ₹ 1533.19/month, billed annually (₹ 18,399.00)</h6>
+                    <div class="price-div">
+                        <div class="monthly">
+                            <div><h6>10-day free trial <br>
+                                then ₹ 2,299.00/month, billed monthly</h6></div>
+                        </div>
+                        <div class="yearly">
+                            <div><h6>10-day free trial <br>
+                            then ₹ 1020.98/month, billed annually (₹ 12252.26)</h6></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -139,63 +163,76 @@
         
     </div>
     <div style="clear:both; height:30px;"></div>
-    <div class="price-table">
+    <div class="price-table" style="padding-top: 70px;">
         <table>
             <thead>
-                <tr>
-                    <td><h4>Core</h4></td>
-                    <td>
-                        <p>Standard</p>
+                <tr class="individual">
+                    <td></td>
+                    <td colspan="2">
+                        <div class="border-line">Individual</div>
                     </td>
-                    <td><p>Premium</p></td>
-                    <td><p>Professional</p></td>
-                    <td><p>Enterprise</p></td>
+                    <td colspan="1">
+                        <div class="border-line" style="color: #ec008c;">Team</div>
+                    </td>
+                </tr>
+                <tr class="features">
+                    <td style="color: #0084BD; font-weight: bold;">
+                        Core
+                    </td>
+                    <td>
+                        Standard
+                    </td>
+                    <td>
+                        Premium
+                    </td>
+                    <td>
+                        Professional
+                    </td>
+                    <td>
+                        Enterprise
+                    </td>
                 </tr>
             </thead>
             <tbody>
-               
-                <tr>
-                    <td style="border-top: 1px solid #363636;"><h4>Free Trial</h4></td>
-                    <td style="border-top: 1px solid #363636;"><h4>For 10 days</h4></td>
-                    <td style="border-top: 1px solid #363636;"><h4>For 10 days</h4></td>
-                    <td style="border-top: 1px solid #363636;"><h4>For 15 days</h4></td>
-                    <td style="border-top: 1px solid #363636;"><h4>For 15 days</h4></td>
+    
+                <tr class="features">
+                    <td style="border-top: 1px solid #363636; font-weight: 200;">
+                        Free Trial
+                    </td>
+                    <td style="border-top: 1px solid #363636;">
+                        For 10 days
+                    </td>
+                    <td style="border-top: 1px solid #363636;">
+                        For 10 days
+                    </td>
+                    <td style="border-top: 1px solid #363636;">
+                        For 15 days
+                    </td>
+                    <td style="border-top: 1px solid #363636;">
+                        For 15 days
+                    </td>
+                </tr>
+                <tr class="features">
+                    <td style="font-weight: 200;">
+                        Course Library
+                    </td>
+                    <td>
+                        Core Library
+                    </td>
+                    <td>
+                        Expanded Library
+                    </td>
+                    <td>
+                        Expanded Library
+                    </td>
+                    <td>
+                        Expanded Library
+                    </td>
                 </tr>
                 <tr>
-                    <td><h4>Course Library</h4></td>
-                    <td><h4>Core Library</h4></td>
-                    <td><h4>Expanded Library</h4></td>
-                    <td><h4>Expanded Library</h4></td>
-                    <td><h4>Expanded Library</h4></td>
-                </tr>
-                <tr>
-                    <td><h4>Paths</h4></td>
-                    <td><img src="https://cdn.pixabay.com/photo/2014/04/02/10/40/check-304167_1280.png" alt=""></td>
-                    <td><img src="https://cdn.pixabay.com/photo/2014/04/02/10/40/check-304167_1280.png" alt=""></td>
-                    <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1" alt=""></td>
-                    <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
-                        alt=""></td>
-                </tr>
-                <tr>
-                    <td><h4>Channels</h4></td>
-                    <td><img src="https://cdn.pixabay.com/photo/2014/04/02/10/40/check-304167_1280.png" alt=""></td>
-                    <td><img src="https://cdn.pixabay.com/photo/2014/04/02/10/40/check-304167_1280.png" alt=""></td>
-                    <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
-                            alt=""></td>
-                    <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
-                            alt=""></td>
-                </tr>
-                <tr>
-                    <td><h4>Course discussion</h4></td>
-                    <td><img src="https://cdn.pixabay.com/photo/2014/04/02/10/40/check-304167_1280.png" alt=""></td>
-                    <td><img src="https://cdn.pixabay.com/photo/2014/04/02/10/40/check-304167_1280.png" alt=""></td>
-                    <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
-                            alt=""></td>
-                    <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
-                            alt=""></td>
-                </tr>
-                <tr>
-                    <td><h4>Excercise files</h4></td>
+                    <td>
+                        Paths
+                    </td>
                     <td><img src="https://cdn.pixabay.com/photo/2014/04/02/10/40/check-304167_1280.png" alt=""></td>
                     <td><img src="https://cdn.pixabay.com/photo/2014/04/02/10/40/check-304167_1280.png" alt=""></td>
                     <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
@@ -204,7 +241,9 @@
                             alt=""></td>
                 </tr>
                 <tr>
-                    <td><h4>Mobile and TV apps</h4></td>
+                    <td>
+                        Channels
+                    </td>
                     <td><img src="https://cdn.pixabay.com/photo/2014/04/02/10/40/check-304167_1280.png" alt=""></td>
                     <td><img src="https://cdn.pixabay.com/photo/2014/04/02/10/40/check-304167_1280.png" alt=""></td>
                     <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
@@ -213,7 +252,9 @@
                             alt=""></td>
                 </tr>
                 <tr>
-                    <td><h4>Offline Viewing</h4></td>
+                    <td>
+                        Course discussion
+                    </td>
                     <td><img src="https://cdn.pixabay.com/photo/2014/04/02/10/40/check-304167_1280.png" alt=""></td>
                     <td><img src="https://cdn.pixabay.com/photo/2014/04/02/10/40/check-304167_1280.png" alt=""></td>
                     <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
@@ -222,7 +263,9 @@
                             alt=""></td>
                 </tr>
                 <tr>
-                    <td><h4>Conferences</h4></td>
+                    <td>
+                        Excercise files
+                    </td>
                     <td><img src="https://cdn.pixabay.com/photo/2014/04/02/10/40/check-304167_1280.png" alt=""></td>
                     <td><img src="https://cdn.pixabay.com/photo/2014/04/02/10/40/check-304167_1280.png" alt=""></td>
                     <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
@@ -231,40 +274,77 @@
                             alt=""></td>
                 </tr>
                 <tr>
-                <td><h4>Guides</h4></td>
-                <td><img src="https://cdn.pixabay.com/photo/2014/04/02/10/40/check-304167_1280.png" alt=""></td>
-                <td><img src="https://cdn.pixabay.com/photo/2014/04/02/10/40/check-304167_1280.png" alt=""></td>
-                <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
-                        alt=""></td>
-                <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
-                        alt=""></td>
+                    <td>
+                        Mobile and TV apps
+                    </td>
+                    <td><img src="https://cdn.pixabay.com/photo/2014/04/02/10/40/check-304167_1280.png" alt=""></td>
+                    <td><img src="https://cdn.pixabay.com/photo/2014/04/02/10/40/check-304167_1280.png" alt=""></td>
+                    <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
+                            alt=""></td>
+                    <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
+                            alt=""></td>
                 </tr>
                 <tr>
-                <td><h4>Badges</h4></td>
-                <td><img src="https://cdn.pixabay.com/photo/2014/04/02/10/40/check-304167_1280.png" alt=""></td>
-                <td><img src="https://cdn.pixabay.com/photo/2014/04/02/10/40/check-304167_1280.png" alt=""></td>
-                <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
-                        alt=""></td>
-                <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
-                        alt=""></td>
+                    <td>
+                        Offline Viewing
+                    </td>
+                    <td><img src="https://cdn.pixabay.com/photo/2014/04/02/10/40/check-304167_1280.png" alt=""></td>
+                    <td><img src="https://cdn.pixabay.com/photo/2014/04/02/10/40/check-304167_1280.png" alt=""></td>
+                    <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
+                            alt=""></td>
+                    <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
+                            alt=""></td>
+                </tr>
+                <tr>
+                    <td>
+                        Conferences
+                    </td>
+                    <td><img src="https://cdn.pixabay.com/photo/2014/04/02/10/40/check-304167_1280.png" alt=""></td>
+                    <td><img src="https://cdn.pixabay.com/photo/2014/04/02/10/40/check-304167_1280.png" alt=""></td>
+                    <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
+                            alt=""></td>
+                    <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
+                            alt=""></td>
+                </tr>
+                <tr>
+                    <td>
+                        Guides
+                    </td>
+                    <td><img src="https://cdn.pixabay.com/photo/2014/04/02/10/40/check-304167_1280.png" alt=""></td>
+                    <td><img src="https://cdn.pixabay.com/photo/2014/04/02/10/40/check-304167_1280.png" alt=""></td>
+                    <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
+                            alt=""></td>
+                    <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
+                            alt=""></td>
+                </tr>
+                <tr>
+                    <td>
+                        Badges
+                    </td>
+                    <td><img src="https://cdn.pixabay.com/photo/2014/04/02/10/40/check-304167_1280.png" alt=""></td>
+                    <td><img src="https://cdn.pixabay.com/photo/2014/04/02/10/40/check-304167_1280.png" alt=""></td>
+                    <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
+                            alt=""></td>
+                    <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
+                            alt=""></td>
                 </tr>
             </tbody>
         </table>
     </div>
-
+    
     <div class="price-table">
         <table>
             <thead>
                 <tr>
-                    <td>
-                        <h4>ASSESSMENT</h4>
+                    <td style="color: #0084BD; font-weight: bold;">
+                        ASSESSMENT
                     </td>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>
-                        <h4>Skill IQ</h4>
+                        Skill IQ
                     </td>
                     <td><img src="https://cdn.pixabay.com/photo/2014/04/02/10/40/check-304167_1280.png" alt=""></td>
                     <td><img src="https://cdn.pixabay.com/photo/2014/04/02/10/40/check-304167_1280.png" alt=""></td>
@@ -275,7 +355,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <h4>Role IQ</h4>
+                        Role IQ
                     </td>
                     <td><img src="https://cdn.pixabay.com/photo/2014/04/02/10/40/check-304167_1280.png" alt=""></td>
                     <td><img src="https://cdn.pixabay.com/photo/2014/04/02/10/40/check-304167_1280.png" alt=""></td>
@@ -286,7 +366,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <h4>Course learning checks</h4>
+                        Course learning checks
                     </td>
                     <td><img src="https://cdn.pixabay.com/photo/2014/04/02/10/40/check-304167_1280.png" alt=""></td>
                     <td><img src="https://cdn.pixabay.com/photo/2014/04/02/10/40/check-304167_1280.png" alt=""></td>
@@ -297,139 +377,223 @@
                 </tr>
             </tbody>
         </table>
+    </div>
+    
+    <div class="price-table">
+        <table>
+            <thead>
+                <tr>
+                    <td style="color: #0084BD; font-weight: bold;">
+                        PREMIUM
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        Certification practice exams
+                    </td>
+                    <td></td>
+                    <td><img src="https://cdn.pixabay.com/photo/2014/04/02/10/40/check-304167_1280.png" alt=""></td>
+                    <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
+                            alt=""></td>
+                    <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
+                            alt=""></td>
+                </tr>
+                <tr>
+                    <td>
+                        Interactive courses
+                    </td>
+                    <td></td>
+                    <td><img src="https://cdn.pixabay.com/photo/2014/04/02/10/40/check-304167_1280.png" alt=""></td>
+                    <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
+                            alt=""></td>
+                    <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
+                            alt=""></td>
+                </tr>
+                <tr>
+                    <td>
+                        Projects
+                    </td>
+                    <td></td>
+                    <td><img src="https://cdn.pixabay.com/photo/2014/04/02/10/40/check-304167_1280.png" alt=""></td>
+                    <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
+                            alt=""></td>
+                    <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
+                            alt=""></td>
+                </tr>
+                <tr>
+                    <td>
+                        Labs
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td><img src="https://freepngimg.com/thumb/telephone/7-2-telephone-png-clipart.png" alt=""></td>
+                    <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
+                            alt=""></td>
+                </tr>
+                <tr>
+                    <td>
+                        Sandboxes
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td><img src="https://freepngimg.com/thumb/telephone/7-2-telephone-png-clipart.png" alt=""></td>
+                    <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
+                            alt=""></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="price-table">
+        <table>
+            <thead>
+                <tr>
+                    <td style="color: #0084BD; font-weight: bold;">
+                        ANALYTICS
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        Trend analytics
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
+                            alt=""></td>
+                    <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
+                            alt=""></td>
+                </tr>
+                <tr>
+                    <td>
+                        Usage Analytics
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
+                            alt=""></td>
+                    <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
+                            alt=""></td>
+                </tr>
+                <tr>
+                    <td>
+                        Skills analytics
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td>Basic</td>
+                    <td>Advanced</td>
+                </tr>
+                <tr>
+                    <td>
+                        Roles analytics
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td>Basic</td>
+                    <td>Advanced</td>
+                </tr>
+                <tr>
+                    <td>
+                        Channels analytics
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td>Basic</td>
+                    <td>Advanced</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="price-table">
+        <table>
+            <thead>
+                <tr>
+                    <td style="color: #0084BD; font-weight: bold;">
+                        STRATEGIC
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        Role customization
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
+                            alt=""></td>
+                </tr>
+                <tr>
+                    <td>
+                        Priorities
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
+                            alt=""></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="price-table">
+        <table>
+            <thead>
+                <tr>
+                    <td style="color: #0084BD; font-weight: bold;">
+                        ANALYTICS
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        Onboarding
+                    </td>
+                    <td></td>
+                    <td><img src="https://freepngimg.com/thumb/telephone/7-2-telephone-png-clipart.png" alt=""></td>
+                    <td><img src="https://freepngimg.com/thumb/telephone/7-2-telephone-png-clipart.png" alt=""></td>
+                    <td><img src="https://freepngimg.com/thumb/telephone/7-2-telephone-png-clipart.png" alt=""></td>
+                </tr>
+                <tr>
+                    <td>
+                        Skills Strategy Plans
+                    </td>
+                    <td></td>
+                    <td><img src="https://freepngimg.com/thumb/telephone/7-2-telephone-png-clipart.png" alt=""></td>
+                    <td><img src="https://freepngimg.com/thumb/telephone/7-2-telephone-png-clipart.png" alt=""></td>
+                    <td><img src="https://freepngimg.com/thumb/telephone/7-2-telephone-png-clipart.png" alt=""></td>
+                </tr>
+                <tr>
+                    <td>
+                        Data export
+                    </td>
+                    <td></td>
+                    <td><img src="https://freepngimg.com/thumb/telephone/7-2-telephone-png-clipart.png" alt=""></td>
+                    <td><img src="https://freepngimg.com/thumb/telephone/7-2-telephone-png-clipart.png" alt=""></td>
+                    <td><img src="https://freepngimg.com/thumb/telephone/7-2-telephone-png-clipart.png" alt=""></td>
+                </tr>
+                <tr>
+                    <td>
+                        Single sign-on (SSO)
+                    </td>
+                    <td></td>
+                    <td><img src="https://freepngimg.com/thumb/telephone/7-2-telephone-png-clipart.png" alt=""></td>
+                    <td><img src="https://freepngimg.com/thumb/telephone/7-2-telephone-png-clipart.png" alt=""></td>
+                    <td><img src="https://freepngimg.com/thumb/telephone/7-2-telephone-png-clipart.png" alt=""></td>
+                </tr>
+    
+            </tbody>
+    
+        </table>
+        <div id="customer-review">
+            <a href="">Contact Sales <span>></span></a>
         </div>
-
-        <div class="price-table">
-            <table>
-                <thead>
-                    <tr>
-                        <td>
-                            <h4>PREMIUM</h4>
-                        </td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <h4>Certification practice exams</h4>
-                        </td>
-                        <td></td>
-                        <td><img src="https://cdn.pixabay.com/photo/2014/04/02/10/40/check-304167_1280.png" alt=""></td>
-                        <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
-                                alt=""></td>
-                        <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
-                                alt=""></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <h4>Interactive courses</h4>
-                        </td>
-                        <td></td>
-                        <td><img src="https://cdn.pixabay.com/photo/2014/04/02/10/40/check-304167_1280.png" alt=""></td>
-                        <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
-                                alt=""></td>
-                        <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
-                                alt=""></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <h4>Projects</h4>
-                        </td>
-                        <td></td>
-                        <td><img src="https://cdn.pixabay.com/photo/2014/04/02/10/40/check-304167_1280.png" alt=""></td>
-                        <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
-                                alt=""></td>
-                        <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
-                                alt=""></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <h4>Labs</h4>
-                        </td>
-                        <td></td>
-                        <td></td>
-                        <td><img src="https://freepngimg.com/thumb/telephone/7-2-telephone-png-clipart.png"
-                                alt=""></td>
-                        <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
-                                alt=""></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <h4>Sandboxes</h4>
-                        </td>
-                        <td></td>
-                        <td></td>
-                        <td><img src="https://freepngimg.com/thumb/telephone/7-2-telephone-png-clipart.png" alt=""></td>
-                        <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
-                                alt=""></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-
-        <div class="price-table">
-            <table>
-                <thead>
-                    <tr>
-                        <td>
-                            <h4>ANALYTICS</h4>
-                        </td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <h4>Trend analytics</h4>
-                        </td>
-                        <td></td>
-                        <td></td>
-                        <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
-                                alt=""></td>
-                        <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
-                                alt=""></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <h4>Usage Analytics</h4>
-                        </td>
-                        <td></td>
-                        <td></td>
-                        <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
-                                alt=""></td>
-                        <td><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages%2F8T6oB9Rjc.png&f=1&nofb=1"
-                                alt=""></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <h4>Skills analytics</h4>
-                        </td>
-                        <td></td>
-                        <td></td>
-                        <td>Basic</td>
-                        <td>Advanced</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <h4>Roles analytics</h4>
-                        </td>
-                        <td></td>
-                        <td></td>
-                        <td>Basic</td>
-                        <td>Advanced</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <h4>Channels analytics</h4>
-                        </td>
-                        <td></td>
-                        <td></td>
-                        <td>Basic</td>
-                        <td>Advanced</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+    </div>
 
 
     <div style="height: 40px; width: 100%; clear: both;"></div>
@@ -668,3 +832,5 @@
     </div>
 </body>
 </html>
+
+<script src="../js/free_trial.js"></script>
