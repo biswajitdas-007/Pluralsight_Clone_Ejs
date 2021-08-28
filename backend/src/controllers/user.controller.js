@@ -122,5 +122,14 @@ router.get("/courses", async function (req, res) {
      pageTitle,
   });
 });
-
+router.get("/landingpage", async function (req, res) {
+  try {
+      const videos = await videoHead.find().lean().exec();
+      return res.render("landingPage/landingPage", {
+          videos:videos                       // path then the data to be fetched
+      });
+  } catch (error) {
+      return res.status(400).send(error.message);
+  }
+});
 module.exports = router;
