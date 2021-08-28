@@ -18,7 +18,7 @@ router.get("/", async function (req, res) {
 router.get("/checking2", async function (req, res) {
     try {
         const streams = await courseDomain.find().lean().exec();
-        return res.render("practice/practice", {
+        return res.render("users/practice", {
             streams:streams                       // path then the data to be fetched
         });
     } catch (error) {
@@ -47,7 +47,7 @@ router.get("/:id", async (req, res) => {
 router.get("/lastPage", async function (req, res) {
     try {
         const streams = await courseDomain.find().lean().exec();
-        return res.render("lastPage/lastpage", {
+        return res.render("users/lastPage", {
             streams:streams                       // path then the data to be fetched
         });
     } catch (error) {

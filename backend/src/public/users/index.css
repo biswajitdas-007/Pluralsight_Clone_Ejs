@@ -1,0 +1,176 @@
+* {
+  top: 0;
+  left: 0;
+  right: 0;
+  font-family: "Secular One", sans-serif;
+}
+body {
+  background: black;
+}
+.top {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgb(24, 24, 24) 500px),
+    linear-gradient(to left, rgba(0, 0, 0, 0.1) 80%, rgb(24, 24, 24) 100%),
+    url(https://pluralsight2.imgix.net/custom-home/free-user-homepage-hero-image-32427ac5ba8442bd7034233f8cafa6a8);
+  background-size: 100%;
+  min-height: 70vh;
+  color: whitesmoke;
+  padding-bottom: 80px;
+}
+.top > div {
+  padding: 20px;
+}
+.top > .heading > div > h1 {
+  top: 0;
+  font-weight: bold;
+  margin-top: 100px;
+  padding-right: 20px;
+  color: white;
+  font-size: 40px;
+}
+.top > .heading > div {
+  margin-left: 70px;
+  width: 500px;
+  font-size: 16px;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content-desc {
+  width: 60%;
+  color: whitesmoke;
+  text-align: center;
+}
+.category {
+  display: flex;
+  width: 20%;
+  color: whitesmoke;
+  margin-right: 100px;
+  vertical-align: super;
+  margin-bottom: 50px;
+}
+.content-desc > div > h1 {
+  font-weight: 900;
+}
+.content-desc > div > p {
+  text-align: center;
+}
+.category-course {
+  width: 100%;
+  height: 330px;
+  background-color: rgb(29, 36, 40);
+}
+.category-course > div > div {
+  width: 450px;
+  height: 70px;
+  background-color: rgb(56, 66, 73);
+  text-align: center;
+  justify-content: center;
+
+  align-items: center;
+}
+.category-course > div {
+  padding-left: 50px;
+  margin-left: 160px;
+}
+.category-course > div > div > h3 {
+  padding-top: 10px;
+  padding-bottom: 0px;
+}
+.category-course > div > div > p {
+  padding-top: 0px;
+  margin-top: 0px;
+}
+.category-course a {
+  text-decoration: none;
+  color: aqua;
+}
+.link {
+  display: block;
+  margin-top: 13px;
+}
+
+.up {
+  display: flex;
+}
+.courses {
+  display: flex;
+}
+.courses > div {
+  padding: 10px;
+}
+.courses > div img {
+  padding: 0;
+  margin: 0;
+  bottom: 0;
+}
+.free-weekly-course {
+  margin-left: 60px;
+}
+.up > div > a {
+  display: flex;
+  text-decoration: none;
+  color: rgb(58, 136, 175);
+  margin-left: 30px;
+  margin-top: 20px;
+}
+.courses > div > a {
+  display: flex;
+  text-decoration: none;
+  font-size: 13px;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+footer {
+  border-top: 1px solid grey;
+  left: 0;
+  width: 100%;
+}
+footer > div {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  height: 70px;
+  background-color: rgb(24, 28, 32);
+}
+footer > div div {
+  padding-top: 10px;
+  margin-top: 20px;
+}
+footer > div div a {
+  color: rgb(155, 145, 145);
+  text-decoration: none;
+  font-size: 13px;
+}
+.support-btn {
+  width: 250px;
+  height: 100px;
+  padding: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  background: transparent;
+  overflow: visible;
+  margin-left: 20px;
+}
+.content > .category > div > span {
+  display: flex;
+  height: 60px;
+  width: 8px;
+  margin-top: 5px;
+  background-color: rgb(254, 255, 255);
+  opacity: 1;
+}
+.category > div > div {
+  cursor: pointer;
+  margin-left: 20px;
+  font-size: 20px;
+  width: 100%;
+}
+.category > div > div:hover {
+  color: orange;
+}
+.space > h3 {
+  margin-top: 45px;
+}

@@ -2,7 +2,8 @@ const express = require("express");
 const router = express.Router();
 const User = require("../models/user.model");
 const Course = require("../models/course.model");
-
+const courseDomain = require("../models/coursedomain.model");
+const videoHead = require("../models/videoHead.model");
 
 router.post("", async function (req, res) {
   var count=0;
@@ -117,5 +118,55 @@ router.get("/courses", async function (req, res) {
     });
   });
   
+/////////////////////////////////////////////////////
+
+
+router.get("/pricing_skills", async function (req, res) {
+  const videos = await Course.find().lean().exec();
+  const pageTitle = "Welcome to Users page";
+  return res.render("users/pricing_skills", {
+     pageTitle,
+     videos,
+  });
+});
+///////////////////////////////////////////////////
+router.get("/lastPage", async function (req, res) {
+  try {
+      const streams = await courseDomain.find().lean().exec();
+      return res.render("users/lastPage", {
+          streams:streams                       // path then the data to be fetched
+      });
+  } catch (error) {
+      return res.status(400).send(error.message);
+  }
+});
+
+//////////////////////////////////////////////////////
+router.get("/filter", async function (req, res) {
+  try {
+      const videos = await videoHead.find().lean().exec();
+      return res.render("users/filter", {
+          videos:videos                       // path then the data to be fetched
+      });
+  } catch (error) {
+      return res.status(400).send(error.message);
+  }
+});
+
+///////////////////////////////////////////////////////
+
+
+router.get("/landingPage", async function (req, res) {
+  try {
+      const videos = await videoHead.find().lean().exec();
+      return res.render("users/landingPage", {
+          videos:videos                       // path then the data to be fetched
+      });
+  } catch (error) {
+      return res.status(400).send(error.message);
+  }
+});
+
+//////////////////////////////////////////////////////////
 
 module.exports = router;
