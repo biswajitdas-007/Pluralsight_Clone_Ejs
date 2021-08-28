@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/> 
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   <title>Filter</title>
   <style>
     /* navabar starts */
@@ -107,6 +109,10 @@
         {
           margin-left: 1em;
         }
+        .hentai
+        {
+          margin-left: 1em;
+        }
         .t3
         {
           margin-top: 0.8em;
@@ -152,6 +158,11 @@
           line-height: 21px;
           margin-bottom: 0px;
           border-right: 0px;
+          
+        }
+        .titlesub:hover
+        {
+          background-color: #e0d9d9;
         }
         .titlesub23
         {
@@ -161,6 +172,8 @@
           letter-spacing: 0.01em;
           line-height: 20px;
           margin-bottom: 4px;
+          margin-left: 1em;
+          margin-bottom: 0.8em;
         }
         .titlesub2334
         {
@@ -171,6 +184,39 @@
           line-height: 20px;
           margin: 0px;
           cursor: pointer;
+          margin-left: 1em;
+          
+        }
+        .titlesub23346
+        {
+          letter-spacing: 0.01em;
+          line-height: 28px;
+          color: rgb(0, 116, 171);
+          text-decoration: none;
+          -webkit-box-align: center;
+          align-items: center;
+          width: max-content;
+          font-weight: 500;
+          font-size: 14px;
+          margin: 0px;
+          margin-left: 1em;
+          margin-top: 0.5em;
+          margin-bottom: 0.5em;
+        }
+        .row1234
+        {
+          border-right: 1px solid rgb(200,201,202);
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        }
+        #platform
+        {
+          position: absolute;
+          left: 19.7%;
+          top: 4%;
+        }
+        .brwse1>input
+        {
+          padding-left: 5%;
         }
     /* navbar ends */
         
@@ -242,10 +288,55 @@
     }
     .btnToradio
     {
-      width:60% ;
+      width:80% ;
       margin:1px;
+      color: #e0d9d9;
       margin-left: 1em;
+      font-weight: bolder;
+      background-color: rgb(14, 13, 13);
       border: transparent;
+    }
+    .btnToradio:hover
+    {
+      background-color: rgb(255, 255, 255);
+      color: black;
+    }
+    .platform2
+    {
+      margin-left: 30%;
+      padding-top: 0.3em;
+    }
+    #platform2
+    {
+      margin-left: 36%;
+    }
+    #platform4
+    {
+      margin-left: 50%;
+    }
+    #platform5
+    {
+      margin-left: 50%;
+    }
+    #platform6
+    {
+      margin-left: 13%;
+    }
+    #platform7
+    {
+      margin-left: 43%;
+    }
+    #platform8
+    {
+      margin-left: 39%;
+    }
+    #platform9
+    {
+      margin-left: 39%;
+    }
+    #platform11
+    {
+      margin-left: 38%;
     }
     #juggaddata
     {
@@ -292,8 +383,9 @@
     }
      #mainData>div>div:nth-child(1)>img
      {
-       width: 80px;
+       width: 75px;
        padding: 8px;
+       border-radius: 110px;
      }
      #mainData>div>div:nth-child(2)>div:nth-child(1)
      {
@@ -359,6 +451,7 @@
     margin-block-end: 1em;
 
       }
+
   </style>
 </head>
 <body>
@@ -388,7 +481,9 @@
 
         <div class="row1 col-6 brwse1">
 
-            <input type="text">
+            <i id="platform" class="material-icons">search</i>
+            
+             <input type="text" placeholder="search courses.....">
 
         </div>
 
@@ -400,12 +495,12 @@
                 <svg role="img" viewBox="0 0 40 33"><g><path fill="grey" d="M4 5.25A.25.25 0 014.25 5h15.5a.25.25 0 01.25.25v1.5a.25.25 0 01-.25.25H4.25A.25.25 0 014 6.75v-1.5zm0 4A.25.25 0 014.25 9h15.5a.25.25 0 01.25.25v1.5a.25.25 0 01-.25.25H4.25a.25.25 0 01-.25-.25v-1.5zm0 4a.25.25 0 01.25-.25h15.5a.25.25 0 01.25.25v1.5a.25.25 0 01-.25.25H4.25a.25.25 0 01-.25-.25v-1.5zm0 4a.25.25 0 01.25-.25h11.5a.25.25 0 01.25.25v1.5a.25.25 0 01-.25.25H4.25a.25.25 0 01-.25-.25v-1.5z">  </path></g></svg>
             </div>
             <div class="twenty height23 ">
-                <button class="btn btn-primary"><p>upgrade</p></button>
+                <button class="btn btn-primary"><p>UPGRADE</p></button>
             </div>
         </div>
 
          <div class="row1 col-2">
-            <div class="userdetail brwse2 hoverprop">
+            <div class="userdetail hentai brwse2 hoverprop">
                 <svg role="img" viewBox="0 0 43 33"><g><path fill-rule="evenodd" fill="grey" d="M7.68509519,2.0864418 C8.65164519,1.7965253 9.80509519,2.2539228 10.2423452,3.1878848 C10.2901952,3.1869048 10.3376852,3.1865448 10.3848052,3.1865448 C12.9849052,3.1865448 15.4848852,4.7865148 16.3847852,7.3864948 L17.0848852,9.3864948 C17.4848852,10.3864948 18.2847852,12.1865748 19.5848852,12.7864748 C19.7847852,12.8864748 20.0848852,13.0865748 20.1848852,13.3864748 C20.3847852,13.9865748 20.1848852,14.5865748 19.5848852,14.7864748 L6.58487519,19.4865748 C6.38480519,19.5865748 6.28482519,19.5865748 6.18485519,19.5865748 C5.78482519,19.5865748 5.38480519,19.2864748 5.18485519,18.8864748 C5.08487519,18.5865748 5.08487519,18.2864748 5.28482519,17.9865748 C5.88480519,16.7864748 5.38480519,14.7864748 5.08487519,13.7864748 L4.38480419,11.7865148 C3.41947179,9.1318548 4.33084919,6.2184048 6.44217519,4.5556848 C6.13346519,3.5002648 6.72476519,2.4705978 7.68509519,2.0864418 Z M14.4847852,8.0865648 C13.8847852,6.3864948 12.1848552,5.1865448 10.3848052,5.1865448 C9.88480519,5.1865448 9.38480519,5.1865448 8.88480519,5.3864948 C7.78482519,5.7865148 6.88480519,6.5865648 6.38480519,7.6865448 C5.88480519,8.7865148 5.88480519,9.9865848 6.28482519,11.0865648 L6.98477519,13.0865748 C7.38480519,14.1865748 7.68485519,15.5865748 7.58475519,16.9865748 L17.2847852,13.4865748 C16.2847852,12.4865748 15.5847852,11.1865448 15.1848852,10.0865648 L14.4847852,8.0865648 Z M12.6850952,21.5865748 C11.0849952,22.1865748 9.38504519,21.3864748 8.88504519,19.7864748 L14.4849852,17.7864748 C15.0849852,19.3864748 14.2850852,21.0865748 12.6850952,21.5865748 Z">  </path></g></svg>
             </div>
             <div class="userdetail brwse2 hoverprop">
@@ -420,7 +515,7 @@
     </div>
     <!-- overlay started -->
     <div class="container box col-8" id="skipit" style="position: absolute; left: 13vw;">
-        <div class="rowstream">
+        <div class="rowstream row1234">
             <h1 class="tiitleOptions">EXPLORE</h1>
             <p class="titlesub" id="b1">Business Professional  </p>
             <p class="titlesub" id="b2">Cloud</p>
@@ -429,14 +524,14 @@
             <p class="titlesub" id="b5">Security</p>
             <p class="titlesub" id="b6">Software Development</p>
 
-            <hr>
+            <hr style="margin-left: 0.2em;">
             <p class="titlesub23">Ways to learn</p>
             <p class="titlesub2334"> Discover diffrent content formats</p>
             <p class="titlesub2334">including videos,interactive,projects,labs,</p>
-            <p>and written contents.</p>
-            <p>Explore all contents Formats > </p>
+            <p class="titlesub2334">and written contents.</p>
+            <p class="titlesub23346">Explore all contents Formats > </p>
         </div>
-        <div class="rowstream">
+        <div class="rowstream row1234">
             <h4 class="tiitleOptions" id="c1"></h4>
             <p class="titlesub" id="c2"></p>
             <p class="titlesub" id="c3"></p>
@@ -449,15 +544,15 @@
         </div>
         <div class="rowstream">
             <h4 class="tiitleOptions" id="d1"></h4>
-            <p id="d2"></p>
-            <p id="d3"></p>
-            <p id="d4"></p>
-            <p id="d5"></p>
-            <p id="d6"></p>
-            <p id="d7"></p>
-            <p id="d8"></p>
-            <p id="d9"></p>
-            <p id="d10"></p>
+            <p class="titlesub" id="d2"></p>
+            <p class="titlesub" id="d3"></p>
+            <p class="titlesub" id="d4"></p>
+            <p class="titlesub" id="d5"></p>
+            <p class="titlesub" id="d6"></p>
+            <p class="titlesub" id="d7"></p>
+            <p class="titlesub" id="d8"></p>
+            <p class="titlesub" id="d9"></p>
+            <p class="titlesub" id="d10"></p>
         </div>
     </div>
     <!-- navbar ended -->
@@ -480,14 +575,14 @@
           <div>
             <p class="filterHeadText" onclick="dropkar()">Content Type</p>
             
-            <div class="content-type-one">
-              <button class="btnToradio">Conferences</button>
-              <button class="btnToradio" onclick="videosSC()">Video Courses</button>
-              <button class="btnToradio">Demos</button>
-              <button class="btnToradio" onclick="guides()">Guides</button>
-              <button class="btnToradio">Interactive Courses</button>
-              <button class="btnToradio">Projects</button>
-              <button class="btnToradio" onclick="Webinars()">Webinars</button>
+            <div class="content-type-one tobeedidted">
+              <button class="btnToradio" onclick="confernces()">Conferences <i id="platform2" class="material-icons platform2">add</i></button> 
+              <button class="btnToradio" onclick="videosSC()">Video Courses <i id="platform3" class="material-icons platform2">add</i></button>
+              <button class="btnToradio" onclick="demos()">Demos  <i id="platform4" class="material-icons platform2">add</i></button>
+              <button class="btnToradio" onclick="guides()">Guides <i id="platform5" class="material-icons platform2">add</i></button>
+              <button class="btnToradio" onclick="interactives()">Interactive Courses <i id="platform6" class="material-icons platform2">add</i></button>
+              <button class="btnToradio" onclick="projects()">Projects <i id="platform7" class="material-icons platform2">add</i></button>
+              <button class="btnToradio" onclick="Webinars()">Webinars <i id="platform8" class="material-icons platform2">add</i></button>
               
               
             </div>
@@ -496,9 +591,9 @@
             <p class="filterHeadText">Level</p>
             <div class="content-type-one">
 
-              <button class="btnToradio" onclick="begin()">Beginners</button>
-              <button class="btnToradio" onclick="inter()">Intermediate</button>
-              <button class="btnToradio" onclick="advnc()" style="margin-bottom: 0.9em;">Advances</button>
+              <button class="btnToradio" onclick="begin()">Beginners <i id="platform9" class="material-icons platform2">add</i></button>
+              <button class="btnToradio" onclick="inter()">Intermediate <i id="platform10" class="material-icons platform2">add</i></button>
+              <button class="btnToradio" onclick="advnc()" style="margin-bottom: 0.9em;">Advances <i id="platform11" class="material-icons platform2">add</i></button>
               
             </div>
 
@@ -745,6 +840,56 @@
     console.log(z)
     let y=document.getElementById("mainData");
 
+     function confernces(){
+      y.innerHTML=null;
+        z.forEach((el)=>{
+          if(el.contentType=="Confernces"){
+                    ////////////////////////////////////
+            let maindiv=document.createElement("div");
+
+            let imageDiv=document.createElement("div");
+            let namePart=document.createElement("div");
+
+            let kaamMehanat=document.createElement("div");
+            let jydaMehanat=document.createElement("div");
+
+            let imageDivpic=document.createElement("img");
+            imageDivpic.src="https://image.shutterstock.com/image-vector/line-play-button-icon-illustration-260nw-1044448477.jpg"
+
+            imageDiv.appendChild(imageDivpic);
+            
+          let contentType1=document.createElement("p");
+          contentType1.innerHTML=el.contentType;
+          let courseName1=document.createElement("p");
+          courseName1.innerHTML=el.courseName;
+          let author1=document.createElement("p");
+          author1.innerHTML="by"+el.author;
+
+
+          let dateOfCourse1=document.createElement("p");
+          dateOfCourse1.innerHTML=el.dateOfCourse+"....."+el.difficulty+"....." +el.rating+"....."+el.duration;
+          // let difficulty1=document.createElement("p");
+          // difficulty1.innerHTML=el.difficulty;
+          // let rating1=document.createElement("p");
+          // rating1.innerHTML=el.rating;
+          // let duration1=document.createElement("p");
+          // duration1.innerHTML=el.duration;
+          
+          kaamMehanat.append(contentType1,courseName1,author1);
+          jydaMehanat.append(dateOfCourse1);     // ,difficulty1,rating1,duration1
+          namePart.append(kaamMehanat,jydaMehanat);
+          maindiv.append(imageDiv,namePart);
+          y.append(maindiv);
+
+
+          ///////////////////////////////////
+          }
+        })
+    }
+
+
+
+
     function Webinars(){
       y.innerHTML=null;
         z.forEach((el)=>{
@@ -881,6 +1026,150 @@
           }
         })
     }
+
+     function demos(){
+      y.innerHTML=null;
+        z.forEach((el)=>{
+          if(el.contentType=="Demos"){
+                    ////////////////////////////////////
+            let maindiv=document.createElement("div");
+
+            let imageDiv=document.createElement("div");
+            let namePart=document.createElement("div");
+
+            let kaamMehanat=document.createElement("div");
+            let jydaMehanat=document.createElement("div");
+
+            let imageDivpic=document.createElement("img");
+            imageDivpic.src="https://image.shutterstock.com/image-vector/line-play-button-icon-illustration-260nw-1044448477.jpg"
+
+            imageDiv.appendChild(imageDivpic);
+            
+          let contentType1=document.createElement("p");
+          contentType1.innerHTML=el.contentType;
+          let courseName1=document.createElement("p");
+          courseName1.innerHTML=el.courseName;
+          let author1=document.createElement("p");
+          author1.innerHTML="by"+el.author;
+
+
+          let dateOfCourse1=document.createElement("p");
+          dateOfCourse1.innerHTML=el.dateOfCourse+"....."+el.difficulty+"....." +el.rating+"....."+el.duration;
+          // let difficulty1=document.createElement("p");
+          // difficulty1.innerHTML=el.difficulty;
+          // let rating1=document.createElement("p");
+          // rating1.innerHTML=el.rating;
+          // let duration1=document.createElement("p");
+          // duration1.innerHTML=el.duration;
+          
+          kaamMehanat.append(contentType1,courseName1,author1);
+          jydaMehanat.append(dateOfCourse1);     // ,difficulty1,rating1,duration1
+          namePart.append(kaamMehanat,jydaMehanat);
+          maindiv.append(imageDiv,namePart);
+          y.append(maindiv);
+
+
+          ///////////////////////////////////
+          }
+        })
+    }
+
+
+     function interactives(){
+      y.innerHTML=null;
+        z.forEach((el)=>{
+          if(el.contentType=="Interactive Courses"){
+                    ////////////////////////////////////
+            let maindiv=document.createElement("div");
+
+            let imageDiv=document.createElement("div");
+            let namePart=document.createElement("div");
+
+            let kaamMehanat=document.createElement("div");
+            let jydaMehanat=document.createElement("div");
+
+            let imageDivpic=document.createElement("img");
+            imageDivpic.src="https://image.shutterstock.com/image-vector/line-play-button-icon-illustration-260nw-1044448477.jpg"
+
+            imageDiv.appendChild(imageDivpic);
+            
+          let contentType1=document.createElement("p");
+          contentType1.innerHTML=el.contentType;
+          let courseName1=document.createElement("p");
+          courseName1.innerHTML=el.courseName;
+          let author1=document.createElement("p");
+          author1.innerHTML="by"+el.author;
+
+
+          let dateOfCourse1=document.createElement("p");
+          dateOfCourse1.innerHTML=el.dateOfCourse+"....."+el.difficulty+"....." +el.rating+"....."+el.duration;
+          // let difficulty1=document.createElement("p");
+          // difficulty1.innerHTML=el.difficulty;
+          // let rating1=document.createElement("p");
+          // rating1.innerHTML=el.rating;
+          // let duration1=document.createElement("p");
+          // duration1.innerHTML=el.duration;
+          
+          kaamMehanat.append(contentType1,courseName1,author1);
+          jydaMehanat.append(dateOfCourse1);     // ,difficulty1,rating1,duration1
+          namePart.append(kaamMehanat,jydaMehanat);
+          maindiv.append(imageDiv,namePart);
+          y.append(maindiv);
+
+
+          ///////////////////////////////////
+          }
+        })
+    }
+
+
+     function projects(){
+      y.innerHTML=null;
+        z.forEach((el)=>{
+          if(el.contentType=="Projects"){
+                    ////////////////////////////////////
+            let maindiv=document.createElement("div");
+
+            let imageDiv=document.createElement("div");
+            let namePart=document.createElement("div");
+
+            let kaamMehanat=document.createElement("div");
+            let jydaMehanat=document.createElement("div");
+
+            let imageDivpic=document.createElement("img");
+            imageDivpic.src="https://image.shutterstock.com/image-vector/line-play-button-icon-illustration-260nw-1044448477.jpg"
+
+            imageDiv.appendChild(imageDivpic);
+            
+          let contentType1=document.createElement("p");
+          contentType1.innerHTML=el.contentType;
+          let courseName1=document.createElement("p");
+          courseName1.innerHTML=el.courseName;
+          let author1=document.createElement("p");
+          author1.innerHTML="by"+el.author;
+
+
+          let dateOfCourse1=document.createElement("p");
+          dateOfCourse1.innerHTML=el.dateOfCourse+"....."+el.difficulty+"....." +el.rating+"....."+el.duration;
+          // let difficulty1=document.createElement("p");
+          // difficulty1.innerHTML=el.difficulty;
+          // let rating1=document.createElement("p");
+          // rating1.innerHTML=el.rating;
+          // let duration1=document.createElement("p");
+          // duration1.innerHTML=el.duration;
+          
+          kaamMehanat.append(contentType1,courseName1,author1);
+          jydaMehanat.append(dateOfCourse1);     // ,difficulty1,rating1,duration1
+          namePart.append(kaamMehanat,jydaMehanat);
+          maindiv.append(imageDiv,namePart);
+          y.append(maindiv);
+
+
+          ///////////////////////////////////
+          }
+        })
+    }
+
 
 
     function begin(){
