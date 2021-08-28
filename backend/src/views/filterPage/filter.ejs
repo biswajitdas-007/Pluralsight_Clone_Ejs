@@ -148,13 +148,13 @@
         }
         .titlesub
         {
-              font-size: 12px;
+              font-size: 14px;
           font-weight: 600;
           text-transform: uppercase;
-          color: rgb(0, 0, 0);
-          letter-spacing: 1mm;
-          padding: 15px 15px 9px;
-          font-weight: bolder;
+          color: rgb(24, 22, 22);
+          letter-spacing: 0.5mm;
+          padding: 9px 15px;
+          font-weight: bold;
           line-height: 21px;
           margin-bottom: 0px;
           border-right: 0px;
@@ -374,6 +374,22 @@
     {
       width: 60px;
     }
+    .smallestdiv
+    {
+      border-radius: 30px 30px 0% 0%;
+    }
+    .bademiyan
+    {
+      border-radius:  0% 0% 30px 30px;
+    }
+    .filterbox
+    {
+      border-radius: 30px 30px;
+    }
+    .notifier
+    {
+      padding-top: 0.8em;
+    }
     #mainData>div
     {
       display: flex;
@@ -451,6 +467,16 @@
     margin-block-end: 1em;
 
       }
+      @media screen and (max-width: 1260px) 
+      {
+        #platform2,#platform3,#platform4,#platform6,#platform7,#platform8,#platform9,#platform10,#platform11,#platform5
+        {
+          display: none;
+        }
+      }
+
+
+
 
   </style>
 </head>
@@ -464,7 +490,7 @@
         </div>
         <div class="row1 col-2">
             <div class="rowdown brwse2 jbrdsti">
-                <img src="https://i.pinimg.com/280x280_RS/a7/cc/a9/a7cca931e3d796de2962d6ce0659a51b.jpg" alt="">
+                <img onclick="toHome()" src="https://i.pinimg.com/280x280_RS/a7/cc/a9/a7cca931e3d796de2962d6ce0659a51b.jpg" alt="">
             </div>
             <div class="rowdown homebase brwse2 hoverprop">
                 <!-- <button onclick="off()"><img src="https://icon-library.com/images/home-logo-icon/home-logo-icon-0.jpg" alt=""></button> -->
@@ -524,7 +550,7 @@
             <p class="titlesub" id="b5">Security</p>
             <p class="titlesub" id="b6">Software Development</p>
 
-            <hr style="margin-left: 0.2em;">
+            <hr style="margin: 0.8em 0.7em;">
             <p class="titlesub23">Ways to learn</p>
             <p class="titlesub2334"> Discover diffrent content formats</p>
             <p class="titlesub2334">including videos,interactive,projects,labs,</p>
@@ -533,6 +559,9 @@
         </div>
         <div class="rowstream row1234">
             <h4 class="tiitleOptions" id="c1"></h4>
+
+          <hr style="margin: 0.8em 0.7em;">
+
             <p class="titlesub" id="c2"></p>
             <p class="titlesub" id="c3"></p>
             <p class="titlesub" id="c4"></p>
@@ -544,6 +573,7 @@
         </div>
         <div class="rowstream">
             <h4 class="tiitleOptions" id="d1"></h4>
+            <hr style="margin: 0.8em 0.7em;">
             <p class="titlesub" id="d2"></p>
             <p class="titlesub" id="d3"></p>
             <p class="titlesub" id="d4"></p>
@@ -561,7 +591,7 @@
 
       <div class="col-11 " id="topBox">
         <p id="headTag">Showing search results for:</p>
-        <p id="headTagDyanamic">‘Microsoft Access’</p>
+        <p id="headTagDyanamic" >‘Microsoft Access’</p>
       </div>
 
       <div class="col-11 flexbox">
@@ -576,15 +606,13 @@
             <p class="filterHeadText" onclick="dropkar()">Content Type</p>
             
             <div class="content-type-one tobeedidted">
-              <button class="btnToradio" onclick="confernces()">Conferences <i id="platform2" class="material-icons platform2">add</i></button> 
+              <button class="btnToradio" onclick="confernces()"> Conferences<i id="platform2" class="material-icons platform2">add</i> </button> 
               <button class="btnToradio" onclick="videosSC()">Video Courses <i id="platform3" class="material-icons platform2">add</i></button>
               <button class="btnToradio" onclick="demos()">Demos  <i id="platform4" class="material-icons platform2">add</i></button>
               <button class="btnToradio" onclick="guides()">Guides <i id="platform5" class="material-icons platform2">add</i></button>
               <button class="btnToradio" onclick="interactives()">Interactive Courses <i id="platform6" class="material-icons platform2">add</i></button>
               <button class="btnToradio" onclick="projects()">Projects <i id="platform7" class="material-icons platform2">add</i></button>
-              <button class="btnToradio" onclick="Webinars()">Webinars <i id="platform8" class="material-icons platform2">add</i></button>
-              
-              
+              <button class="btnToradio" onclick="Webinars()">Webinars <i id="platform8" class="material-icons platform2">add</i></button>  
             </div>
 
             <hr>
@@ -616,11 +644,11 @@
                   </div>
                   <div class="addition">
                     <div id="additionExtended">
-                      14 paths atached
+                      0 paths atached
                     </div>
                   </div>
                    <div class="notifier">
-                    <img src="https://pluralsight2.imgix.net/paths/images/comptia-project-7fea631277.png" alt="">
+                   <i id="platform2" class="material-icons platform2">add</i>
                   </div>
               </div>
               <div class="bademiyan">
@@ -642,7 +670,7 @@
                     </div>
                   </div>
                    <div class="notifier">
-                    <img src="https://pluralsight2.imgix.net/paths/images/comptia-project-7fea631277.png" alt="">
+                   <i id="platform2" class="material-icons platform2">add</i>
                   </div>
               </div>
               <div class="bademiyan">
@@ -655,7 +683,7 @@
           </div>
 
           <div class="resultBox ">
-            <p style="color: #f2f2f2;">217 results</p>
+            <p style="color: #f2f2f2;" id="resultTobeedisadgys" >217 results (total samples in server)</p>
           </div>
           <div class="col-9 lines" id="mainData">
           <!-- data to be fetced -->
@@ -867,7 +895,7 @@
 
 
           let dateOfCourse1=document.createElement("p");
-          dateOfCourse1.innerHTML=el.dateOfCourse+"....."+el.difficulty+"....." +el.rating+"....."+el.duration;
+          dateOfCourse1.innerHTML=el.dateOfCourse+"....."+el.difficulty+" ....." +el.rating+" "+"star"+"....."+el.duration;
           // let difficulty1=document.createElement("p");
           // difficulty1.innerHTML=el.difficulty;
           // let rating1=document.createElement("p");
@@ -916,7 +944,7 @@
 
 
           let dateOfCourse1=document.createElement("p");
-          dateOfCourse1.innerHTML=el.dateOfCourse +" ..... "+el.difficulty+"...... "+el.rating+"...... "+el.duration;
+          dateOfCourse1.innerHTML=el.dateOfCourse +" ..... "+el.difficulty+" ...... "+el.rating+" "+"star"+"...... "+el.duration;
           // let difficulty1=document.createElement("p");
           // difficulty1.innerHTML=el.difficulty;
           // let rating1=document.createElement("p");
@@ -960,7 +988,7 @@
 
 
           let dateOfCourse1=document.createElement("p");
-          dateOfCourse1.innerHTML=el.dateOfCourse +" ..... "+el.difficulty+"...... "+el.rating+" ...... "+el.duration;
+          dateOfCourse1.innerHTML=el.dateOfCourse +" ..... "+el.difficulty+" ...... "+el.rating+" "+"star"+" ...... "+el.duration;
           // let difficulty1=document.createElement("p");
           // difficulty1.innerHTML=el.difficulty;
           // let rating1=document.createElement("p");
@@ -1007,7 +1035,7 @@
 
 
           let dateOfCourse1=document.createElement("p");
-          dateOfCourse1.innerHTML=el.dateOfCourse+"....."+el.difficulty+"....." +el.rating+"....."+el.duration;
+          dateOfCourse1.innerHTML=el.dateOfCourse+"....."+el.difficulty+" ....." +el.rating+" "+"star"+"....."+el.duration;
           // let difficulty1=document.createElement("p");
           // difficulty1.innerHTML=el.difficulty;
           // let rating1=document.createElement("p");
@@ -1054,7 +1082,7 @@
 
 
           let dateOfCourse1=document.createElement("p");
-          dateOfCourse1.innerHTML=el.dateOfCourse+"....."+el.difficulty+"....." +el.rating+"....."+el.duration;
+          dateOfCourse1.innerHTML=el.dateOfCourse+"....."+el.difficulty+" ....." +el.rating+" "+"star"+"....."+el.duration;
           // let difficulty1=document.createElement("p");
           // difficulty1.innerHTML=el.difficulty;
           // let rating1=document.createElement("p");
@@ -1102,7 +1130,7 @@
 
 
           let dateOfCourse1=document.createElement("p");
-          dateOfCourse1.innerHTML=el.dateOfCourse+"....."+el.difficulty+"....." +el.rating+"....."+el.duration;
+          dateOfCourse1.innerHTML=el.dateOfCourse+"....."+el.difficulty+" ....." +el.rating+ " "+"star"+"....."+el.duration;
           // let difficulty1=document.createElement("p");
           // difficulty1.innerHTML=el.difficulty;
           // let rating1=document.createElement("p");
@@ -1150,7 +1178,7 @@
 
 
           let dateOfCourse1=document.createElement("p");
-          dateOfCourse1.innerHTML=el.dateOfCourse+"....."+el.difficulty+"....." +el.rating+"....."+el.duration;
+          dateOfCourse1.innerHTML=el.dateOfCourse+"....."+el.difficulty+" ....." +el.rating+" "+"star"+"....."+el.duration;
           // let difficulty1=document.createElement("p");
           // difficulty1.innerHTML=el.difficulty;
           // let rating1=document.createElement("p");
@@ -1199,7 +1227,7 @@
 
 
           let dateOfCourse1=document.createElement("p");
-          dateOfCourse1.innerHTML=el.dateOfCourse +" ..... "+el.difficulty+"...... "+el.rating+" ...... "+el.duration;
+          dateOfCourse1.innerHTML=el.dateOfCourse +" ..... "+el.difficulty+" ...... "+el.rating+" "+"star"+" ...... "+el.duration;
           // let difficulty1=document.createElement("p");
           // difficulty1.innerHTML=el.difficulty;
           // let rating1=document.createElement("p");
@@ -1245,7 +1273,7 @@
 
 
           let dateOfCourse1=document.createElement("p");
-          dateOfCourse1.innerHTML=el.dateOfCourse +" ..... "+el.difficulty+"...... "+el.rating+" ...... "+el.duration;
+          dateOfCourse1.innerHTML=el.dateOfCourse +" ..... "+el.difficulty+" ...... "+el.rating+" "+"star"+" ...... "+el.duration;
           // let difficulty1=document.createElement("p");
           // difficulty1.innerHTML=el.difficulty;
           // let rating1=document.createElement("p");
@@ -1267,7 +1295,10 @@
     function advnc(){
       y.innerHTML=null;
        z.forEach((el)=>{
+         
           if(el.difficulty=="Advance"){
+            
+          nadhs.innerHTML=count+"Results";
                     ////////////////////////////////////
             let maindiv=document.createElement("div");
 
@@ -1291,7 +1322,7 @@
 
 
           let dateOfCourse1=document.createElement("p");
-          dateOfCourse1.innerHTML=el.dateOfCourse +" ..... "+el.difficulty+"...... "+el.rating+" ...... "+el.duration;
+          dateOfCourse1.innerHTML=el.dateOfCourse +" ..... "+el.difficulty+" ...... "+el.rating+" "+"star"+" ...... "+el.duration;
           // let difficulty1=document.createElement("p");
           // difficulty1.innerHTML=el.difficulty;
           // let rating1=document.createElement("p");
@@ -1308,15 +1339,29 @@
 
           ///////////////////////////////////
           }
+          
         })
     }
   
 
 //////////// filter drop down ??????
+
+
 function dropkar()
 {
-  document.getElementsByClassName("content-type-one").display="none";
+  document.getElementsByClassName("btnToradio").style.display="none";
+  console.log("1")
 }
 
+function toHome()
+{
+  window.location.href=" ";     // homepage link;
+}
+//document.getElementById("headTagDyanamic").innerHTML = `"herroku"`  dyanamic name changer
 
+ 
+
+
+ document.getElementById("additionExtended").innerHTML=Number(Math.round(784*Math.random()))+" "+`paths atached`;
+document.getElementById("additionExtended2").innerHTML=Number(Math.round(784*Math.random()))+" "+`paths atached`;
 </script>
