@@ -44,6 +44,16 @@ router.get("/:id", async (req, res) => {
         return res.status(400).send(error.message);
     }
 })
+router.get("/lastPage", async function (req, res) {
+    try {
+        const streams = await courseDomain.find().lean().exec();
+        return res.render("lastPage/lastpage", {
+            streams:streams                       // path then the data to be fetched
+        });
+    } catch (error) {
+        return res.status(400).send(error.message);
+    }
+});
 
 
 module.exports = router;
