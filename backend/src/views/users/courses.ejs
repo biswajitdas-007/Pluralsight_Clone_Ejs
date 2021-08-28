@@ -12,7 +12,7 @@
     />
   </head>
   <body id="body">
-    <div id="nav_bar" style="height: 60px;">
+    <div id="nav_bar" style="height: 60px">
       <div id="left_nav_bar">
         <img
           src="https://media-exp3.licdn.com/dms/image/C4D0BAQGMBr54nDC6rw/company-logo_200_200/0/1596819394680?e=2159024400&v=beta&t=a7RGpov0dB-gGlqsXdDr33YL35XfMXKtIGx1rsO4jFU"
@@ -325,208 +325,53 @@
     <div class="slider_box">
       <div class="slider" id="slider">
         <div class="slide" id="slide">
+          <% videos.map((user) => { %>
+
           <div
             class="item"
             id="product1"
-            onclick="window.location.href='course?img=https://pluralsight.imgix.net/course-images/aws-developer-serverless-architecture-monitoring-v2.png?h=180&w=320&duration=2h29m&level=Intermediate&p=byRyan Lewis&rating=27&n=AWS-Developer:-Serverless-Architecture-and-Monitoring'"
+            onclick="window.location.href='course?n=<%=user.courseName%>&duration=<%=user.duration%>&img=<%= user.src %>&rating=<%=user.rating%>&level=<%= user.difficulty %>&dateOfCourse=<%= user.dateOfCourse %>&author=<%= user.author %>'"
           >
             <img
-              src="https://pluralsight.imgix.net/course-images/aws-developer-serverless-architecture-monitoring-v2.png?h=180&w=320"
+              src=<%= user.src %>
               alt=""
             />
-            <div>AWS Developer: Serverless Architecture and Monitoring</div>
-            <p>by Nate Tayion</p>
-            <span>2h 29m</span
+            <div><%= user.courseName %></div>
+            <p><%= user.author %></p>
+            <span><%= user.duration %></span
             ><span
-              >Beginner
+              ><%= user.difficulty %>
               <img
                 src="https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/course/level.png"
                 alt=""
             /></span>
           </div>
-          <div
-            class="item"
-            onclick="window.location.href='course?img=https://pluralsight.imgix.net/course-images/ng-conf-2021-session-32-part-2-v1.jpg?h=180&w=320&duration=4h16m&level=Intermediate&p=byKevin Jones&rating=35&n=Postman Fundamental'"
-          >
-            <img
-              src="https://pluralsight.imgix.net/course-images/ng-conf-2021-session-32-part-2-v1.jpg?h=180&w=320"
-              alt=""
-            />
-            <div>Postman Fundamental</div>
-            <p>by Kevin Jones</p>
-            <span>4h 16m </span
-            ><span
-              >Intermediate
-              <img
-                src="https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/course/level.png"
-                alt=""
-            /></span>
-          </div>
-          <div
-            class="item"
-            onclick="window.location.href='course?img=https://pluralsight.imgix.net/course-images/linux-managing-software-debian-software-management-v1.png?h=180&w=320&duration=3h16m&level=Intermediate&p=byKevin Jones&rating=30&n=Administering-a-Delivery-Pipeline-Ecosystem-in-Salesforce'"
-          >
-            <img
-              src="https://pluralsight.imgix.net/course-images/linux-managing-software-debian-software-management-v1.png?h=180&w=320"
-              alt=""
-            />
-            <div>Administering a Delivery Pipeline Ecosystem in Salesforce</div>
-            <p>by Scott Lee</p>
-            <span>3h 29m</span
-            ><span
-              >Beginner
-              <img
-                src="https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/course/level.png"
-                alt=""
-            /></span>
-          </div>
-          <div class="item" onclick="window.location.href='users/course'">
-            <img
-              src="https://pluralsight.imgix.net/course-images/docker-developing-go-apps-v1.jpg?h=180&w=320"
-              alt=""
-            />
-            <div>Postman Fundamental</div>
-            <p>by Nate Tayion</p>
-            <span>2h 29m</span
-            ><span
-              >Beginner
-              <img
-                src="https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/course/level.png"
-                alt=""
-            /></span>
-          </div>
-          <div class="item" onclick="window.location.href='users/course'">
-            <img
-              src="https://pluralsight.imgix.net/course-images/audience/software-development.jpg?h=180&w=320"
-              alt=""
-            />
-            <div>Postman Fundamental</div>
-            <p>by Nate Tayion</p>
-            <span>2h 29m</span
-            ><span
-              >Beginner
-              <img
-                src="https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/course/level.png"
-                alt=""
-            /></span>
-          </div>
-
-          <div class="item" onclick="window.location.href='users/course'">
-            <img
-              src="https://pluralsight.imgix.net/course-images/ng-conf-2021-session-32-part-2-v1.jpg?h=180&w=320"
-              alt=""
-            />
-            <div>Postman Fundamental</div>
-            <p>by Nate Tayion</p>
-            <span>2h 29m</span
-            ><span
-              >Beginner
-              <img
-                src="https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/course/level.png"
-                alt=""
-            /></span>
-          </div>
-          <div class="item" onclick="window.location.href='users/course'">
-            <img
-              src="https://pluralsight.imgix.net/course-images/audience/software-development.jpg?h=180&w=320"
-              alt=""
-            />
-            <div>Postman Fundamental</div>
-            <p>by Nate Tayion</p>
-            <span>2h 29m</span
-            ><span
-              >Beginner
-              <img
-                src="https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/course/level.png"
-                alt=""
-            /></span>
-          </div>
-          <div class="item" onclick="window.location.href='users/course'">
-            <img
-              src="https://pluralsight.imgix.net/course-images/docker-developing-go-apps-v1.jpg?h=180&w=320"
-              alt=""
-            />
-            <div onclick="course.html">Postman Fundamental</div>
-            <p onclick="course.html">by Nate Tayion</p>
-            <span>2h 29m</span
-            ><span
-              >Beginner
-              <img
-                src="https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/course/level.png"
-                alt=""
-                onclick="course.html"
-            /></span>
-          </div>
-          <div class="item" onclick="window.location.href='users/course'">
-            <img
-              src="https://pluralsight.imgix.net/course-images/audience/software-development.jpg?h=180&w=320"
-              alt=""
-            />
-            <div>Postman Fundamental</div>
-            <p>by Nate Tayion</p>
-            <span>2h 29m</span
-            ><span
-              >Beginner
-              <img
-                src="https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/course/level.png"
-                alt=""
-            /></span>
-          </div>
-          <div class="item" onclick="window.location.href='users/course'">
-            <img
-              src="http://via.placeholder.com/200x200?text=Product1"
-              alt=""
-            />
-          </div>
-          <div class="item" onclick="window.location.href='users/course'">
-            <img
-              src="http://via.placeholder.com/200x200?text=Product1"
-              alt=""
-            />
-          </div>
-
-          <div class="item">
-            <img
-              src="http://via.placeholder.com/200x200?text=Product1"
-              alt=""
-            />
-          </div>
-          <div class="item">
-            <img
-              src="http://via.placeholder.com/200x200?text=Product1"
-              alt=""
-            />
-          </div>
-          <div class="item">
-            <img
-              src="http://via.placeholder.com/200x200?text=Product1"
-              alt=""
-            />
-          </div>
+         
+          <% }) %>
         </div>
-        <button class="ctrl-btn pro-prev">
+
+        <button class="ctrl-btn pro-prev" style="background-color: rgba(255, 255, 255, 0.733); width: 20px; border-radius: 50%;">
           <i
             onclick="sarch_sarch()"
             class="material-icons"
             style="
-              color: white;
-              margin-left: 15px;
-              border-left: 1px solid rgb(194, 194, 194);
-              margin-top: 15px;
+              color: rgb(0, 0, 0);
+              text-align: center;
+              width: 30px;  
               border-radius: 5%;
             "
             >arrow_back_ios</i
           >
         </button>
-        <button class="ctrl-btn pro-next">
+        <button class="ctrl-btn pro-next" style="background-color: rgba(255, 255, 255, 0.76); width: 20px; border-radius: 50%;">
           <i
             onclick="sarch_sarch()"
             class="material-icons"
             style="
-              color: white;
-              margin-left: 15px;
-              border-left: 1px solid rgb(194, 194, 194);
-              margin-top: 15px;
+             color: rgb(0, 0, 0);
+              text-align: center;
+              width: 30px;  
+              border-radius: 5%;
             "
             >arrow_forward_ios</i
           >
@@ -831,3 +676,8 @@
   </body>
 </html>
 <script src="/static/users/courses.js"></script>
+<script>
+  let x = "<%- JSON.stringify(videos) %>";
+  let z = JSON.parse(x);
+  console.log(z);
+</script>

@@ -7,9 +7,10 @@ const streamController = require("./controllers/stream.controller");
 const subStreamController = require("./controllers/substream.controller");
 const courseDomainController = require("./controllers/coursedomain.controller");
 const userController = require("./controllers/user.controller");
+const courseController = require("./controllers/course.controller");
+const vidioController = require("./controllers/videoHead.controller");
 
 const app = express();
-app.use(express.json());
 
 
 
@@ -30,7 +31,8 @@ app.use("/stream",streamController)
 app.use("/substream", subStreamController)
 app.use("/coursedomain", courseDomainController)
 app.use("/users", userController);
-
+app.use("/vidio", vidioController);
+app.use("/us",courseController);
 
 
 app.listen(3251, async () => {
