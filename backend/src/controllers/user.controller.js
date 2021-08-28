@@ -116,6 +116,11 @@ router.get("/courses", async function (req, res) {
        videos,
     });
   });
-  
+  router.get("/practice", async function (req, res) {
+  const pageTitle = "Welcome to Users page";
+  return res.render("practice/practice", {
+     pageTitle,
+  });
+});
 
 module.exports = router;
