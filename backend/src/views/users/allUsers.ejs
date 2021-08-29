@@ -32,8 +32,8 @@
             </button>
           </form>
           <div class="signin-links">
-            <a href="users/forgotPassword">Forgot Password?</a>
-            <a href="users/signInWithCompany">Signin with comapany or school</a>
+            <a href="forgotPassword">Forgot Password?</a>
+            <a href="signInWithCompany">Signin with comapany or school</a>
           </div>
           <div>
             <hr class="bar" />
@@ -57,7 +57,7 @@
             src="https://www.pluralsight.com/content/dam/pluralsight2/login/login-h1.png"
             alt=""
           />
-          <a href="" id="try-for-free">Try For Free</a>
+          <a href="free_trial" id="try-for-free">Try For Free</a>
         </div>
         <div></div>
         <div id="right-side-down-img">
@@ -84,7 +84,7 @@
       if (z[i].email == email && z[i].password == password) {  
         arr2.push(z[i].first_name);
         console.log(arr2);
-      window.location.href='landingPage'
+        window.location.href = `http://localhost:3251/pluralsight/payment_successful?email=${z[i].email}&type=${z[i].type}&fName=${z[i].first_name}&lName=${z[i].last_name}`;
         count++;
         break;
       }

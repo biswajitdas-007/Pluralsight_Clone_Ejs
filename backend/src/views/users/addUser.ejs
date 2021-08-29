@@ -69,7 +69,7 @@
         </h5>
 
         <div>
-          <span> SUBTOTAL </span><span style="margin-right: 0px">₹0</span>
+          <span> SUBTOTAL </span><span id="blance1" style="margin-right: 0px">₹0</span>
         </div>
         <h5 style="border-bottom-width: 0px">
           <span style="margin-right: 57%">Total due today</span>
@@ -514,7 +514,7 @@
             </div>
             <div class="right-input">
               <p>Card number*<br /></p>
-              <input id="card_input" type="text" required />
+              <input id="card_input" type="number" required />
             </div>
           </div>
           <div>
@@ -565,7 +565,7 @@
             </div>
             <div class="right-input">
               <p>CVV*<br /></p>
-              <input id="cvv" type="text" required />
+              <input id="cvv" type="number" required />
             </div>
           </div>
           <div>
@@ -1296,7 +1296,7 @@
             } else {
               document.getElementById("type").value = true;
             }
-          //  document.myForm.submit();
+           document.myForm.submit();
 
             let arr;
             arr = localStorage.getItem("signData1");
@@ -1394,4 +1394,21 @@
  
     window.location.href = `http://localhost:3251/pluralsight/payment_successful?email=${eName}&type=${tName}&fName=${fName}&lName=${lName}&pName${pName}`;
   }
+  function qs(key) {
+    var vars = [],
+      hash;
+    var hashes = window.location.href
+      .slice(window.location.href.indexOf("?") + 1)
+      .split("&");
+    for (var i = 0; i < hashes.length; i++) {
+      hash = hashes[i].split("=");
+      vars.push(hash[0]);
+      vars[hash[0]] = hash[1];
+    }
+    return vars[key];
+  }
+  console.log( window.location.href)
+  document.getElementById("blance").innerText=qs("p")
+  document.getElementById("blance1").innerText=qs("p")
+ 
 </script>

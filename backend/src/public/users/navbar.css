@@ -207,19 +207,19 @@ body {
 }
 
 #photo{
-  background-color: rgba(221, 209, 36, 0.89);
+  background-color:  rgb(36, 192, 5);
   margin-top: 4px;
-  padding-top: 2px;
+
   width: 34px;
   height: 34px;
   margin-left: -15px;
   border-radius: 50%;
   text-align: center;
-  font-size: 27px;
+  font-size: 22px;
   font-weight: bold;
-  font-family: auto;
-  color: rgb(148, 0, 216);
-  box-shadow: rgba(255, 255, 255, 0.144) 1px 1px 1px 1px;
+  font-family: sans-serif;
+  color:rgba(255, 255, 255, 0.89);
+  
 }
 
 /* navbar ends */

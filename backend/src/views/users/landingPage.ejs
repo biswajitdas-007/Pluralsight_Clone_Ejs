@@ -543,7 +543,7 @@
     ////////////////////////////////////////////////////////////////////////////////
 
     function filtersectiojnPage() {
-        window.location.href=`filter1?${has}`    //filter section link
+        window.location.href=`filter?${has}`    //filter section link
     }
     function toHome() {
         window.location.href = "";     // homepage link;
@@ -562,9 +562,9 @@
     }
     return vars[key];
   }
-  console.log(  window.location.href)
+  console.log( window.location.href)
   document.getElementById("photo").innerText=qs("fName")[0].toUpperCase()
-  document.getElementById("photo").innerText=qs("fName")[0].toUpperCase()
+ 
     if(qs("type")=="true"){
     document.getElementById("up").style.display="none"
     document.getElementById("up1").style.marginLeft="30px"

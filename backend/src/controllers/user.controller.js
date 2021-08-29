@@ -161,7 +161,7 @@ router.get("/lastPage", async function (req, res) {
 router.get("/filter", async function (req, res) {
   try {
       const videos = await videoHead.find().lean().exec();
-      return res.render("users/filter1", {
+      return res.render("users/filter", {
           videos:videos                       // path then the data to be fetched
       });
   } catch (error) {
