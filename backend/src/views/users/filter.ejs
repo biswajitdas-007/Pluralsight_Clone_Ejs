@@ -865,7 +865,7 @@
 
     let x= '<%- JSON.stringify(videos) %>';
     let z=JSON.parse(x);
-    console.log(z)
+    
     let y=document.getElementById("mainData");
 
      function confernces(){
@@ -896,19 +896,13 @@
 
           let dateOfCourse1=document.createElement("p");
           dateOfCourse1.innerHTML=el.dateOfCourse+"....."+el.difficulty+" ....." +el.rating+" "+"star"+"....."+el.duration;
-          // let difficulty1=document.createElement("p");
-          // difficulty1.innerHTML=el.difficulty;
-          // let rating1=document.createElement("p");
-          // rating1.innerHTML=el.rating;
-          // let duration1=document.createElement("p");
-          // duration1.innerHTML=el.duration;
           
           kaamMehanat.append(contentType1,courseName1,author1);
           jydaMehanat.append(dateOfCourse1);     // ,difficulty1,rating1,duration1
           namePart.append(kaamMehanat,jydaMehanat);
           maindiv.append(imageDiv,namePart);
           y.append(maindiv);
-
+          maindiv.addEventListener("click", () => { window.location.href = "lastpage" })
 
           ///////////////////////////////////
           }
@@ -945,29 +939,27 @@
 
           let dateOfCourse1=document.createElement("p");
           dateOfCourse1.innerHTML=el.dateOfCourse +" ..... "+el.difficulty+" ...... "+el.rating+" "+"star"+"...... "+el.duration;
-          // let difficulty1=document.createElement("p");
-          // difficulty1.innerHTML=el.difficulty;
-          // let rating1=document.createElement("p");
-          // rating1.innerHTML=el.rating;
-          // let duration1=document.createElement("p");
-          // duration1.innerHTML=el.duration;
           
           kaamMehanat.append(contentType1,courseName1,author1);
           jydaMehanat.append(dateOfCourse1);     // ,difficulty1,rating1,duration1
           namePart.append(kaamMehanat,jydaMehanat);
           maindiv.append(imageDiv,namePart);
+          maindiv.addEventListener("click", () => { alert("Error") })
+          console.log("Maindv: ", maindiv)
           y.append(maindiv);
+          
           }
         })
     }
 
     function videosSC(){
       y.innerHTML=null;
+      
         z.forEach((el)=>{
           if(el.contentType=="VIDEO COURSE"){
           ////////////////////////////////////
             let maindiv=document.createElement("div");
-
+            
             let imageDiv=document.createElement("div");
             let namePart=document.createElement("div");
 
@@ -989,17 +981,12 @@
 
           let dateOfCourse1=document.createElement("p");
           dateOfCourse1.innerHTML=el.dateOfCourse +" ..... "+el.difficulty+" ...... "+el.rating+" "+"star"+" ...... "+el.duration;
-          // let difficulty1=document.createElement("p");
-          // difficulty1.innerHTML=el.difficulty;
-          // let rating1=document.createElement("p");
-          // rating1.innerHTML=el.rating;
-          // let duration1=document.createElement("p");
-          // duration1.innerHTML=el.duration;
           
           kaamMehanat.append(contentType1,courseName1,author1);
           jydaMehanat.append(dateOfCourse1);     // ,difficulty1,rating1,duration1
           namePart.append(kaamMehanat,jydaMehanat);
           maindiv.append(imageDiv,namePart);
+          maindiv.addEventListener("click", ()=>{ window.location.href = 'lastpage'})
           y.append(maindiv);
 
 
@@ -1036,21 +1023,12 @@
 
           let dateOfCourse1=document.createElement("p");
           dateOfCourse1.innerHTML=el.dateOfCourse+"....."+el.difficulty+" ....." +el.rating+" "+"star"+"....."+el.duration;
-          // let difficulty1=document.createElement("p");
-          // difficulty1.innerHTML=el.difficulty;
-          // let rating1=document.createElement("p");
-          // rating1.innerHTML=el.rating;
-          // let duration1=document.createElement("p");
-          // duration1.innerHTML=el.duration;
           
           kaamMehanat.append(contentType1,courseName1,author1);
           jydaMehanat.append(dateOfCourse1);     // ,difficulty1,rating1,duration1
           namePart.append(kaamMehanat,jydaMehanat);
           maindiv.append(imageDiv,namePart);
           y.append(maindiv);
-
-
-          ///////////////////////////////////
           }
         })
     }
@@ -1083,21 +1061,11 @@
 
           let dateOfCourse1=document.createElement("p");
           dateOfCourse1.innerHTML=el.dateOfCourse+"....."+el.difficulty+" ....." +el.rating+" "+"star"+"....."+el.duration;
-          // let difficulty1=document.createElement("p");
-          // difficulty1.innerHTML=el.difficulty;
-          // let rating1=document.createElement("p");
-          // rating1.innerHTML=el.rating;
-          // let duration1=document.createElement("p");
-          // duration1.innerHTML=el.duration;
-          
           kaamMehanat.append(contentType1,courseName1,author1);
           jydaMehanat.append(dateOfCourse1);     // ,difficulty1,rating1,duration1
           namePart.append(kaamMehanat,jydaMehanat);
           maindiv.append(imageDiv,namePart);
           y.append(maindiv);
-
-
-          ///////////////////////////////////
           }
         })
     }
@@ -1131,21 +1099,12 @@
 
           let dateOfCourse1=document.createElement("p");
           dateOfCourse1.innerHTML=el.dateOfCourse+"....."+el.difficulty+" ....." +el.rating+ " "+"star"+"....."+el.duration;
-          // let difficulty1=document.createElement("p");
-          // difficulty1.innerHTML=el.difficulty;
-          // let rating1=document.createElement("p");
-          // rating1.innerHTML=el.rating;
-          // let duration1=document.createElement("p");
-          // duration1.innerHTML=el.duration;
           
           kaamMehanat.append(contentType1,courseName1,author1);
           jydaMehanat.append(dateOfCourse1);     // ,difficulty1,rating1,duration1
           namePart.append(kaamMehanat,jydaMehanat);
           maindiv.append(imageDiv,namePart);
           y.append(maindiv);
-
-
-          ///////////////////////////////////
           }
         })
     }
@@ -1179,20 +1138,12 @@
 
           let dateOfCourse1=document.createElement("p");
           dateOfCourse1.innerHTML=el.dateOfCourse+"....."+el.difficulty+" ....." +el.rating+" "+"star"+"....."+el.duration;
-          // let difficulty1=document.createElement("p");
-          // difficulty1.innerHTML=el.difficulty;
-          // let rating1=document.createElement("p");
-          // rating1.innerHTML=el.rating;
-          // let duration1=document.createElement("p");
-          // duration1.innerHTML=el.duration;
           
           kaamMehanat.append(contentType1,courseName1,author1);
           jydaMehanat.append(dateOfCourse1);     // ,difficulty1,rating1,duration1
           namePart.append(kaamMehanat,jydaMehanat);
           maindiv.append(imageDiv,namePart);
           y.append(maindiv);
-
-
           ///////////////////////////////////
           }
         })
@@ -1228,21 +1179,11 @@
 
           let dateOfCourse1=document.createElement("p");
           dateOfCourse1.innerHTML=el.dateOfCourse +" ..... "+el.difficulty+" ...... "+el.rating+" "+"star"+" ...... "+el.duration;
-          // let difficulty1=document.createElement("p");
-          // difficulty1.innerHTML=el.difficulty;
-          // let rating1=document.createElement("p");
-          // rating1.innerHTML=el.rating;
-          // let duration1=document.createElement("p");
-          // duration1.innerHTML=el.duration;
-          
           kaamMehanat.append(contentType1,courseName1,author1);
           jydaMehanat.append(dateOfCourse1);     // ,difficulty1,rating1,duration1
           namePart.append(kaamMehanat,jydaMehanat);
           maindiv.append(imageDiv,namePart);
           y.append(maindiv);
-
-
-          ///////////////////////////////////
           }
         })
     }
@@ -1250,7 +1191,6 @@
       y.innerHTML=null;
        z.forEach((el)=>{
           if(el.difficulty=="Intermediate"){
-                   ////////////////////////////////////
             let maindiv=document.createElement("div");
 
             let imageDiv=document.createElement("div");
@@ -1274,21 +1214,12 @@
 
           let dateOfCourse1=document.createElement("p");
           dateOfCourse1.innerHTML=el.dateOfCourse +" ..... "+el.difficulty+" ...... "+el.rating+" "+"star"+" ...... "+el.duration;
-          // let difficulty1=document.createElement("p");
-          // difficulty1.innerHTML=el.difficulty;
-          // let rating1=document.createElement("p");
-          // rating1.innerHTML=el.rating;
-          // let duration1=document.createElement("p");
-          // duration1.innerHTML=el.duration;
           
           kaamMehanat.append(contentType1,courseName1,author1);
           jydaMehanat.append(dateOfCourse1);     // ,difficulty1,rating1,duration1
           namePart.append(kaamMehanat,jydaMehanat);
           maindiv.append(imageDiv,namePart);
           y.append(maindiv);
-
-
-          ///////////////////////////////////
           }
         })
     }
@@ -1326,21 +1257,12 @@
 
           let dateOfCourse1=document.createElement("p");
           dateOfCourse1.innerHTML=el.dateOfCourse +" ..... "+el.difficulty+" ...... "+el.rating+" "+"star"+" ...... "+el.duration;
-          // let difficulty1=document.createElement("p");
-          // difficulty1.innerHTML=el.difficulty;
-          // let rating1=document.createElement("p");
-          // rating1.innerHTML=el.rating;
-          // let duration1=document.createElement("p");
-          // duration1.innerHTML=el.duration;
           
           kaamMehanat.append(contentType1,courseName1,author1);
           jydaMehanat.append(dateOfCourse1);     // ,difficulty1,rating1,duration1
           namePart.append(kaamMehanat,jydaMehanat);
           maindiv.append(imageDiv,namePart);
           y.append(maindiv);
-
-
-          ///////////////////////////////////
           }
           
         })
@@ -1355,15 +1277,6 @@ function dropkar()
   document.getElementsByClassName("btnToradio").style.display="none";
   console.log("1")
 }
-
-function toHome()
-{
-  window.location.href=" ";     // homepage link;
-}
-//document.getElementById("headTagDyanamic").innerHTML = `"herroku"`  dyanamic name changer
-
- 
-
 
  document.getElementById("additionExtended").innerHTML=Number(Math.round(784*Math.random()))+" "+`paths atached`;
 document.getElementById("additionExtended2").innerHTML=Number(Math.round(784*Math.random()))+" "+`paths atached`;
