@@ -10,26 +10,19 @@
 
 ---
 
-### Pages
-
-- `Home Page`
-- `Course Page`
-- `Course Details Page`
-- `Subscription Details Page`
-- `Sign-Up Page`
-- `Sign-In Page`
-- `Forgot Password Page`
-- `Payment Page`
-- `Payment Successful Page`
-
----
-
 ### Tech Stack Used
-
-- `HTML`
-- `CSS`
-- `Javascript`
-
+ + #### Languages
+     - `HTML`
+      - `CSS`
+     - `Javascript`
++ #### Framework
+   - `Node.Js`
++ #### Libraries
+   - `Express`
+   - `ejs`
+   - `mongoose`
++ #### Database
+    - `MongoDb`
 ---
 
 ### Screenshots
