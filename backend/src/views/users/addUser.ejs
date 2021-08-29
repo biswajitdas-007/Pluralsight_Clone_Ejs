@@ -13,7 +13,7 @@
   </head>
 
   <body style="margin-bottom: 1px; background-color: rgb(29, 26, 26)">
-    <form name="myForm" id="myForm" action="/users" method="post">
+    <form name="myForm" id="myForm" action="/pluralsight" method="post">
       <input
         type="text"
         id="f"
@@ -1392,6 +1392,6 @@
     let pName = document.getElementById("p").value;
     let tName = document.getElementById("type").value;
  
-    window.location.href = `payment_successful?email=${eName}&type=${tName}&fName=${fName}&lName=${lName}&pName${pName}`;
+    window.location.href = `http://localhost:3251/pluralsight/payment_successful?email=${eName}&type=${tName}&fName=${fName}&lName=${lName}&pName${pName}`;
   }
 </script>
