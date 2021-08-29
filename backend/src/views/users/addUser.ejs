@@ -876,7 +876,7 @@
             </div>
             <div class="right-input">
               <p>Postal Code*<br /></p>
-              <input id="postal_code" type="text" required />
+              <input id="postal_code" type="number"  required />
             </div>
           </div>
           <div style="height: 10px"></div>
@@ -921,27 +921,27 @@
         <div>
           <div>
             <p>Firstname*<br /></p>
-            <input id="firstname1" type="text" required />
+            <input readonly id="firstname1" type="text" required />
           </div>
           <div class="right-input">
             <p>Lastname*<br /></p>
-            <input id="lastname1" type="text" />
+            <input readonly id="lastname1" type="text" />
           </div>
         </div>
         <div>
           <div>
             <p>Email*<br /></p>
-            <input id="email1" type="text" required />
+            <input readonly id="email1" type="text" required />
           </div>
           <div class="right-input">
             <p>Confirm email*<br /></p>
-            <input id="confirm-email1" type="text" required />
+            <input readonly id="confirm-email1" type="text" required />
           </div>
         </div>
         <div>
           <div>
             <p>Password*<br /></p>
-            <input id="password1" type="password" required />
+            <input readonly id="password1" type="password" required />
           </div>
           <div class="right-input">
             <p>Confirm Password*<br /></p>
@@ -1236,7 +1236,7 @@
         <hr />
 
         <div>
-          <button  onclick="window.location.href='/users/payment_successful'" >Continue</button>
+          <button  onclick="run()" >Continue</button>
         </div>
       </div>
     </div>
@@ -1248,7 +1248,8 @@
     document.getElementById("text").style.display="block"
     console.log("kkk")
   }
-  
+  var t=''
+  console.log(t)
   function check(e) {
     e.preventDefault();
     var terms_policy = document.getElementById("terms-policy");
@@ -1288,7 +1289,7 @@
             document.getElementById("email").value;
           document.getElementById("p").value =
             document.getElementById("password").value;
-          document.myForm.submit();
+         //document.myForm.submit();
 
           let arr;
           arr = localStorage.getItem("signData1");
@@ -1378,6 +1379,15 @@
       
     }
   }
-
- 
+  function run(){
+    
+    
+    let x= '<%- JSON.stringify(users) %>';
+    let z=JSON.parse(x);
+    let l=z.length-1
+   let u= document.getElementById("email").value
+    console.log( z[l].email )
+   // window.location.href='/users/payment_successful?email=document.getElementById("email").value'
+  }
+  run()
 </script>

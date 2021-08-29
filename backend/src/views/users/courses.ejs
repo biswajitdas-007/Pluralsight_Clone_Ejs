@@ -675,9 +675,251 @@
     </div>
   </body>
 </html>
-<script src="/static/users/courses.js"></script>
+
 <script>
-  let x = "<%- JSON.stringify(videos) %>";
-  let z = JSON.parse(x);
-  console.log(z);
+  let data_div = document.getElementById("coures_view");
+ let x= '<%- JSON.stringify(videos) %>';
+    let z=JSON.parse(x);
+    console.log(z)
+   let t= z
+
+
+    function addCourses(d) {
+  let data1 = d;
+
+  data_div.innerHTML = null;
+
+  data1.forEach(function (el) {
+    var div = document.createElement("div");
+
+    let name = document.createElement("p");
+    name.innerHTML = el.courseName;
+    let type = document.createElement("p");
+    type.innerHTML = el.contentType;
+    let wname = document.createElement("p");
+    wname.innerHTML = el. author;
+   
+    let time = document.createElement("span");
+    time.innerHTML = el.duration ;
+    let status = document.createElement("span");
+    status.innerHTML = el.difficulty
+    let rat = document.createElement("span");
+    rat.innerHTML = el.rating;
+    let img = document.createElement("img");
+    img.src =
+      "https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/course/level.png";
+    let s_img = document.createElement("img");
+    s_img.src =
+      "https://www.nicepng.com/png/full/88-886368_five-yellow-stars-5-stars-black-background.png";
+    let c_img = document.createElement("img");
+    c_img.src =
+      " https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/course/clock.png";
+    name.setAttribute("id", "div_courses_name");
+    type.setAttribute("id", "div_courses_name_1");
+    div.setAttribute("id", "div_courses_div");
+    wname.setAttribute("id", "div_courses_wname");
+    time.setAttribute("id", "div_courses_time");
+    status.setAttribute("id", "div_courses_status");
+    rat.setAttribute("id", "div_courses_rat");
+    img.setAttribute("id", "div_courses_img");
+    c_img.setAttribute("id", "div_courses_c_img");
+    s_img.setAttribute("id", "div_courses_s_img");
+    div.append(type, name, wname, time, c_img, status, img, s_img, rat);
+    data_div.append(div);
+  });
+}
+
+setInterval(function () {
+ // if (p != 10) {
+    let t =z;
+     let sarch_box_1 = document.getElementById("sarch_box").value;
+ 
+    
+    if (sarch_box_1.length >= 1) {
+      data_div.innerHTML = null;
+      for (var i = 0; i < t.length; i++) {
+       
+        if (
+        
+          t[i].contentType[sarch_box_1.length - 1].toLowerCase() ==
+          sarch_box_1[sarch_box_1.length - 1].toLowerCase()
+        ) {  //console.log(t)
+          var div = document.createElement("div");
+
+          let name = document.createElement("p");
+          name.innerHTML = t[i].contentType;
+          let type = document.createElement("p");
+          type.innerHTML = t[i].courseName;
+          let wname = document.createElement("p");
+          wname.innerHTML = t[i].author;
+          let time = document.createElement("span");
+          time.innerHTML = t[i].duration
+          let status = document.createElement("span");
+          status.innerHTML = t[i].difficulty;
+          let rat = document.createElement("span");
+          rat.innerHTML = t[i].rating;
+          let img = document.createElement("img");
+          img.src =
+            "https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/course/level.png";
+          let s_img = document.createElement("img");
+          s_img.src =
+            "https://www.nicepng.com/png/full/88-886368_five-yellow-stars-5-stars-black-background.png";
+          let c_img = document.createElement("img");
+          c_img.src =
+            " https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/course/clock.png";
+          name.setAttribute("id", "div_courses_name");
+          type.setAttribute("id", "div_courses_name_1");
+          div.setAttribute("id", "div_courses_div");
+          wname.setAttribute("id", "div_courses_wname");
+          time.setAttribute("id", "div_courses_time");
+          status.setAttribute("id", "div_courses_status");
+          rat.setAttribute("id", "div_courses_rat");
+          img.setAttribute("id", "div_courses_img");
+          c_img.setAttribute("id", "div_courses_c_img");
+          s_img.setAttribute("id", "div_courses_s_img");
+          div.append(type, name, wname, time, c_img, status, img, s_img, rat);
+          data_div.append(div);
+          // } else if (
+          //   t[i].name[sarch_box_1.length - 1].toLowerCase() !=
+          //   sarch_box_1[sarch_box_1.length - 1].toLowerCase()
+          // ) {
+          // document.getElementById("not_available").style.display = "flex";
+          // document.getElementById("not_available").innerHTML = "No results...";
+        }
+      }
+    }
+  //   else {
+  //     document.getElementById("not_available").innerHTML = null;
+  //     document.getElementById("not_available").style.display = "none";
+  //     addCourses(JSON.parse(localStorage.getItem("courses")));
+  //   }
+  // }
+}, 1000);
+
+var p = [1];
+function cut_sarch() {
+  document.getElementById("sarch_box").value = null;
+  // addCourses(JSON.parse(localStorage.getItem("courses")));
+  document.getElementById("not_available").innerHTML = null;
+  document.getElementById("not_available").style.display = "none";
+  p.pop();
+  p.push(1);
+  addCourses(z) 
+}
+
+
+function sort_mid(mid) {
+  
+  data_div.innerHTML = null;
+  for (var i = 0; i < t.length; i++) {
+   console.log(t[i].difficulty == mid);
+    if (t[i].difficulty == mid) {
+      console.log(t[i].difficulty)
+      var div = document.createElement("div");
+
+      let name = document.createElement("p");
+      name.innerHTML = t[i].contentType;
+      let type = document.createElement("p");
+      type.innerHTML = t[i].courseName;
+      let wname = document.createElement("p");
+      wname.innerHTML = t[i].author;
+      let time = document.createElement("span");
+      time.innerHTML = t[i].duration
+      let status = document.createElement("span");
+      status.innerHTML = t[i].difficulty;
+      let rat = document.createElement("span");
+      rat.innerHTML = t[i].rating;
+      let img = document.createElement("img");
+      img.src =
+        "https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/course/level.png";
+      let s_img = document.createElement("img");
+      s_img.src =
+        "https://www.nicepng.com/png/full/88-886368_five-yellow-stars-5-stars-black-background.png";
+      let c_img = document.createElement("img");
+      c_img.src =
+        " https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/course/clock.png";
+      name.setAttribute("id", "div_courses_name");
+      type.setAttribute("id", "div_courses_name_1");
+      div.setAttribute("id", "div_courses_div");
+      wname.setAttribute("id", "div_courses_wname");
+      time.setAttribute("id", "div_courses_time");
+      status.setAttribute("id", "div_courses_status");
+      rat.setAttribute("id", "div_courses_rat");
+      img.setAttribute("id", "div_courses_img");
+      c_img.setAttribute("id", "div_courses_c_img");
+      s_img.setAttribute("id", "div_courses_s_img");
+      div.append(type, name, wname, time, c_img, status, img, s_img, rat);
+      data_div.append(div);
+    }
+  }
+}
+
+addCourses(z) 
+ function sortupper_wirth() {
+  let data2 = z
+
+  data2 = data2.sort(function (a, b) {
+    return b.rating - a.rating;
+  });
+  addCourses(data2);
+}
+ function sortupper() {
+  let data2 = z
+
+  data2 = data2.sort(function (a, b) {
+    return b.rating - a.rating;
+  });
+  addCourses(data2);
+  p.pop();
+  p.push(10);
+  document.getElementById("sarch_box").value = null;
+  document.getElementById("not_available").innerHTML = null;
+  document.getElementById("not_available").style.display = "none";
+}
+
+
+function sort_mid_name(mid) {
+  var t =z
+  data_div.innerHTML = null;
+  for (var i = 0; i < t.length; i++) {
+    if (t[i].contentType == mid) {
+      var div = document.createElement("div");
+
+      let name = document.createElement("p");
+      name.innerHTML = t[i].contentType;
+      let type = document.createElement("p");
+      type.innerHTML = t[i].courseName;
+      let wname = document.createElement("p");
+      wname.innerHTML = t[i].author;
+      let time = document.createElement("span");
+      time.innerHTML = t[i].duration
+      let status = document.createElement("span");
+      status.innerHTML = t[i].difficulty;
+      let rat = document.createElement("span");
+      rat.innerHTML = t[i].rating;
+      let img = document.createElement("img");
+      img.src =
+        "https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/course/level.png";
+      let s_img = document.createElement("img");
+      s_img.src =
+        "https://www.nicepng.com/png/full/88-886368_five-yellow-stars-5-stars-black-background.png";
+      let c_img = document.createElement("img");
+      c_img.src =
+        " https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/course/clock.png";
+      name.setAttribute("id", "div_courses_name");
+      type.setAttribute("id", "div_courses_name_1");
+      div.setAttribute("id", "div_courses_div");
+      wname.setAttribute("id", "div_courses_wname");
+      time.setAttribute("id", "div_courses_time");
+      status.setAttribute("id", "div_courses_status");
+      rat.setAttribute("id", "div_courses_rat");
+      img.setAttribute("id", "div_courses_img");
+      c_img.setAttribute("id", "div_courses_c_img");
+      s_img.setAttribute("id", "div_courses_s_img");
+      div.append(type, name, wname, time, c_img, status, img, s_img, rat);
+      data_div.append(div);
+    }
+  }
+}
 </script>
+<script src="/static/users/courses.js"></script>

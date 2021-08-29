@@ -16,22 +16,26 @@ router.post("", async function (req, res) {
   }
   if(count==0){
     const user = await User.create(req.body);
+   
     
   }else{
     const pageTitle = "Email is already in databse";
     return res.render("users/addUser", {
       pageTitle,
+      users
     });
   } 
 });
+
 
 //////////////////////////////////////////
 router.get("", async function (req, res) {
   const users = await User.find().lean().exec();
   const pageTitle = "Welcome to Users page";
   return res.render("users/allUsers", {
-    users: users,
     pageTitle,
+    users,
+    
   });
 });
 
@@ -42,6 +46,8 @@ console.log(users[users.length-1]);
   const pageTitle = "Welcome to Users page";
   return res.render("users/addUser", {
      pageTitle,
+     users,
+
   });
 });
 
