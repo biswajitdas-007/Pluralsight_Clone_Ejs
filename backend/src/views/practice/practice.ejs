@@ -5,17 +5,229 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>navbar</title>
+    <style>
+        /* navabar starts */
 
-    <title>Pluralsight</title>
-    <link rel="stylesheet" href="/static/users/index.css" />
-    <link rel="stylesheet" href="/static/users/navbar.css" />
+
+        .container-fluid {
+            background-color: rgb(13, 15, 18);
+            overflow: hidden;
+        }
+
+        .box {
+            background-color: rgb(24, 28, 32);
+        }
+
+        .box,
+        .row1,
+        .row2 {
+            display: flex;
+            flex-flow: row;
+
+            padding: 3px;
+        }
+
+        .spaceCreation {
+            width: 1.67%;
+        }
+
+        .row1 {
+            height: 65px;
+        }
+
+        .row1>div {
+            width: 33.33%;
+            /* border: 1px solid red; */
+        }
+
+        .row1>input {
+            height: 80%;
+            width: 95%;
+            margin: 1% auto;
+            padding: 2%;
+
+        }
+
+        .row2>div {
+            width: 25%;
+            /* border: 1px solid red; */
+        }
+
+        .row2>:nth-child(3) {
+            width: 50%;
+            padding: 1%;
+        }
+
+        .row2>:nth-child(3)>button {
+            padding: 2%;
+            width: 96%;
+            height: 100%;
+        }
+
+        .dropdown>button {
+            width: 100%;
+        }
+
+        .rowstream {
+            width: 33.33%;
+        }
+
+        .rowdown>img {
+            width: 3em;
+        }
+
+        .rowdown>button>img {
+            width: 55px;
+        }
+
+        .rowdown>button {
+            border: transparent;
+            background-color: black;
+            color: white;
+        }
+
+        .height23 {
+            height: 43px;
+        }
+
+        .spread {
+            width: 100vw;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+        .twenty,
+        .brwse2 {
+            margin-top: 0.6em;
+        }
+
+        .brwse1 {
+            margin-top: 0.2em;
+        }
+
+        .jbrdsti {
+            margin-left: 1em;
+        }
+
+        .hentai {
+            margin-left: 1em;
+        }
+
+        .t3 {
+            margin-top: 0.8em;
+        }
+
+        #circleFace {
+            width: 2em;
+        }
+
+        #circleFace>img {
+            width: 68%;
+            border-radius: 150px;
+        }
+
+        .hoverprop>svg :hover {
+            fill: white;
+        }
+
+        #skipit {
+            background-color: rgb(255, 255, 255);
+        }
+
+        .tiitleOptions {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: rgba(0, 0, 0, 0.65);
+            letter-spacing: 1mm;
+            padding: 5px 24px 5px;
+            line-height: 21px;
+            margin-bottom: 0px;
+            border-right: 0px;
+        }
+
+        .titlesub {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: rgb(24, 22, 22);
+            letter-spacing: 0.5mm;
+            padding: 9px 15px;
+            font-weight: bold;
+            line-height: 21px;
+            margin-bottom: 0px;
+            border-right: 0px;
+
+        }
+
+        .titlesub:hover {
+            background-color: #e0d9d9;
+        }
+
+        .titlesub23 {
+            font-weight: 400;
+            color: rgba(0, 0, 0, 0.9);
+            font-size: 16px;
+            letter-spacing: 0.01em;
+            line-height: 20px;
+            margin-bottom: 4px;
+            margin-left: 1em;
+            margin-bottom: 0.8em;
+        }
+
+        .titlesub2334 {
+            font-weight: 400;
+            font-size: 14px;
+            letter-spacing: 0.01em;
+            color: rgba(0, 0, 0, 0.65);
+            line-height: 20px;
+            margin: 0px;
+            cursor: pointer;
+            margin-left: 1em;
+
+        }
+
+        .titlesub23346 {
+            letter-spacing: 0.01em;
+            line-height: 28px;
+            color: rgb(0, 116, 171);
+            text-decoration: none;
+            -webkit-box-align: center;
+            align-items: center;
+            width: max-content;
+            font-weight: 500;
+            font-size: 14px;
+            margin: 0px;
+            margin-left: 1em;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+        }
+
+        .row1234 {
+            border-right: 1px solid rgb(200, 201, 202);
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        }
+
+        #platform {
+            position: absolute;
+            left: 19.7%;
+            top: 4%;
+        }
+
+        .brwse1>input {
+            padding-left: 7%;
+        }
+
+        /* navbar ends */
+    </style>
+
 </head>
-<style>
-    /* navabar starts */
-</style>
 
 <body>
-
     <div class="container-fluid box spread">
         <div class="spaceCreation">
 
@@ -27,7 +239,7 @@
             </div>
             <div class="rowdown homebase brwse2 hoverprop">
                 <!-- <button onclick="off()"><img src="https://icon-library.com/images/home-logo-icon/home-logo-icon-0.jpg" alt=""></button> -->
-                <svg height="50px" width="50px" onclick="off()" role="img" viewBox="0 0 40 33">
+                <svg onclick="off()" role="img" viewBox="0 0 40 33">
                     <g>
                         <path fill-rule="evenodd" fill="grey"
                             d="M20.5703897,13.4986182 L21.5126731,14.4766708 C21.6987855,14.6699043 22.0003009,14.6698052 22.1864133,14.4765718 L22.8605347,13.7762366 C23.0466471,13.5826069 23.0464565,13.2690358 22.8601536,13.0759014 L12.3307469,2.14486754 C12.1446345,1.95166576 11.843119,1.95175589 11.6569113,2.14486754 L1.13959288,13.0758023 C0.953469041,13.2691349 0.953469041,13.582706 1.13959288,13.7761375 L1.81336646,14.4764727 C1.99948839,14.6698052 2.3011277,14.6698052 2.48724963,14.4764727 L3.41717315,13.5100082 L3.41717315,21.009567 C3.41717315,21.5565831 3.84385941,22 4.37012963,22 L9.13491201,22 C9.66118223,22 10.0878685,21.5565831 10.0878685,21.009567 L10.0878685,17.0473397 C10.0878685,15.9533074 10.9411457,15.0664737 11.9937814,15.0664737 C13.0464172,15.0664737 13.8996944,15.9533074 13.8996944,17.0473397 L13.8996944,21.009567 C13.8996944,21.5565831 14.3264283,22 14.8526509,22 L19.6174333,22 C20.1436558,22 20.5703897,21.5565831 20.5703897,21.009567 L20.5703897,13.4986182 Z M5.3230861,11.5291421 L11.9938767,4.59592284 L18.6644768,11.5202282 L18.6644768,20.019134 L15.8056073,20.019134 L15.8056073,17.0473397 C15.8056073,14.8593741 14.0989576,13.0856076 11.9937814,13.0856076 C9.88859576,13.0856076 8.18195553,14.8593741 8.18195553,17.0473397 L8.18195553,20.019134 L5.3230861,20.019134 L5.3230861,11.5291421 Z">
@@ -36,8 +248,7 @@
                 </svg>
             </div>
             <div class="rowdown brwse2 hoverprop" id="broowse">
-                <svg height="50px" width="50px" onclick="on()" viewBox="0 0 40 33"><svg aria-label="browse icon"
-                        viewBox="0 0 29 34">
+                <svg onclick="on()" viewBox="0 0 40 33"><svg aria-label="browse icon" viewBox="0 0 29 34">
                         <path fill-rule="evenodd" fill="grey" clip-rule="evenodd"
                             d="M3 9h18a1 1 0 011 1v10a1 1 0 01-1 1H3a1 1 0 01-1-1V10a1 1 0 011-1zm1 2v8h16v-8H4zm1-5h14a1 1 0 011 1v1H4V7a1 1 0 011-1zm3-3h8a1 1 0 011 1v1H7V4a1 1 0 011-1z">
                         </path>
@@ -47,7 +258,7 @@
 
         <div class="row1 col-6 brwse1">
 
-            <!-- <i id="platform" class="material-icons">search</i> -->
+            <i id="platform" class="material-icons">search</i>
 
             <input type="text" placeholder="search courses.....">
 
@@ -55,7 +266,7 @@
 
         <div class="row2 col-2">
             <div class="twenty hoverprop">
-                <svg height="50px" width="50px" role="img" viewBox="0 0 40 33">
+                <svg role="img" viewBox="0 0 40 33">
                     <g>
                         <path fill="grey" fill-rule="evenodd"
                             d="M4.41132,9.7929665 L7.85066,13.2323465 C7.94443,13.3260465 7.99711,13.4532465 7.99711,13.5858465 L7.99711,21.2929465 C7.99711,21.5691465 7.77325,21.7929465 7.49711,21.7929465 L6.5,21.7929465 C6.22393,21.7929465 6.00011,21.5690465 6,21.2929465 L5.99711,14.2071465 L3,11.2100765 L3,13.2929465 C3,13.5691465 2.77614,13.7929465 2.5,13.7929465 L1.5,13.7929465 C1.223858,13.7929465 1,13.5691465 1,13.2929465 L1,8.2929665 C1,8.0168265 1.223858,7.7929665 1.5,7.7929665 L6.5,7.7929665 C6.77614,7.7929665 7,8.0168265 7,8.2929665 L7,9.2929665 C7,9.5691065 6.77614,9.7929665 6.5,9.7929665 L4.41132,9.7929665 Z M21,11.2071865 L18,14.2071465 L18,21.2929465 C18,21.5691465 17.7761,21.7929465 17.5,21.7929465 L16.5,21.7929465 C16.2239,21.7929465 16,21.5691465 16,21.2929465 L16,13.5858465 C16,13.4532465 16.0527,13.3260465 16.1464,13.2323465 L19.5858,9.7929665 L17.5,9.7929665 C17.2239,9.7929665 17,9.5691065 17,9.2929665 L17,8.2929665 C17,8.0168265 17.2239,7.7929665 17.5,7.7929665 L22.5,7.7929665 C22.7761,7.7929665 23,8.0168265 23,8.2929665 L23,13.2929465 C23,13.5691465 22.7761,13.7929465 22.5,13.7929465 L21.5,13.7929465 C21.2239,13.7929465 21,13.5691465 21,13.2929465 L21,11.2071865 Z M12.5001,21.7928465 L11.5001,21.7928465 C11.2239,21.7928465 11.0001,21.5690465 11.0001,21.2928465 L11.0001,5.6239565 L9.52782,7.0961965 C9.33256,7.2914565 9.01598,7.2914565 8.82072,7.0961965 L8.11361,6.3890865 C7.91835,6.1938265 7.91835,5.8772465 8.11361,5.6819765 L11.6491,2.1464465 C11.8444,1.9511845 12.161,1.9511845 12.3563,2.1464465 L15.8918,5.6819765 C16.087,5.8772465 16.087,6.1938265 15.8918,6.3890865 L15.1847,7.0961965 C14.9894,7.2914565 14.6728,7.2914565 14.4776,7.0961965 L13.0001,5.6186765 L13.0001,21.2928465 C13.0001,21.5690465 12.7762,21.7928465 12.5001,21.7928465 Z">
@@ -64,7 +275,7 @@
                 </svg>
             </div>
             <div class="twenty t3 hoverprop">
-                <svg height="50px" width="50px" role="img" viewBox="0 0 40 33">
+                <svg role="img" viewBox="0 0 40 33">
                     <g>
                         <path fill="grey"
                             d="M4 5.25A.25.25 0 014.25 5h15.5a.25.25 0 01.25.25v1.5a.25.25 0 01-.25.25H4.25A.25.25 0 014 6.75v-1.5zm0 4A.25.25 0 014.25 9h15.5a.25.25 0 01.25.25v1.5a.25.25 0 01-.25.25H4.25a.25.25 0 01-.25-.25v-1.5zm0 4a.25.25 0 01.25-.25h15.5a.25.25 0 01.25.25v1.5a.25.25 0 01-.25.25H4.25a.25.25 0 01-.25-.25v-1.5zm0 4a.25.25 0 01.25-.25h11.5a.25.25 0 01.25.25v1.5a.25.25 0 01-.25.25H4.25a.25.25 0 01-.25-.25v-1.5z">
@@ -74,14 +285,14 @@
             </div>
             <div class="twenty height23 ">
                 <button class="btn btn-primary">
-                    UPGRADE
+                    <p>UPGRADE</p>
                 </button>
             </div>
         </div>
 
         <div class="row1 col-2">
             <div class="userdetail hentai brwse2 hoverprop">
-                <svg height="50px" width="50px" role="img" viewBox="0 0 43 33">
+                <svg role="img" viewBox="0 0 43 33">
                     <g>
                         <path fill-rule="evenodd" fill="grey"
                             d="M7.68509519,2.0864418 C8.65164519,1.7965253 9.80509519,2.2539228 10.2423452,3.1878848 C10.2901952,3.1869048 10.3376852,3.1865448 10.3848052,3.1865448 C12.9849052,3.1865448 15.4848852,4.7865148 16.3847852,7.3864948 L17.0848852,9.3864948 C17.4848852,10.3864948 18.2847852,12.1865748 19.5848852,12.7864748 C19.7847852,12.8864748 20.0848852,13.0865748 20.1848852,13.3864748 C20.3847852,13.9865748 20.1848852,14.5865748 19.5848852,14.7864748 L6.58487519,19.4865748 C6.38480519,19.5865748 6.28482519,19.5865748 6.18485519,19.5865748 C5.78482519,19.5865748 5.38480519,19.2864748 5.18485519,18.8864748 C5.08487519,18.5865748 5.08487519,18.2864748 5.28482519,17.9865748 C5.88480519,16.7864748 5.38480519,14.7864748 5.08487519,13.7864748 L4.38480419,11.7865148 C3.41947179,9.1318548 4.33084919,6.2184048 6.44217519,4.5556848 C6.13346519,3.5002648 6.72476519,2.4705978 7.68509519,2.0864418 Z M14.4847852,8.0865648 C13.8847852,6.3864948 12.1848552,5.1865448 10.3848052,5.1865448 C9.88480519,5.1865448 9.38480519,5.1865448 8.88480519,5.3864948 C7.78482519,5.7865148 6.88480519,6.5865648 6.38480519,7.6865448 C5.88480519,8.7865148 5.88480519,9.9865848 6.28482519,11.0865648 L6.98477519,13.0865748 C7.38480519,14.1865748 7.68485519,15.5865748 7.58475519,16.9865748 L17.2847852,13.4865748 C16.2847852,12.4865748 15.5847852,11.1865448 15.1848852,10.0865648 L14.4847852,8.0865648 Z M12.6850952,21.5865748 C11.0849952,22.1865748 9.38504519,21.3864748 8.88504519,19.7864748 L14.4849852,17.7864748 C15.0849852,19.3864748 14.2850852,21.0865748 12.6850952,21.5865748 Z">
@@ -90,7 +301,7 @@
                 </svg>
             </div>
             <div class="userdetail brwse2 hoverprop">
-                <svg height="50px" width="50px" role="img" viewBox="0 0 43 33">
+                <svg role="img" viewBox="0 0 43 33">
                     <g>
                         <path fill="grey" clip-rule="evenodd"
                             d="M3,4.51578947 C3,3.98521579 3,3.71992516 3.10325653,3.51727168 C3.19408453,3.33901295 3.33901295,3.19408453 3.51727168,3.10325653 C3.71992516,3 3.98521579,3 4.51578947,3 L6.22105263,3 C6.75162632,3 7.01691789,3 7.21956947,3.10325653 C7.39782632,3.19408453 7.54275474,3.33901295 7.63358842,3.51727168 C7.73684211,3.71992516 7.73684211,3.98521579 7.73684211,4.51578947 L7.73684211,6.22105263 C7.73684211,6.75162632 7.73684211,7.01691789 7.63358842,7.21956947 C7.54275474,7.39782632 7.39782632,7.54275474 7.21956947,7.63358842 C7.01691789,7.73684211 6.75162632,7.73684211 6.22105263,7.73684211 L4.51578947,7.73684211 C3.98521579,7.73684211 3.71992516,7.73684211 3.51727168,7.63358842 C3.33901295,7.54275474 3.19408453,7.39782632 3.10325653,7.21956947 C3,7.01691789 3,6.75162632 3,6.22105263 L3,4.51578947 Z M9.63157895,4.51578947 C9.63157895,3.98521579 9.63157895,3.71992516 9.73483263,3.51727168 C9.82566632,3.33901295 9.97059474,3.19408453 10.1488516,3.10325653 C10.3515032,3 10.6167947,3 11.1473684,3 L12.8526316,3 C13.3832526,3 13.6485158,3 13.8511579,3.10325653 C14.0294526,3.19408453 14.1743053,3.33901295 14.2651579,3.51727168 C14.3684211,3.71992516 14.3684211,3.98521579 14.3684211,4.51578947 L14.3684211,6.22105263 C14.3684211,6.75162632 14.3684211,7.01691789 14.2651579,7.21956947 C14.1743053,7.39782632 14.0294526,7.54275474 13.8511579,7.63358842 C13.6485158,7.73684211 13.3832526,7.73684211 12.8526316,7.73684211 L11.1473684,7.73684211 C10.6167947,7.73684211 10.3515032,7.73684211 10.1488516,7.63358842 C9.97059474,7.54275474 9.82566632,7.39782632 9.73483263,7.21956947 C9.63157895,7.01691789 9.63157895,6.75162632 9.63157895,6.22105263 L9.63157895,4.51578947 Z M16.3664211,3.51727168 C16.4572737,3.33901295 16.6021263,3.19408453 16.7804211,3.10325653 C16.9830632,3 17.2483263,3 17.7789474,3 L19.4842105,3 C20.0148316,3 20.2800947,3 20.4827368,3.10325653 C20.6610316,3.19408453 20.8058842,3.33901295 20.8967368,3.51727168 C21,3.71992516 21,3.98521579 21,4.51578947 L21,6.22105263 C21,6.75162632 21,7.01691789 20.8967368,7.21956947 C20.8058842,7.39782632 20.6610316,7.54275474 20.4827368,7.63358842 C20.2800947,7.73684211 20.0148316,7.73684211 19.4842105,7.73684211 L17.7789474,7.73684211 C17.2483263,7.73684211 16.9830632,7.73684211 16.7804211,7.63358842 C16.6021263,7.54275474 16.4572737,7.39782632 16.3664211,7.21956947 C16.2631579,7.01691789 16.2631579,6.75162632 16.2631579,6.22105263 L16.2631579,4.51578947 C16.2631579,3.98521579 16.2631579,3.71992516 16.3664211,3.51727168 Z M3,11.1473684 C3,10.6167947 3,10.3515032 3.10325653,10.1488516 C3.19408453,9.97059474 3.33901295,9.82566632 3.51727168,9.73483263 C3.71992516,9.63157895 3.98521579,9.63157895 4.51578947,9.63157895 L6.22105263,9.63157895 C6.75162632,9.63157895 7.01691789,9.63157895 7.21956947,9.73483263 C7.39782632,9.82566632 7.54275474,9.97059474 7.63358842,10.1488516 C7.73684211,10.3515032 7.73684211,10.6167947 7.73684211,11.1473684 L7.73684211,12.8526316 C7.73684211,13.3832526 7.73684211,13.6485158 7.63358842,13.8511579 C7.54275474,14.0294526 7.39782632,14.1743053 7.21956947,14.2651579 C7.01691789,14.3684211 6.75162632,14.3684211 6.22105263,14.3684211 L4.51578947,14.3684211 C3.98521579,14.3684211 3.71992516,14.3684211 3.51727168,14.2651579 C3.33901295,14.1743053 3.19408453,14.0294526 3.10325653,13.8511579 C3,13.6485158 3,13.3832526 3,12.8526316 L3,11.1473684 Z M9.73483263,10.1488516 C9.82566632,9.97059474 9.97059474,9.82566632 10.1488516,9.73483263 C10.3515032,9.63157895 10.6167947,9.63157895 11.1473684,9.63157895 L12.8526316,9.63157895 C13.3832526,9.63157895 13.6485158,9.63157895 13.8511579,9.73483263 C14.0294526,9.82566632 14.1743053,9.97059474 14.2651579,10.1488516 C14.3684211,10.3515032 14.3684211,10.6167947 14.3684211,11.1473684 L14.3684211,12.8526316 C14.3684211,13.3832526 14.3684211,13.6485158 14.2651579,13.8511579 C14.1743053,14.0294526 14.0294526,14.1743053 13.8511579,14.2651579 C13.6485158,14.3684211 13.3832526,14.3684211 12.8526316,14.3684211 L11.1473684,14.3684211 C10.6167947,14.3684211 10.3515032,14.3684211 10.1488516,14.2651579 C9.97059474,14.1743053 9.82566632,14.0294526 9.73483263,13.8511579 C9.63157895,13.6485158 9.63157895,13.3832526 9.63157895,12.8526316 L9.63157895,11.1473684 C9.63157895,10.6167947 9.63157895,10.3515032 9.73483263,10.1488516 Z M16.2631579,11.1473684 C16.2631579,10.6167947 16.2631579,10.3515032 16.3664211,10.1488516 C16.4572737,9.97059474 16.6021263,9.82566632 16.7804211,9.73483263 C16.9830632,9.63157895 17.2483263,9.63157895 17.7789474,9.63157895 L19.4842105,9.63157895 C20.0148316,9.63157895 20.2800947,9.63157895 20.4827368,9.73483263 C20.6610316,9.82566632 20.8058842,9.97059474 20.8967368,10.1488516 C21,10.3515032 21,10.6167947 21,11.1473684 L21,12.8526316 C21,13.3832526 21,13.6485158 20.8967368,13.8511579 C20.8058842,14.0294526 20.6610316,14.1743053 20.4827368,14.2651579 C20.2800947,14.3684211 20.0148316,14.3684211 19.4842105,14.3684211 L17.7789474,14.3684211 C17.2483263,14.3684211 16.9830632,14.3684211 16.7804211,14.2651579 C16.6021263,14.1743053 16.4572737,14.0294526 16.3664211,13.8511579 C16.2631579,13.6485158 16.2631579,13.3832526 16.2631579,12.8526316 L16.2631579,11.1473684 Z M3.10325653,16.7804211 C3.19408453,16.6021263 3.33901295,16.4572737 3.51727168,16.3664211 C3.71992516,16.2631579 3.98521579,16.2631579 4.51578947,16.2631579 L6.22105263,16.2631579 C6.75162632,16.2631579 7.01691789,16.2631579 7.21956947,16.3664211 C7.39782632,16.4572737 7.54275474,16.6021263 7.63358842,16.7804211 C7.73684211,16.9830632 7.73684211,17.2483263 7.73684211,17.7789474 L7.73684211,19.4842105 C7.73684211,20.0148316 7.73684211,20.2800947 7.63358842,20.4827368 C7.54275474,20.6610316 7.39782632,20.8058842 7.21956947,20.8967368 C7.01691789,21 6.75162632,21 6.22105263,21 L4.51578947,21 C3.98521579,21 3.71992516,21 3.51727168,20.8967368 C3.33901295,20.8058842 3.19408453,20.6610316 3.10325653,20.4827368 C3,20.2800947 3,20.0148316 3,19.4842105 L3,17.7789474 C3,17.2483263 3,16.9830632 3.10325653,16.7804211 Z M9.63157895,17.7789474 C9.63157895,17.2483263 9.63157895,16.9830632 9.73483263,16.7804211 C9.82566632,16.6021263 9.97059474,16.4572737 10.1488516,16.3664211 C10.3515032,16.2631579 10.6167947,16.2631579 11.1473684,16.2631579 L12.8526316,16.2631579 C13.3832526,16.2631579 13.6485158,16.2631579 13.8511579,16.3664211 C14.0294526,16.4572737 14.1743053,16.6021263 14.2651579,16.7804211 C14.3684211,16.9830632 14.3684211,17.2483263 14.3684211,17.7789474 L14.3684211,19.4842105 C14.3684211,20.0148316 14.3684211,20.2800947 14.2651579,20.4827368 C14.1743053,20.6610316 14.0294526,20.8058842 13.8511579,20.8967368 C13.6485158,21 13.3832526,21 12.8526316,21 L11.1473684,21 C10.6167947,21 10.3515032,21 10.1488516,20.8967368 C9.97059474,20.8058842 9.82566632,20.6610316 9.73483263,20.4827368 C9.63157895,20.2800947 9.63157895,20.0148316 9.63157895,19.4842105 L9.63157895,17.7789474 Z M16.3664211,16.7804211 C16.4572737,16.6021263 16.6021263,16.4572737 16.7804211,16.3664211 C16.9830632,16.2631579 17.2483263,16.2631579 17.7789474,16.2631579 L19.4842105,16.2631579 C20.0148316,16.2631579 20.2800947,16.2631579 20.4827368,16.3664211 C20.6610316,16.4572737 20.8058842,16.6021263 20.8967368,16.7804211 C21,16.9830632 21,17.2483263 21,17.7789474 L21,19.4842105 C21,20.0148316 21,20.2800947 20.8967368,20.4827368 C20.8058842,20.6610316 20.6610316,20.8058842 20.4827368,20.8967368 C20.2800947,21 20.0148316,21 19.4842105,21 L17.7789474,21 C17.2483263,21 16.9830632,21 16.7804211,20.8967368 C16.6021263,20.8058842 16.4572737,20.6610316 16.3664211,20.4827368 C16.2631579,20.2800947 16.2631579,20.0148316 16.2631579,19.4842105 L16.2631579,17.7789474 C16.2631579,17.2483263 16.2631579,16.9830632 16.3664211,16.7804211 Z"
@@ -153,200 +364,6 @@
         </div>
     </div>
     <!-- navbar ended -->
-    <div class="top">
-        <div class="heading">
-            <div>
-                <h1>Get 33% off Pluralsight</h1>
-                <p>For a limited time, get 33% off annual standard and annual premium subscriptions.
-                    Click below to upgrade now!</p>
-            </div>
-        </div>
-        <div class="content">
-            <div class="category">
-                <div>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div>
-                    <div>
-                        <h3>Software Development</h3>
-                    </div>
-                    <div class="space">
-                        <h3>IT Operation</h3>
-                    </div>
-                    <div class="space">
-                        <h3>Data Professional</h3>
-                    </div>
-                    <div class="space">
-                        <h3>Security Professional</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="content-desc">
-                <div>
-                    <h1>Software Development</h1>
-                    <p>Explore courses on popular programming languages, developer tools, software practices and app
-                        development platforms.</p>
-                </div>
-                <div class="category-course">
-                    <div style="margin-top: 30px; padding-top: 20px;">
-                        <div>
-                            <h3>Node.js: The Big Picture</h3>
-                            <p>Paul O'Fallon . Beginner . June 3, 2019</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <h3>Node.js: The Big Picture</h3>
-                            <p>Paul O'Fallon . Beginner . June 3, 2019</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <h3>Node.js: The Big Picture</h3>
-                            <p>Paul O'Fallon . Beginner . June 3, 2019</p>
-                        </div>
-                    </div>
-                    <a href="" class="link">See all courses</a>
-                </div>
-            </div>
-
-        </div>
-        <div class="free-weekly-course">
-            <div class="up">
-                <div>
-                    <h3>5 Free Weekly Courses: Security</h3>
-                </div>
-                <div>
-                    <a href="">View all ></a>
-                </div>
-            </div>
-            <div class="courses">
-                <div>
-                    <img src="https://pluralsight2.imgix.net/custom-home/freemium-test-reanna-tile-0-4-b268047d2da12d0c09971144967a9b4c?w=240&amp;h=96&amp;fit=clamp&amp;auto=compress,format"
-                        alt="">
-                    <a>Performed Cloud security Operation</a>
-                </div>
-                <div>
-                    <img src="https://pluralsight2.imgix.net/custom-home/freemium-test-reanna-tile-0-2-08fed77543ba95656e4f3bba080f2f3f?w=240&amp;h=96&amp;fit=clamp&amp;auto=compress,format"
-                        alt="">
-                    <a>Lateral Movement with Infection Monkey</a>
-                </div>
-                <div>
-                    <img src="https://pluralsight2.imgix.net/custom-home/freemium-test-reanna-tile-0-1-08556444c65d0e48f7536932a3b6bfdc?w=240&amp;h=96&amp;fit=clamp&amp;auto=compress,format"
-                        alt="">
-                    <a>Initial Access with Gophish</a>
-                </div>
-                <div>
-                    <img src="https://pluralsight2.imgix.net/custom-home/freemium-test-reanna-tile-0-0-b1c153f8ca8d00a34394e40da8e6ad7d?w=240&amp;h=96&amp;fit=clamp&amp;auto=compress,format"
-                        alt="">
-                    <a>Building a Cybersecurity Home Lab Enviroment</a>
-                </div>
-                <div>
-                    <img src="https://pluralsight2.imgix.net/custom-home/freemium-test-reanna-tile-0-3-fa564b86a8de945c77f819eac3cd46ed?w=240&amp;h=96&amp;fit=clamp&amp;auto=compress,format"
-                        alt="">
-                    <a>People Information Gathering with the Social Engineering Toolkit (SET)</a>
-                </div>
-            </div>
-        </div>
-        <div class="free-weekly-course">
-            <div class="up">
-                <div>
-                    <h3>Role IQ</h3>
-                </div>
-                <div>
-                    <a href="">View all ></a>
-                </div>
-            </div>
-            <div class="courses">
-                <div>
-                    <img src="https://pluralsight2.imgix.net/custom-home/free-user-homepage-tile-1-0-6f97b50c40ff02997deeb6a795a9b7bf?w=240&amp;h=96&amp;fit=clamp&amp;auto=compress,format"
-                        alt="" style="background-color: rgb(29,36,40);">
-                    <a>Microsoft Azure Developer</a>
-                </div>
-                <div>
-                    <img src="https://pluralsight2.imgix.net/custom-home/free-user-homepage-tile-1-1-0e830365fe7b87d50406fd589a46c605?w=240&amp;h=96&amp;fit=clamp&amp;auto=compress,format"
-                        alt="" style="background-color: rgb(29,36,40);">
-                    <a>AWS Security</a>
-                </div>
-                <div>
-                    <img src="https://pluralsight2.imgix.net/custom-home/freemium-test-reanna-tile-2-1-d404d48ca76a7c98d1d3bec3ca2feece?w=240&amp;h=96&amp;fit=clamp&amp;auto=compress,format"
-                        alt="" style="background-color: rgb(29,36,40);">
-                    <a>Anugular Web Developer</a>
-                </div>
-                <div>
-                    <img src="https://pluralsight2.imgix.net/custom-home/freemium-test-reanna-tile-2-3-44cbda3f225323815aa87efe5f4a1b23?w=240&amp;h=96&amp;fit=clamp&amp;auto=compress,format"
-                        alt="" style="background-color: rgb(29,36,40);">
-                    <a>Framework C#</a>
-                </div>
-                <div>
-                    <img src="https://pluralsight2.imgix.net/custom-home/freemium-test-reanna-tile-2-4-98d661d6105fbf0bd6e85272f9f6377c?w=240&amp;h=96&amp;fit=clamp&amp;auto=compress,format"
-                        alt="" style="background-color: rgb(29,36,40);">
-                    <a>Vue Web Developer</a>
-                </div>
-            </div>
-        </div>
-        <div class="free-weekly-course">
-            <div class="up">
-                <div>
-                    <h3>Skill IQ</h3>
-                </div>
-                <div>
-                    <a href="">View all ></a>
-                </div>
-            </div>
-            <div class="courses">
-                <div>
-                    <img src="https://pluralsight2.imgix.net/custom-home/free-user-homepage-tile-1-0-6f97b50c40ff02997deeb6a795a9b7bf?w=240&amp;h=96&amp;fit=clamp&amp;auto=compress,format"
-                        alt="" style="background-color: rgb(29,36,40);">
-                    <a>Adobe Experience Manager for Developer</a>
-                </div>
-                <div>
-                    <img src="https://pluralsight2.imgix.net/custom-home/freemium-test-reanna-tile-1-1-66388e2ed917a39cdd92973b19cc3d45?w=240&amp;h=96&amp;fit=clamp&amp;auto=compress,format"
-                        alt="" style="background-color: rgb(29,36,40);">
-                    <a>Android</a>
-                </div>
-                <div>
-                    <img src="https://pluralsight2.imgix.net/custom-home/freemium-test-reanna-tile-2-1-d404d48ca76a7c98d1d3bec3ca2feece?w=240&amp;h=96&amp;fit=clamp&amp;auto=compress,format"
-                        alt="" style="background-color: rgb(29,36,40);">
-                    <a>Anugular</a>
-                </div>
-                <div>
-                    <img src="https://pluralsight2.imgix.net/custom-home/freemium-test-reanna-tile-1-3-6f97b50c40ff02997deeb6a795a9b7bf?w=240&amp;h=96&amp;fit=clamp&amp;auto=compress,format"
-                        alt="" style="background-color: rgb(29,36,40);">
-                    <a>Active Directory Administration</a>
-                </div>
-                <div>
-                    <img src="https://pluralsight2.imgix.net/custom-home/freemium-test-reanna-tile-1-4-eaf59395f6db72b8bdd039d4e95cff54?w=240&amp;h=96&amp;fit=clamp&amp;auto=compress,format"
-                        alt="" style="background-color: rgb(29,36,40);">
-                    <a>Javascript Core Language</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <footer>
-        <div>
-            <div>
-                <a href="#">Features .</a>
-                <a href="#"> Author .</a>
-                <a href="#">Mobile&offline apps .</a>
-                <a href="#">Blog .</a>
-                <a href="#">Help center .</a>
-                <a href="#">How-to videos .</a>
-                <a href="#">Refferal program .</a>
-                <a href="#">Terms of use .</a>
-                <a href="#">Privacy policy</a>
-            </div>
-            <div>
-                <a href="#">Send feedback</a>
-                <a href="#" class="support-btn">Get support</a>
-            </div>
-
-        </div>
-    </footer>
-
 </body>
 
 </html>
@@ -513,10 +530,10 @@
     ////////////////////////////////////////////////////////////////////////////////
 
     function filtersectiojnPage() {
-        window.location.href = "http://localhost:3251/vidio"      //filter section link
+        window.location.href = ""      //filter section link
     }
     function toHome() {
-        window.location.href = "";     // homepage link;
+        window.location.href = " ";     // homepage link;
     }
 
 </script>
