@@ -547,14 +547,14 @@
         </div>
       </div>
 
-      <div
+      <div 
         id="coures_view"
         style="
           width: 65%;
           float: left;
           height: 100%;
           background-color: rgb(0, 0, 0);
-        "
+        " onclick="run()"
       ></div>
     </div>
 
@@ -684,18 +684,22 @@
    let t= z
 
 
-    function addCourses(d) {
+  function addCourses(d) {
   let data1 = d;
 
   data_div.innerHTML = null;
 
   data1.forEach(function (el) {
     var div = document.createElement("div");
-
+  
+  
     let name = document.createElement("p");
-    name.innerHTML = el.courseName;
-    let type = document.createElement("p");
-    type.innerHTML = el.contentType;
+    
+    name.innerHTML = el.contentType;
+    let type = document.createElement("a");
+    type.innerHTML = el.courseName;
+    type.href = `course?n=${el.courseName}&duration=${el.duration}.&img=${el.src}&rating=${el.rating}&level=${el.difficulty}&dateOfCourse= ${el.dateOfCourse}&author=${el.author}`
+    
     let wname = document.createElement("p");
     wname.innerHTML = el. author;
    
@@ -726,8 +730,14 @@
     s_img.setAttribute("id", "div_courses_s_img");
     div.append(type, name, wname, time, c_img, status, img, s_img, rat);
     data_div.append(div);
+    // document.getElementById('div_courses_div').onclick =window.location.href='course?n=={el.courseName}'
+
+     
+
+   
   });
 }
+
 
 setInterval(function () {
  // if (p != 10) {

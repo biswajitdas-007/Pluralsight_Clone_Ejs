@@ -12,6 +12,20 @@
 </head>
 <style>
     /* navabar starts */
+    #photo{
+        background-color: rgb(29, 1, 31);
+        margin-top: 4px;
+        width: 34px;
+        height: 34px;
+        margin-left: -15px;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 27px;
+        font-weight: bold;
+        font-family: sans-serif;
+        color: rgb(252, 227, 0);
+    }
+
 </style>
 
 <body>
@@ -100,8 +114,7 @@
             </div>
             <div class="userdetail brwse2">
                 <div id="circleFace">
-                    <img src="https://i.ibb.co/DbJb026/IMG-20201206-225239-333-removebg-preview.png"
-                        alt="IMG-20201206-225239-333-removebg-preview">
+                    <div id="photo">p</div>
                 </div>
             </div>
         </div>
@@ -513,10 +526,25 @@
     ////////////////////////////////////////////////////////////////////////////////
 
     function filtersectiojnPage() {
-        window.location.href = "http://localhost:3251/vidio"      //filter section link
+        window.location.href = "filter"      //filter section link
     }
     function toHome() {
         window.location.href = "";     // homepage link;
     }
 
+    function qs(key) {
+    var vars = [],
+      hash;
+    var hashes = window.location.href
+      .slice(window.location.href.indexOf("?") + 1)
+      .split("&");
+    for (var i = 0; i < hashes.length; i++) {
+      hash = hashes[i].split("=");
+      vars.push(hash[0]);
+      vars[hash[0]] = hash[1];
+    }
+    return vars[key];
+  }
+console.log(  window.location.href)
+  document.getElementById("photo").innerText==qs(fName)[0]
 </script>

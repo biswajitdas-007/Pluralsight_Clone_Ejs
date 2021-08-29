@@ -38,6 +38,16 @@ router.get("", async function (req, res) {
     
   });
 });
+router.get("/ppp", async function (req, res) {
+  const users = await User.find().lean().exec();
+ // const pageTitle = "Welcome to Users page";
+//  return res.render("users/allUsers", {
+  //  pageTitle,
+   // users,
+   return res.send(users);
+    
+ // });
+});
 
 //////////////////////////////////////////
 router.get("/sigin", async function (req, res) {

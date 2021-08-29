@@ -13,7 +13,6 @@
   </head>
 
   <body style="margin-bottom: 1px; background-color: rgb(29, 26, 26)">
-   
     <form name="myForm" id="myForm" action="/users" method="post">
       <input
         type="text"
@@ -32,6 +31,7 @@
       />
       <input type="email" id="e" name="email" placeholder="Email" required />
       <input type="email" id="p" name="password" placeholder="Email" required />
+      <input type="text" id="type" name="type" placeholder="Email" required />
       <button type="submit">Add Users</button>
     </form>
     <img
@@ -73,7 +73,7 @@
         </div>
         <h5 style="border-bottom-width: 0px">
           <span style="margin-right: 57%">Total due today</span>
-          <span style="margin-right: 0px"> ₹0</span>
+          <span id="blance" style="margin-right: 0px"> ₹0</span>
         </h5>
       </div>
       <p id="order_summary-text">
@@ -876,7 +876,7 @@
             </div>
             <div class="right-input">
               <p>Postal Code*<br /></p>
-              <input id="postal_code" type="number"  required />
+              <input id="postal_code" type="number" required />
             </div>
           </div>
           <div style="height: 10px"></div>
@@ -1236,20 +1236,22 @@
         <hr />
 
         <div>
-          <button  onclick="run()" >Continue</button>
+          <button onclick="run()">Continue</button>
         </div>
       </div>
     </div>
   </body>
 </html>
 <script>
-  console.log(window.location.href)
-  if(document.getElementById("text").innerText=="Email is already in databse"){
-    document.getElementById("text").style.display="block"
-    console.log("kkk")
+  console.log(window.location.href);
+  if (
+    document.getElementById("text").innerText == "Email is already in databse"
+  ) {
+    document.getElementById("text").style.display = "block";
+    console.log("kkk");
   }
-  var t=''
-  console.log(t)
+  var t = "";
+  console.log(t);
   function check(e) {
     e.preventDefault();
     var terms_policy = document.getElementById("terms-policy");
@@ -1278,73 +1280,77 @@
     ) {
       alert("Please fill the required fields!");
     } else {
-      if (email == confirm_email ) {
-        if(confirm_password == password){
-        if (terms_policy.checked) {
-          document.getElementById("f").value =
-            document.getElementById("firstname").value;
-          document.getElementById("l").value =
-            document.getElementById("lastname").value;
-          document.getElementById("e").value =
-            document.getElementById("email").value;
-          document.getElementById("p").value =
-            document.getElementById("password").value;
-         //document.myForm.submit();
+      if (email == confirm_email) {
+        if (confirm_password == password) {
+          if (terms_policy.checked) {
+            document.getElementById("f").value =
+              document.getElementById("firstname").value;
+            document.getElementById("l").value =
+              document.getElementById("lastname").value;
+            document.getElementById("e").value =
+              document.getElementById("email").value;
+            document.getElementById("p").value =
+              document.getElementById("password").value;
+            if (document.getElementById("blance").innerText == "₹0") {
+              document.getElementById("type").value = false;
+            } else {
+              document.getElementById("type").value = true;
+            }
+            document.myForm.submit();
 
-          let arr;
-          arr = localStorage.getItem("signData1");
-          if (arr == null) {
-            arr = [];
+            let arr;
+            arr = localStorage.getItem("signData1");
+            if (arr == null) {
+              arr = [];
+            } else {
+              arr = JSON.parse(localStorage.getItem("signData1"));
+            }
+            arr.push(location);
+            localStorage.setItem("signData1", JSON.stringify(arr));
+            document.getElementById("payment-container").style.display = "none";
+
+            if (
+              (document.getElementById("payment-container").style.display =
+                "none")
+            ) {
+              document.getElementById("text").style.display = "none";
+              document.getElementById("text").innerText.display = "block";
+              console.log("p");
+            }
+            document.getElementById("payment-form-close").style.display =
+              "none";
+            document.getElementById("payment-form").style.display = "block";
+
+            document.getElementById("number1").innerText = "done";
+
+            document.getElementById("number2").style.backgroundColor =
+              "rgb(136, 136, 136)";
+            document.getElementById("number3").style.color = "white";
+            document.getElementById("number3").style.backgroundColor =
+              "rgb(32, 219, 233)";
+
+            document.getElementById("payment-container-close").style.display =
+              "block";
+            document.getElementById("firstname1").value =
+              document.getElementById("firstname").value;
+            document.getElementById("lastname1").value =
+              document.getElementById("lastname").value;
+            document.getElementById("email1").value =
+              document.getElementById("email").value;
+            document.getElementById("confirm-email1").value =
+              document.getElementById("confirm-email").value;
+            document.getElementById("companyName1").value =
+              document.getElementById("companyName").value =
+              document.getElementById("country1").value =
+              document.getElementById("country").value =
+              document.getElementById("password1").value =
+                document.getElementById("password").value;
           } else {
-            arr = JSON.parse(localStorage.getItem("signData1"));
+            alert("You missed terms and conditions!");
           }
-          arr.push(location);
-          localStorage.setItem("signData1", JSON.stringify(arr));
-          document.getElementById("payment-container").style.display = "none";
-
-          if (
-            (document.getElementById("payment-container").style.display =
-              "none")
-          ) {
-            document.getElementById("text").style.display = "none";
-            document.getElementById("text").innerText.display = "block";
-            console.log("p");
-          }
-          document.getElementById("payment-form-close").style.display = "none";
-          document.getElementById("payment-form").style.display = "block";
-
-          document.getElementById("number1").innerText = "done";
-
-          document.getElementById("number2").style.backgroundColor =
-            "rgb(136, 136, 136)";
-          document.getElementById("number3").style.color = "white";
-          document.getElementById("number3").style.backgroundColor =
-            "rgb(32, 219, 233)";
-
-          let data = JSON.parse(localStorage.getItem("signData1"));
-          console.log(data[data.length - 1].firstname);
-
-          document.getElementById("payment-container-close").style.display =
-            "block";
-          document.getElementById("firstname1").value =
-            data[data.length - 1].firstname;
-          document.getElementById("lastname1").value =
-            data[data.length - 1].lastname;
-          document.getElementById("email1").value = data[data.length - 1].email;
-          document.getElementById("confirm-email1").value =
-            data[data.length - 1].confirm_email;
-          document.getElementById("companyName1").value =
-            data[data.length - 1].companyName;
-          document.getElementById("country1").value =
-            data[data.length - 1].country;
-          document.getElementById("password1").value =
-            data[data.length - 1].password;
         } else {
-          alert("You missed terms and conditions!");
+          alert("Fill correct password!");
         }
-      }else{
-        alert("Fill correct password!")
-      }
       } else {
         alert("Fill correct email!");
       }
@@ -1376,18 +1382,16 @@
       document.getElementById("number5").style.color = "white";
       document.getElementById("number4").style.backgroundColor =
         "rgb(136, 136, 136)";
-      
     }
   }
-  function run(){
-    
-    
-    let x= '<%- JSON.stringify(users) %>';
-    let z=JSON.parse(x);
-    let l=z.length-1
-   let u= document.getElementById("email").value
-    console.log( z[l].email )
-   // window.location.href='/users/payment_successful?email=document.getElementById("email").value'
+
+  function run() {
+    let fName = document.getElementById("f").value;
+    let lName = document.getElementById("l").value;
+    let eName = document.getElementById("e").value;
+    let pName = document.getElementById("p").value;
+    let tName = document.getElementById("type").value;
+ 
+    window.location.href = `payment_successful?email=${eName}&type=${tName}&fName=${fName}&lName=${lName}&pName${pName}`;
   }
-  run()
 </script>

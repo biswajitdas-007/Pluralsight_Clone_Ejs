@@ -1,21 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pluralsight</title>
-    <link rel="stylesheet" href="/static/users/users.css"/>
-</head>
-<body>
+    <link rel="stylesheet" href="/static/users/users.css" />
+  </head>
+  <body>
     <div id="animation">
-        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-        <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_7W0ppe.json" background="transparent" speed="1"
-            style="width: 550px; height: 550px;" loop autoplay></lottie-player>
+      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+      <lottie-player
+        src="https://assets5.lottiefiles.com/packages/lf20_7W0ppe.json"
+        background="transparent"
+        speed="1"
+        style="width: 550px; height: 550px"
+        loop
+        autoplay
+      ></lottie-player>
     </div>
 
     <div>
-        <a href="signin.html">Explore our courses ></a>
+      <a onclick="run()">Explore our courses ></a>
     </div>
-</body>
+  </body>
 </html>
+<script>
+  var count = 0;
+  var data = [];
+  var arr = window.location.href;
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i-1] == "?") {
+      count++;
+    }
+    if (count == 1) {
+      data.push(arr[i]);
+    }
+  }
+  var has=data.join("")
+ console.log(has)
+  function run(){
+    window.location.href=`landingPage?${has}`
+  }
+</script>
