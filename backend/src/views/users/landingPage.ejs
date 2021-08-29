@@ -12,19 +12,6 @@
 </head>
 <style>
     /* navabar starts */
-    #photo{
-        background-color: rgb(29, 1, 31);
-        margin-top: 4px;
-        width: 34px;
-        height: 34px;
-        margin-left: -15px;
-        border-radius: 50%;
-        text-align: center;
-        font-size: 27px;
-        font-weight: bold;
-        font-family: sans-serif;
-        color: rgb(252, 227, 0);
-    }
 
 </style>
 
@@ -77,7 +64,7 @@
                     </g>
                 </svg>
             </div>
-            <div class="twenty t3 hoverprop">
+            <div id="up1" class="twenty t3 hoverprop">
                 <svg height="50px" width="50px" role="img" viewBox="0 0 40 33">
                     <g>
                         <path fill="grey"
@@ -86,7 +73,7 @@
                     </g>
                 </svg>
             </div>
-            <div class="twenty height23 ">
+            <div id="up" class="twenty height23 ">
                 <button class="btn btn-primary">
                     UPGRADE
                 </button>
@@ -228,7 +215,7 @@
 
         </div>
         <div class="free-weekly-course">
-            <div class="up">
+            <div  class="up">
                 <div>
                     <h3>5 Free Weekly Courses: Security</h3>
                 </div>
@@ -236,7 +223,7 @@
                     <a href="">View all ></a>
                 </div>
             </div>
-            <div class="courses">
+            <div onclick="filtersectiojnPage()" class="courses">
                 <div>
                     <img src="https://pluralsight2.imgix.net/custom-home/freemium-test-reanna-tile-0-4-b268047d2da12d0c09971144967a9b4c?w=240&amp;h=96&amp;fit=clamp&amp;auto=compress,format"
                         alt="">
@@ -264,8 +251,8 @@
                 </div>
             </div>
         </div>
-        <div class="free-weekly-course">
-            <div class="up">
+        <div onclick="filtersectiojnPage()" class="free-weekly-course">
+            <div onclick="filtersectiojnPage()" class="up">
                 <div>
                     <h3>Role IQ</h3>
                 </div>
@@ -273,7 +260,7 @@
                     <a href="">View all ></a>
                 </div>
             </div>
-            <div class="courses">
+            <div onclick="filtersectiojnPage()" class="courses">
                 <div>
                     <img src="https://pluralsight2.imgix.net/custom-home/free-user-homepage-tile-1-0-6f97b50c40ff02997deeb6a795a9b7bf?w=240&amp;h=96&amp;fit=clamp&amp;auto=compress,format"
                         alt="" style="background-color: rgb(29,36,40);">
@@ -301,7 +288,7 @@
                 </div>
             </div>
         </div>
-        <div class="free-weekly-course">
+        <div onclick="filtersectiojnPage()" class="free-weekly-course">
             <div class="up">
                 <div>
                     <h3>Skill IQ</h3>
@@ -373,6 +360,23 @@
 
 
 <script>
+    
+  var count = 0;
+  var data = [];
+  var arr = window.location.href;
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i-1] == "?") {
+      count++;
+    }
+    if (count == 1) {
+      data.push(arr[i]);
+    }
+  }
+  var has=data.join("")
+  console.log(has)
+  
+   
+  
     let a = 0;
     if (a == 0) {
         off();
@@ -526,7 +530,7 @@
     ////////////////////////////////////////////////////////////////////////////////
 
     function filtersectiojnPage() {
-        window.location.href = "filter"      //filter section link
+        window.location.href=`filter?${has}`    //filter section link
     }
     function toHome() {
         window.location.href = "";     // homepage link;
@@ -545,6 +549,11 @@
     }
     return vars[key];
   }
-console.log(  window.location.href)
-  document.getElementById("photo").innerText==qs(fName)[0]
+  console.log(  window.location.href)
+  document.getElementById("photo").innerText=qs("fName")[0].toUpperCase()
+  document.getElementById("photo").innerText=qs("fName")[0].toUpperCase()
+    if(qs("type")=="true"){
+    document.getElementById("up").style.display="none"
+    document.getElementById("up1").style.marginLeft="30px"
+  }
 </script>

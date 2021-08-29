@@ -184,6 +184,44 @@ body {
 .brwse1 > input {
   padding-left: 5%;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(122, 122, 122);
+ 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(201, 201, 201);
+  border-radius: 90px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+#photo{
+  background-color: rgba(221, 209, 36, 0.89);
+  margin-top: 4px;
+  padding-top: 2px;
+  width: 34px;
+  height: 34px;
+  margin-left: -15px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 27px;
+  font-weight: bold;
+  font-family: auto;
+  color: rgb(148, 0, 216);
+  box-shadow: rgba(255, 255, 255, 0.144) 1px 1px 1px 1px;
+}
+
 /* navbar ends */
 
 /* navbar ends */

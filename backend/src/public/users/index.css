@@ -97,6 +97,12 @@ body {
 .courses {
   display: flex;
 }
+.courses div {
+ box-shadow: black 3px 3px 3px 3px;
+}
+.courses > div:hover {
+  box-shadow: rgba(190, 190, 190, 0.753) 1px 1px 1px 4px;
+ }
 .courses > div {
   padding: 10px;
 }
