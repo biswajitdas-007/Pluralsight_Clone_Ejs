@@ -39,7 +39,7 @@
             <hr class="bar" />
           </div>
           <button
-            onclick="window.location.href='/users/create'"
+            onclick="window.location.href='sigin'"
             class="btn2-signin"
           >
             Create an account
@@ -84,6 +84,7 @@
       if (z[i].email == email && z[i].password == password) {  
         arr2.push(z[i].first_name);
         console.log(arr2);
+      window.location.href='landingPage'
         count++;
         break;
       }
