@@ -1,5 +1,16 @@
 ---
 # Pluralsight Clone :sunglasses:
+
+
+## To start the project
+
+: run the following command in `backend` folder
+
+```bash
+  nodemon server
+```
+: after that go to you browser and type `http://localhost:3251/pluralsight/home` and you are ready to expolore our project.
+
 ---
 
 ### Team Members
@@ -11,18 +22,20 @@
 ---
 
 ### Tech Stack Used
- + #### Languages
-     - `HTML`
-      - `CSS`
-     - `Javascript`
-+ #### Framework
-   - `Node.Js`
-+ #### Libraries
-   - `Express`
-   - `ejs`
-   - `mongoose`
-+ #### Database
-    - `MongoDb`
+
+- #### Languages
+  - `HTML`
+  - `CSS`
+  - `Javascript`
+- #### Framework
+  - `Node.Js`
+- #### Libraries
+  - `Express`
+  - `ejs`
+  - `mongoose`
+- #### Database
+  - `MongoDb`
+
 ---
 
 ### Screenshots
