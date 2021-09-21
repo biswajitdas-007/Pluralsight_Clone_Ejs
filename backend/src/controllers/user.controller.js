@@ -95,18 +95,6 @@ router.get("/signInWithCompany", async function (req, res) {
 
 //////////////////////////////////////////////
 
-// router.get("/courses", async function (req, res) {
-//   const pageTitle = "Welcome to Users page";
-//   //const videos = await videoHead.find().lean().exec();
-//   return res.render("users/courses", {
-//      pageTitle,
-//     // videos:videos 
-//   });
-// });
-
-//////////////////////////////
-
-
 router.get("/course", async function (req, res) {
   const pageTitle = "Welcome to Users page";
   return res.render("users/course", {
