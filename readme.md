@@ -1,5 +1,5 @@
 ---
-# Pluralsight Clone :sunglasses
+# Pluralsight Clone :sunglasses:
 ---
 
 ### To start the project
