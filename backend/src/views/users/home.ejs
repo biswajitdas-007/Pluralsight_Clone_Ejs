@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/> 
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
     <title>Pluralsight</title>
 
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
@@ -16,7 +19,6 @@
     />
     <link rel="stylesheet" href="/static/users/style.css" />
   </head>
-  
 
   <body id="body">
     <!-- this is nav bar -->
@@ -55,10 +57,7 @@
             Sigin in
             <i id="sigin_in" class="material-icons">expand_more</i>
           </div>
-          <button
-            class="tryFree"
-            onclick="window.location.href='free_trial'"
-          >
+          <button class="tryFree" onclick="window.location.href='free_trial'">
             TRY FOR FREE
           </button>
         </div>
@@ -82,7 +81,7 @@
         <div id="nav_down_left">
           <ul>
             <li id="l_W">WAYS TO UPSKILL</li>
-            <li  onclick="window.location.href='courses'">
+            <li onclick="window.location.href='/pluralsight/courses'">
               <img
                 src="https://www.pluralsight.com/content/dam/pluralsight2/experiment-fragment/navigation/dashboard.png"
                 alt=""
@@ -333,7 +332,7 @@
       <!-- nav down for sign  -->
 
       <div id="nav_down_1_sign">
-        <div id="nav_down_1_left_sign"onclick="window.location.href='.'" >
+        <div id="nav_down_1_left_sign" onclick="window.location.href='/pluralsight/login'">
           <ul>
             <li>SIGN WITH SKILL</li>
             <li>
@@ -385,15 +384,22 @@
             workflows with actionable data. Build better—every time.
           </div>
           <div id="h_box_1_3">
-            <button onclick="window.location.href='pricing_skills'" id="viewPlans">VIEW PLANS</button>
-            <button onclick="window.location.href='free_trial'" id="tryFree">TRY FOR FREE</button>
+            <button
+              onclick="window.location.href='/pluralsight/pricing_skills'"
+              id="viewPlans"
+            >
+              VIEW PLANS
+            </button>
+            <button onclick="window.location.href='/pluralsight/free_trial'" id="tryFree">
+              TRY FOR FREE
+            </button>
           </div>
         </div>
       </div>
 
       <div class="mid_box">
-        <div   class="left_mid_box">
-          <div onclick="window.location.href='courses'" class="left_mid_box_1">
+        <div class="left_mid_box">
+          <div onclick="window.location.href='/pluralsight/courses'" class="left_mid_box_1">
             <div class="left_mid_box_1_1">Path</div>
             <div class="left_mid_box_1_2">JavaSrcipt</div>
             <div class="left_mid_box_1_3">11 coures</div>
@@ -406,7 +412,7 @@
               alt=""
             />
           </div>
-          <div  onclick="window.location.href='courses'" class="left_mid_box_1">
+          <div onclick="window.location.href='/pluralsight/courses'" class="left_mid_box_1">
             <div class="left_mid_box_1_1">Path</div>
             <div class="left_mid_box_1_2">Angular</div>
             <div class="left_mid_box_1_3">14 coures</div>
@@ -419,7 +425,7 @@
               alt=""
             />
           </div>
-          <div  onclick="window.location.href='courses'" class="left_mid_box_1">
+          <div onclick="window.location.href='/pluralsight/courses'" class="left_mid_box_1">
             <div class="left_mid_box_1_1">Path</div>
             <div class="left_mid_box_1_2">Core Pyton</div>
             <div class="left_mid_box_1_3">12 coures</div>
@@ -432,7 +438,7 @@
               alt=""
             />
           </div>
-          <div  onclick="window.location.href='courses'" class="left_mid_box_1">
+          <div onclick="window.location.href='/pluralsight/courses'" class="left_mid_box_1">
             <div class="left_mid_box_1_1">Path</div>
             <div class="left_mid_box_1_2">C#</div>
             <div class="left_mid_box_1_3">19 coures</div>
@@ -968,7 +974,9 @@
           </div>
           <div class="button">
             <span></span>
-            <button onclick="window.location.href='free_trial'" class="button1">TRY FOR FREE</button>
+            <button onclick="window.location.href='free_trial'" class="button1">
+              TRY FOR FREE
+            </button>
           </div>
         </div>
 

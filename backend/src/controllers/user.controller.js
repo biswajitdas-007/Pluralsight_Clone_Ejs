@@ -30,13 +30,11 @@ router.post("", async function (req, res) {
 
 //////////////////////////////////////////
 router.get("", async function (req, res) {
-  const users = await User.find().lean().exec();
   const pageTitle = "Welcome to Users page";
-  return res.render("users/allUsers", {
-    pageTitle,
-    users,
-    
+  return res.render("users/home", {
+     pageTitle,
   });
+ 
 });
 router.get("/ppp", async function (req, res) {
   const users = await User.find().lean().exec();
@@ -62,10 +60,13 @@ console.log(users[users.length-1]);
 });
 
 ///////////////////////////////////////////////
-router.get("/home", async function (req, res) {
+router.get("/login", async function (req, res) {
+  const users = await User.find().lean().exec();
   const pageTitle = "Welcome to Users page";
-  return res.render("users/home", {
-     pageTitle,
+  return res.render("users/allUsers", {
+    pageTitle,
+    users,
+    
   });
 });
 
