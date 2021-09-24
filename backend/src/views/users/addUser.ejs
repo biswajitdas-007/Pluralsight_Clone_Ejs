@@ -13,7 +13,7 @@
   </head>
 
   <body style="margin-bottom: 1px; background-color: rgb(29, 26, 26)">
-    <form name="myForm" id="myForm" action="/pluralsight" method="post">
+    <form name="myForm" id="myForm" action="/" method="post">
       <input
         type="text"
         id="f"
@@ -54,7 +54,7 @@
     </div>
 
     <div id="back-to-pricing">
-      <a href="free_trial.html">
+      <a href="pricing_skills">
         <h5>< Back to pricing</h5>
       </a>
     </div>
@@ -1243,15 +1243,15 @@
   </body>
 </html>
 <script>
-  console.log(window.location.href);
+ // console.log(window.location.href);
   if (
     document.getElementById("text").innerText == "Email is already in databse"
   ) {
     document.getElementById("text").style.display = "block";
-    console.log("kkk");
+    //console.log("kkk");
   }
   var t = "";
-  console.log(t);
+  //console.log(t);
   function check(e) {
     e.preventDefault();
     var terms_policy = document.getElementById("terms-policy");
@@ -1315,7 +1315,7 @@
             ) {
               document.getElementById("text").style.display = "none";
               document.getElementById("text").innerText.display = "block";
-              console.log("p");
+             // console.log("p");
             }
             document.getElementById("payment-form-close").style.display =
               "none";
@@ -1392,7 +1392,7 @@
     let pName = document.getElementById("p").value;
     let tName = document.getElementById("type").value;
  
-    window.location.href = `http://localhost:3251/pluralsight/payment_successful?email=${eName}&type=${tName}&fName=${fName}&lName=${lName}&pName${pName}`;
+    window.location.href = `http://localhost:3251/payment_successful?email=${eName}&type=${tName}&fName=${fName}&lName=${lName}&pName${pName}`;
   }
   function qs(key) {
     var vars = [],
@@ -1407,7 +1407,7 @@
     }
     return vars[key];
   }
-  console.log( window.location.href)
+  //console.log( window.location.href)
   if(qs("p")!=undefined){
   document.getElementById("blance").innerText=qs("p")
   document.getElementById("blance1").innerText=qs("p")

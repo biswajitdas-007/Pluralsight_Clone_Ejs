@@ -29,7 +29,7 @@ router.post("", async function (req, res) {
 
 
 //////////////////////////////////////////
-router.get("", async function (req, res) {
+router.get("/", async function (req, res) {
   const pageTitle = "Welcome to Users page";
   return res.render("users/home", {
      pageTitle,

@@ -30,7 +30,7 @@ app.use("/static", express.static(path.join(__dirname, "public")));
 app.use("/stream",streamController)
 app.use("/substream", subStreamController)
 app.use("/coursedomain", courseDomainController)
-app.use("/pluralsight", userController);
+app.use("/", userController);
 app.use("/vidio", vidioController);
 app.use("/us",courseController);
 
