@@ -1,5 +1,7 @@
----
+
+
 # Pluralsight Clone :sunglasses:
+
 ### To start the project
 
 : run the following command in `backend` folder
@@ -8,6 +10,7 @@
   nodemon server
 ```
 : after that go to you browser and type `http://localhost:3251/pluralsight/home` and you are ready to expolore our project.
+
 
 ---
 
